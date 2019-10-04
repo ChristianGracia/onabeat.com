@@ -4,11 +4,10 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App" style={{ flex: 1 }}>
-      <div style={{ padding: "5vh" }}></div>
-      <HomePage />
-      <p style={{ fontWeight: "bold", fontSize: 30 }}>coming soon</p>
-      <div style={{ paddingBottom: 100 }}></div>
+    <div className="App" style={{ flex: 1, backgroundColor: "black" }}>
+      <div style={{ paddingTop: 100 }}><HomePage /></div>
+
+      <div style={{ paddingBottom: 300 }}></div>
     </div>
 
   );
