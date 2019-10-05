@@ -11,7 +11,7 @@ const HomePage = () => (
         <p style={{ color: "white" }}>Contact <i class="fas fa-envelope"></i> xp@onabeat.com am@onabeat.com</p>
         <span>
             <a href="https://www.youtube.com/channel/UC2bzDGJGflVc9i4Yfx019Hg">Youtube</a>{"\t"}
-            <a href="https://soundcloud.com/amonabeat">Soundcloud</a></span>
+        </span>
         <p style={{ marginTop: 20, color: "white", fontSize: 20 }}>Redesign on the way by <a href="http://christiangracia.com">christiangracia.com</a></p>
         <p style={{ fontWeight: "bold", fontSize: 30, color: "white" }}>COMING SOON</p>
         <i style={{ fontSize: 40, color: "#0EFF00" }} className="fas fa-spinner fa-spin"></i>
