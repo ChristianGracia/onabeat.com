@@ -8,7 +8,7 @@ const HomePage = () => (
         <p style={{ marginTop: 20, fontWeight: "bold", color: "white", fontSize: 20 }}>Videos, Music, & More</p>
         <h2 style={{ fontWeight: "bold", color: "yellow" }}>Under construction</h2>
         <div style={{ padding: 10 }}></div>
-        <p style={{ color: "white" }}>Contact <i class="fas fa-envelope"></i> xp@onabeat.com am@onabeat.com</p>
+        <p style={{ color: "white" }}>Contact <i class="fas fa-envelope"></i> xp@onabeat.com</p>
         <span>
             <a href="https://www.youtube.com/channel/UC2bzDGJGflVc9i4Yfx019Hg">Youtube</a>{"\t"}
         </span>
