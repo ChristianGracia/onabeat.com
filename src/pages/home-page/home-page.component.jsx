@@ -2,20 +2,18 @@ import React from "react"
 
 
 const HomePage = () => (
-    <div>
+    <div style={{}}>
 
-        <h1 style={{ fontSize: 45, color: "white" }}>On A Beat</h1>
-        <p style={{ marginTop: 20, fontWeight: "bold", color: "white", fontSize: 20 }}>Videos, Music, & More</p>
-        <h2 style={{ fontWeight: "bold", color: "yellow" }}>Under construction</h2>
-        <div style={{ padding: 10 }}></div>
-        <p style={{ color: "white" }}>Contact <i class="fas fa-envelope"></i> xp@onabeat.com</p>
-        <span>
-            <a href="https://www.youtube.com/channel/UC2bzDGJGflVc9i4Yfx019Hg">Youtube</a>{"\t"}
-        </span>
-        <p style={{ marginTop: 20, color: "white", fontSize: 20 }}>Redesign on the way by <a href="http://christiangracia.com">christiangracia.com</a></p>
-        <p style={{ fontWeight: "bold", fontSize: 30, color: "white" }}>COMING SOON</p>
-        <i style={{ fontSize: 40, color: "#0EFF00" }} className="fas fa-spinner fa-spin"></i>
-
+        <h1 style={{ fontSize: 70, color: "black" }}>On A Beat</h1>
+        <div style={{ fontSize: 48, color: "black" }}>
+            <p>Tobias Why</p>
+            <div className="row" style={{ justifyContent: "center", alignItems: "center" }}>
+                <iframe src="https://open.spotify.com/embed/track/1fcJd3YvKhhpo13mUpcUwP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div style={{ padding: 15 }}></div>
+            <iframe width="600" height="315" src="https://www.youtube.com/embed/oOO41wFiS4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div >
 )
 export default HomePage
