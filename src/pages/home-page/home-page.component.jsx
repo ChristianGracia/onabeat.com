@@ -4,9 +4,10 @@ import React from "react"
 const HomePage = () => (
     <div style={{}}>
 
-        <h1 style={{ fontSize: 70, color: "black" }}>On A Beat</h1>
+        <h1 style={{ fontSize: 70, color: "red" }}>On A Beat</h1>
         <div style={{ fontSize: 48, color: "black" }}>
-            <p>Tobias Why</p>
+            <div style={{ padding: 15 }}></div>
+            <p>Under Construction</p>
             <div className="row" style={{ justifyContent: "center", alignItems: "center" }}>
                 <iframe src="https://open.spotify.com/embed/track/1fcJd3YvKhhpo13mUpcUwP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
