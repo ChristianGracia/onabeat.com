@@ -4,10 +4,9 @@ import "./home-page.styles.scss"
 
 
 const HomePage = () => (
-    <div style={{}}>
+    <div style={{ justifyContent: "center", alignItems: "center" }}>
 
-
-        <div className="logo" >
+        <div className="logo mr-auto ml-auto" >
             <div
                 className="logo-image"
                 style={{
@@ -20,7 +19,7 @@ const HomePage = () => (
         </div>
 
         <div style={{ fontSize: 48, color: "black" }}>
-            <div style={{ padding: 15 }}></div>
+
             <p>Under Construction</p>
             <div className="row" style={{ justifyContent: "center", alignItems: "center" }}>
                 <iframe src="https://open.spotify.com/embed/track/1fcJd3YvKhhpo13mUpcUwP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
