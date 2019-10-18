@@ -1,10 +1,24 @@
 import React from "react"
+import logo from "../../assets/logo.PNG"
+import "./home-page.styles.scss"
 
 
 const HomePage = () => (
     <div style={{}}>
 
-        <h1 style={{ fontSize: 70, color: "red" }}>On A Beat</h1>
+
+        <div className="logo" >
+            <div
+                className="logo-image"
+                style={{
+                    backgroundImage: `url(
+            ${logo}
+          )`,
+                    backgroundRepeat: "no-repeat"
+                }}
+            />
+        </div>
+
         <div style={{ fontSize: 48, color: "black" }}>
             <div style={{ padding: 15 }}></div>
             <p>Under Construction</p>
