@@ -26,7 +26,7 @@ const HomePage = () => (
                 <iframe src="https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div style={{ padding: 15 }}></div>
-            <iframe width="600" height="315" maxWidth="90vw" src="https://www.youtube.com/embed/oOO41wFiS4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="380" height="315" src="https://www.youtube.com/embed/oOO41wFiS4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div >
 )
