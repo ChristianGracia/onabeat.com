@@ -1,35 +1,59 @@
-import React from "react"
-import logo from "../../assets/logo.PNG"
-import "./home-page.styles.scss"
-
+import React from "react";
+import logo from "../../assets/logo.PNG";
+import "./home-page.styles.scss";
 
 const HomePage = () => (
-    <div style={{ justifyContent: "center", alignItems: "center" }}>
-
-        <div className="logo mr-auto ml-auto" >
-            <div
-                className="logo-image"
-                style={{
-                    backgroundImage: `url(
+  <div style={{ justifyContent: "center", alignItems: "center" }}>
+    <div className="logo mr-auto ml-auto">
+      <div
+        className="logo-image"
+        style={{
+          backgroundImage: `url(
             ${logo}
           )`,
-                    backgroundRepeat: "no-repeat"
-                }}
-            />
-        </div>
+          backgroundRepeat: "no-repeat"
+        }}
+      />
+    </div>
 
-        <div style={{ fontSize: 48, color: "black" }}>
-
-            <p>Under Construction</p>
-        </div>
-        <div className="row" style={{ justifyContent: "center", alignItems: "center" }}>
-            <iframe src="https://open.spotify.com/embed/track/1fcJd3YvKhhpo13mUpcUwP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe src="https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
-        <div style={{ padding: 15 }}></div>
-        <div className="row" style={{ justifyContent: "center", alignItems: "center" }}> <iframe className="mr-0 ml-0" width="360" height="315" src="https://www.youtube.com/embed/oOO41wFiS4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-
-    </div >
-)
-export default HomePage
+    {/* <div
+      className="row"
+      style={{ justifyContent: "center", alignItems: "center" }}
+    > */}
+    {/* <iframe
+        src="https://open.spotify.com/embed/track/1fcJd3YvKhhpo13mUpcUwP"
+        width="300"
+        height="380"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe>
+      <iframe
+        src="https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy"
+        width="300"
+        height="380"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe> */}
+    {/* </div>
+    <div style={{ padding: 15 }}></div> */}
+    <div
+      className="row"
+      style={{ justifyContent: "center", alignItems: "center" }}
+    >
+      {" "}
+      <iframe
+        className="mr-0 ml-0"
+        width="360"
+        height="315"
+        src="https://www.youtube.com/embed/yXxhHFeprk0"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p style={{ marginTop: 10 }}>Full site coming soon...</p>
+  </div>
+);
+export default HomePage;
