@@ -6,7 +6,7 @@ class VideoBox extends React.Component {
     this.state = {};
   }
   componentDidMount() {
-    const url = "http://localhost:8080/all";
+    const url = "http://wwww.onabeat.com/api/all";
     fetch(url)
       .then(res => res.json())
       .then(data => {

@@ -2,7 +2,11 @@
   "name": "on-a-beat",
   "version": "0.1.0",
   "homepage": "http://www.onabeat.com",
-  "proxy": "http://localhost:8080/",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:8080"
+    }
+  },
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
