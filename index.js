@@ -16,19 +16,23 @@ mongoose
   .then(() => console.log("connected to MongoDB"))
   .catch(err => console.log("db connection error"));
 
-app.get("/", (req, res) => res.send("server is up"));
+app.use(express.static(path.join(__dirname, "./client/public")));
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", function(_, res) {
+  res.sendFile(path.join(__dirname, "./client/public/index.html"), function(
+    err
+  ) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
+
+app.get("/", (req, res) => res.send("server is up"));
 
 app.get("/all", cors(), (req, res) => {
   res.json({ hi: "cors works" });
   console.log("hit");
-});
-
-app.use(express.static(path.join(__dirname, "client/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 const port = process.env.PORT || 5000;
