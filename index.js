@@ -11,22 +11,36 @@ app.use(bodyParser.json());
 
 const database = require("./config/keys").mongoURI;
 
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+};
+
 mongoose
-  .connect(database)
+  .connect(database, options)
   .then(() => console.log("connected to MongoDB"))
   .catch(err => console.log("db connection error"));
 
-app.use(express.static(path.join(__dirname, "./client/public")));
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"));
 
-app.get("*", function(_, res) {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"), function(
-    err
-  ) {
-    if (err) {
-      res.status(500).send(err);
-    }
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
-});
+}
+
+// app.use(express.static(path.join(__dirname, "./client/public")));
+
+// app.get("*", function(_, res) {
+//   res.sendFile(path.join(__dirname, "./client/public/index.html"), function(
+//     err
+//   ) {
+//     if (err) {
+//       res.status(500).send(err);
+//     }
+//   });
+// });
 
 app.get("/", (req, res) => res.send("server is up"));
 
