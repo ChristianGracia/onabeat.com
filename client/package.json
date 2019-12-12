@@ -2,7 +2,7 @@
   "name": "on-a-beat",
   "version": "0.1.0",
   "homepage": "http://www.onabeat.com",
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:80/",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",

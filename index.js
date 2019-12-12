@@ -9,9 +9,12 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const publicPath = path.join(__dirname, "/client", "public");
+const portNum = 5000;
+if (process.env.NODE_ENV === "production") {
+  portNum = 80;
+}
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || portNum;
 
 app.listen(port, () => {
   console.log("Server is up!");
