@@ -32,10 +32,10 @@ const options = {
   useUnifiedTopology: true
 };
 
-mongoose
-  .connect(database, options)
-  .then(() => console.log("connected to MongoDB"))
-  .catch(err => console.log("db connection error"));
+// mongoose
+//   .connect(database, options)
+//   .then(() => console.log("connected to MongoDB"))
+//   .catch(err => console.log("db connection error"));
 
 app.get("/all", cors(), (req, res) => {
   res.json({ hi: "cors works" });
