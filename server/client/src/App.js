@@ -5,7 +5,7 @@ import "./App.scss";
 function App() {
   return (
     <div className="App" style={{ flex: 1, backgroundColor: "white" }}>
-      <div className="ml-auto mr-auto" style={{ paddingTop: 3, width: "90%" }}>
+      <div className="ml-auto mr-auto" style={{ padding: 10 }}>
         <HomePage />
       </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.PNG";
 import "./home-page.styles.scss";
+import VideoBox from "../../components/video-box/video-box.component";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -39,11 +40,11 @@ const HomePage = () => (
     {/* </div>
     <div style={{ padding: 15 }}></div> */}
     <div
-      className="row"
-      style={{ justifyContent: "center", alignItems: "center" }}
+    // className="row"
+    // style={{ justifyContent: "center", alignItems: "center" }}
     >
       {" "}
-      <iframe
+      {/* <iframe
         className="mr-0 ml-0"
         width="360"
         height="315"
@@ -51,8 +52,10 @@ const HomePage = () => (
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      ></iframe>
+      ></iframe> */}
+      <VideoBox />
     </div>
+
     <p style={{ marginTop: 10 }}>Full site coming soon...</p>
   </div>
 );
