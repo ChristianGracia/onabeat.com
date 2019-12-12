@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   console.log("Server is up!");
