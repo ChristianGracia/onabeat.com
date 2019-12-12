@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const database = require("./config/keys").mongoURI;
+// const database = require("./config/keys").mongoURI;
 
 const options = {
   useNewUrlParser: true,
