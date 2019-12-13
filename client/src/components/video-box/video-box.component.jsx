@@ -3,27 +3,25 @@ import React from "react";
 class VideoBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { videos: [] };
   }
-  componentDidMount() {
-    const url = "http://www.localhost:8080/all";
-    fetch(url, {
-      method: "get",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(err => console.log(err));
+  async componentDidMount() {
+    const response = await fetch("/all");
+    const videos = await response.json();
+
+    this.setState({ videos: videos });
   }
   render() {
     return (
       <div>
-        <p>hi</p>
+        {this.state.videos.map(video => {
+          return (
+            <p>
+              {video.name}
+              {"\t"} {video.url}
+            </p>
+          );
+        })}
       </div>
     );
   }
