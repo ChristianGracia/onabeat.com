@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
-  console.log("Server is up!");
+  console.log("Server is up! on " + port);
 });
 
 if (process.env.NODE_ENV === "production") {
