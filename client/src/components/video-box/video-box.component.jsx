@@ -6,7 +6,7 @@ class VideoBox extends React.Component {
     this.state = { videos: [] };
   }
   async componentDidMount() {
-    const response = await fetch("/all");
+    const response = await fetch("api/videos/all");
     const videos = await response.json();
 
     this.setState({ videos: videos });
