@@ -44,3 +44,7 @@ app.get("/", cors(), (req, res) => {
   res.send("hi");
   console.log("hit");
 });
+
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
