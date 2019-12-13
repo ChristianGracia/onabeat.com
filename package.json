@@ -27,6 +27,7 @@
   "homepage": "https://github.com/ChristianGracia/onabeat.com#readme",
   "dependencies": {
     "concurrently": "^5.0.1",
+    "mongodb": "^3.4.0",
     "rimraf": "^3.0.0"
   }
 }
