@@ -1,14 +1,15 @@
 import React from "react";
 
-const VideoPlayer = ({ imgUrl }) => (
+const VideoPlayer = ({ videoUrl, name }) => (
   <div>
     <iframe
-      width="560"
-      height="315"
-      src={imgUrl}
-      frameborder="0"
+      title={name}
+      width="320"
+      height="270"
+      src={videoUrl}
+      frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   </div>
 );

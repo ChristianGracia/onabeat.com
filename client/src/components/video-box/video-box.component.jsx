@@ -17,7 +17,7 @@ class VideoBox extends React.Component {
       <div>
         {this.state.videos.map(video => {
           return (
-            <div>
+            <div key={video.name}>
               {" "}
               <div
                 style={{
@@ -47,7 +47,7 @@ class VideoBox extends React.Component {
                   {video.description}
                 </span>
               </div>
-              <VideoPlayer imgUrl={video.videoUrl} />
+              <VideoPlayer key={video.name} videoUrl={video.videoUrl} />
             </div>
           );
         })}

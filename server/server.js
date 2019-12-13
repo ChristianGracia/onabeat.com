@@ -7,6 +7,7 @@ const path = require("path");
 const app = express();
 
 const videos = require("./api/videos");
+const songs = require("./api/songs");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -26,6 +27,7 @@ router.get("/all", (req, res) => {
 
 app.use(router);
 app.use("/api/videos", videos);
+app.use("/api/songs", songs);
 
 app.use("/*", staticFiles);
 
@@ -36,10 +38,10 @@ app.listen(app.get("port"), () => {
 });
 
 //local
-// const database = require("./config/keys").mongoURI;
+const database = require("./config/keys").mongoURI;
 
 //heroku
-const database = process.env.MONGO;
+// const database = process.env.MONGO;
 // console.log(database);
 
 mongoose

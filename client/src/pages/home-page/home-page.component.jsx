@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.PNG";
 import "./home-page.styles.scss";
 import VideoBox from "../../components/video-box/video-box.component";
+import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -53,6 +54,8 @@ const HomePage = () => (
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe> */}
+      <SpotifyBox />
+      <div style={{ padding: 30 }}></div>
       <VideoBox />
     </div>
 
