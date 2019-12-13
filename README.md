@@ -9,3 +9,14 @@ React front-end
 Node JS back-end
 
 hosted on a single dyno on Heroku
+
+
+## Features
+
+### Videos
+
+Stores video info on MongoDb database
+
+Users can add videos to database
+
+videos displayed on front-end
