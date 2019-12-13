@@ -32,6 +32,7 @@ app.use("/*", staticFiles);
 app.set("port", process.env.PORT || 3001);
 app.listen(app.get("port"), () => {
   console.log(`Listening on ${app.get("port")}`);
+  console.log("mongodb: " + process.env.MONGO);
 });
 
 //local
@@ -39,7 +40,7 @@ app.listen(app.get("port"), () => {
 
 //heroku
 const database = process.env.MONGO;
-console.log(database);
+// console.log(database);
 
 mongoose
   .connect(database)
