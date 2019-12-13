@@ -18,9 +18,9 @@ app.listen(port, () => {
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
-  });
+  // app.get("*", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  // });
 }
 
 // const database = require("./config/keys").mongoURI;
@@ -37,5 +37,10 @@ const options = {
 
 app.get("/all", cors(), (req, res) => {
   res.json({ hi: "cors works" });
+  console.log("hit");
+});
+
+app.get("/", cors(), (req, res) => {
+  res.send("hi");
   console.log("hit");
 });
