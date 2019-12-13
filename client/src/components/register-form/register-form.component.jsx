@@ -2,13 +2,14 @@ import React from "react";
 import TextInput from "../common/text-input/text-input.component";
 
 import { Button } from "react-bootstrap";
-class LoginForm extends React.Component {
+class RegisterForm extends React.Component {
   constructor() {
     super();
 
     this.state = {
       user: "",
-      password: ""
+      password: "",
+      password2: ""
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -60,7 +61,13 @@ class LoginForm extends React.Component {
             value={this.state.password}
             onChange={this.onChange}
           />
-
+          <TextInput
+            placeholder="Confirm password"
+            name="password2"
+            type="password"
+            value={this.state.password2}
+            onChange={this.onChange}
+          />
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button type="submit" variant="primary">
               Submit
@@ -72,4 +79,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default RegisterForm;
