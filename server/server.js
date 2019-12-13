@@ -34,7 +34,11 @@ app.listen(app.get("port"), () => {
   console.log(`Listening on ${app.get("port")}`);
 });
 
-const database = require("./config/keys").mongoURI;
+//local
+// const database = require("./config/keys").mongoURI;
+
+//heroku
+const database = process.env.mongoURI;
 console.log(database);
 
 mongoose
