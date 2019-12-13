@@ -8,6 +8,7 @@ class VideoBox extends React.Component {
   componentDidMount() {
     const url = "http://www.localhost:8080/all";
     fetch(url, {
+      method: "get",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"

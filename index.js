@@ -9,18 +9,27 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   console.log("Server is up! on " + port);
 });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "client/build")));
 
-  // app.get("*", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "client/build", "index.html"));
-  // });
+//   // app.get("*", function(req, res) {
+//   //   res.sendFile(path.join(__dirname, "client/build", "index.html"));
+//   // });
+// }
+
+app.use(express.static(__dirname + "/"));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join("client/build", "index.html"));
+  });
 }
 
 // const database = require("./config/keys").mongoURI;
