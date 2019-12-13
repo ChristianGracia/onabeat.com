@@ -15,12 +15,7 @@ class VideoBox extends React.Component {
     return (
       <div>
         {this.state.videos.map(video => {
-          return (
-            <p>
-              {video.name}
-              {"\t"} {video.url}
-            </p>
-          );
+          return <p>{video.name}</p>;
         })}
       </div>
     );
