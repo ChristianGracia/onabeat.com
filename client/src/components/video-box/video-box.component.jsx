@@ -1,4 +1,5 @@
 import React from "react";
+import VideoPlayer from "../video-player/video-player.component";
 
 class VideoBox extends React.Component {
   constructor(props) {
@@ -15,7 +16,40 @@ class VideoBox extends React.Component {
     return (
       <div>
         {this.state.videos.map(video => {
-          return <p>{video.name}</p>;
+          return (
+            <div>
+              {" "}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <span
+                  style={{
+                    color: "red",
+                    fontWeight: "bold",
+                    fontSize: 20,
+                    paddingBottom: 20
+                  }}
+                >
+                  {video.name}
+                </span>
+                <span
+                  style={{
+                    color: "red",
+                    fontWeight: "bold",
+                    fontSize: 20,
+                    paddingBottom: 20
+                  }}
+                >
+                  {video.description}
+                </span>
+              </div>
+              <VideoPlayer imgUrl={video.videoUrl} />
+            </div>
+          );
         })}
       </div>
     );
