@@ -25,6 +25,18 @@ Users can add videos to database
 
 videos displayed on front-end
 
+### Songs
+
+Stores song info on MongoDb database
+
+Users can add songs to database
+
+songs displayed on front-end
+
+
+
+### Auth
+
 create accounts
 
 login
