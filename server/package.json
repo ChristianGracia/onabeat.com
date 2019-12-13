@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
-    "start": "node index.js",
-    "start:prod": "node index.js",
-    "build": "babel . --ignore node_modules,build --out-dir build"
+    "build": "babel . --ignore node_modules,build --out-dir build",
+    "start": "nodemon -r babel-register server.js",
+    "start:prod": "node build/server.js"
   },
   "keywords": [],
   "author": "",
