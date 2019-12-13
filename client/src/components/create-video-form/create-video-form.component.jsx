@@ -19,7 +19,7 @@ class CreateVideoForm extends React.Component {
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  onSubmit(e) {
+  async onSubmit(e) {
     e.preventDefault();
 
     const newVideo = {
@@ -30,13 +30,15 @@ class CreateVideoForm extends React.Component {
     console.log(newVideo);
 
     const options = {
-      method: "post",
+      method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(newVideo)
     };
 
-    fetch("api/videos/create-video", options);
+    const response = await fetch("api/videos/create-video", options);
     // const videos = await response.json();
+    const videos = await response.json();
+    console.log(videos);
   }
   render() {
     return (
