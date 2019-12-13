@@ -24,3 +24,7 @@ Stores video info on MongoDb database
 Users can add videos to database
 
 videos displayed on front-end
+
+create accounts
+
+login
