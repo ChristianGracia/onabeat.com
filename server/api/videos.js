@@ -11,17 +11,13 @@ router.get("/all", (req, res) => {
     .catch(err => res.status(404).json({ novideosfound: "No videos found" }));
 });
 
-router.post(
-  "/create-video",
+router.post("/create-video", (req, res) => {
+  const newVideo = new Video({
+    name: req.body.name,
+    videoUrl: req.body.videoUrl,
+    description: req.body.description
+  });
 
-  (req, res) => {
-    const newVideo = new Video({
-      name: "teenie bikinis / neighbors",
-      description: "Neighbor shows the boys around Menlo Park",
-      videoUrl: "https://www.youtube.com/embed/QQg2xGt_OYA"
-    });
-
-    newVideo.save().then(videos => res.json(videos));
-  }
-);
+  newVideo.save().then(videos => res.json(videos));
+});
 module.exports = router;

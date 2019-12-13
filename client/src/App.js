@@ -4,6 +4,7 @@ import "./App.scss";
 import HomePage from "./pages/home-page/home-page.component";
 import LoginPage from "./pages/login-page/login-page.component";
 import RegisterPage from "./pages/register-page/register-page.component";
+import CreatePage from "./pages/create-page/create-page.component";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/create-content" component={CreatePage} />
       </Router>
 
       <div style={{ paddingBottom: 300 }}></div>

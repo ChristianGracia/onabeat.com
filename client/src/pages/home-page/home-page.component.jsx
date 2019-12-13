@@ -60,6 +60,7 @@ const HomePage = () => (
     </div>
 
     <p style={{ marginTop: 10 }}>Full site coming soon...</p>
+    <p style={{ fontWeight: "bold" }}></p>
   </div>
 );
 export default HomePage;
