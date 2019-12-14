@@ -36,7 +36,7 @@ class CreateVideoForm extends React.Component {
     };
 
     const response = await fetch(
-      "http:/www.onabeat.com/api/videos/create-video",
+      "http://www.onabeat.com/api/videos/create-video",
       options
     );
     // const videos = await response.json();
