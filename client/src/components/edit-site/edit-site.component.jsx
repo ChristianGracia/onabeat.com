@@ -1,21 +1,26 @@
 import React from "react";
 import CreateVideoForm from "../create-video-form/create-video-form.component";
 import { Button } from "react-bootstrap";
+import RegisterForm from "../register-form/register-form.component";
 
 class EditSite extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAddVideo: false
+      showAddVideo: false,
+      showRegister: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick = e => {
     let name = e.nativeEvent.target.name;
-
+    this.setState({ showAddVideo: false, showRegister: false });
     switch (name) {
       case "add-a-video":
         this.setState({ showAddVideo: true });
+        break;
+      case "register":
+        this.setState({ showRegister: true });
         break;
     }
   };
@@ -92,6 +97,7 @@ class EditSite extends React.Component {
         </div>
         <div style={{ marginTop: 50 }}>
           {this.state.showAddVideo ? <CreateVideoForm /> : null}
+          {this.state.showRegister ? <RegisterForm /> : null}
         </div>
       </div>
     );
