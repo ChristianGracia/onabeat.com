@@ -8,6 +8,8 @@ const app = express();
 
 const videos = require("./api/videos");
 const songs = require("./api/songs");
+const login = require("./api/login");
+const register = require("./api/register");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
