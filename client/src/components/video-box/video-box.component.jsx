@@ -14,11 +14,16 @@ class VideoBox extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around"
+        }}
+      >
         {this.state.videos.map(video => {
           return (
             <div key={video.name}>
-              {" "}
               <div
                 style={{
                   display: "flex",
@@ -31,17 +36,17 @@ class VideoBox extends React.Component {
                     color: "red",
                     fontWeight: "bold",
                     fontSize: 20,
-                    paddingBottom: 20
+                    padding: 20
                   }}
                 >
                   {video.name}
                 </span>
                 <span
                   style={{
-                    color: "red",
-                    fontWeight: "bold",
+                    color: "black",
+
                     fontSize: 20,
-                    paddingBottom: 20
+                    padding: 20
                   }}
                 >
                   {video.description}
