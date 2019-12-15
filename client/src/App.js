@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import HomePage from "./pages/home-page/home-page.component";
 import LoginPage from "./pages/login-page/login-page.component";
+import AboutPage from "./pages/about-page/about-page.component";
 import RegisterPage from "./pages/register-page/register-page.component";
-import CreatePage from "./pages/create-page/create-page.component";
+import CreateVideoPage from "./pages/create-video-page/create-video-page.component";
 import ArtistsPage from "./pages/artists-page/artists-page.component";
 import DashboardPage from "./pages/dashboard-page/dashboard-page.component";
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/about" component={AboutPage} />
 
         <Route exact path="/artists" component={ArtistsPage} />
       </Switch>
@@ -32,7 +34,7 @@ function App() {
         <PrivateRoute exact path="/dashboard" component={DashboardPage} />
       </Switch>
       <Switch>
-        <PrivateRoute exact path="/add-video" component={CreatePage} />
+        <PrivateRoute exact path="/add-video" component={CreateVideoPage} />
       </Switch>
 
       <div style={{ paddingBottom: 300 }}></div>

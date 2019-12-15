@@ -52,6 +52,7 @@ class LoginForm extends React.Component {
           display: "flex",
           justifyContent: "center",
           width: "80%",
+          maxWidth: 600,
           flexDirection: "column"
         }}
       >

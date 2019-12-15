@@ -1,9 +1,8 @@
 import React from "react";
 import logo from "../../assets/logo.PNG";
-import "./create-page.styles.scss";
-import CreateVideoForm from "../../components/create-video-form/create-video-form.component";
+import "./about-page.styles.scss";
 
-const CreatePage = () => (
+const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
     <div className="logo mr-auto ml-auto">
       <div
@@ -16,8 +15,7 @@ const CreatePage = () => (
         }}
       />
     </div>
-    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Create</p>
-    <CreateVideoForm />
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>About</p>
   </div>
 );
-export default CreatePage;
+export default AboutPage;
