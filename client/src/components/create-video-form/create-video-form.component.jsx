@@ -47,6 +47,7 @@ class CreateVideoForm extends React.Component {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
         <form onSubmit={this.onSubmit}>
+          <p>Video Name</p>
           <TextInput
             placeholder="Name of video"
             name="name"
@@ -54,6 +55,15 @@ class CreateVideoForm extends React.Component {
             value={this.state.name}
             onChange={this.onChange}
           />
+          <p>
+            <p>
+              Unique YouTube Url: found after https://www.youtube.com/watch?v=
+            </p>
+            https://www.youtube.com/watch?v=
+            <span style={{ backgroundColor: "red", color: "white" }}>
+              ZZ5LpwO-An4
+            </span>
+          </p>
 
           <TextInput
             placeholder="Video youtube url"
@@ -64,7 +74,7 @@ class CreateVideoForm extends React.Component {
           />
 
           <span style={{ color: "black", fontWeight: "bold", fontSize: 16 }}>
-            optional
+            Optional
           </span>
 
           <TextInput

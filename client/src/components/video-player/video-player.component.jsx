@@ -6,7 +6,7 @@ const VideoPlayer = ({ videoUrl, name }) => (
       title={name}
       width="320"
       height="270"
-      src={videoUrl}
+      src={"https://www.youtube.com/embed/" + videoUrl}
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
