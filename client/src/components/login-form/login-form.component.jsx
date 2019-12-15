@@ -1,5 +1,8 @@
 import React from "react";
 import TextInput from "../common/text-input/text-input.component";
+import { connect } from "react-redux";
+import { login } from "../../reducers/reducer";
+import { withRouter } from "react-router";
 
 import { Button } from "react-bootstrap";
 class LoginForm extends React.Component {
