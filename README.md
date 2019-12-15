@@ -12,7 +12,7 @@ Node JS back-end
 
 hosted on a single dyno on Heroku
 
-MongoDB, Sass
+MongoDB, Redux Sass
 
 
 ## Features
@@ -38,5 +38,7 @@ songs displayed on front-end
 ### Auth
 
 create accounts
+
+password hash
 
 login
