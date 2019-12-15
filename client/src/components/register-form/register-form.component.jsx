@@ -33,7 +33,10 @@ class RegisterForm extends React.Component {
       };
 
       (async () => {
-        const response = await fetch("api/register/", options);
+        const response = await fetch(
+          "http://www.onabeat.com/api/register",
+          options
+        );
         const content = await response.json();
         // console.log(content);
         // if (content) {

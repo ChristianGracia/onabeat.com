@@ -5,11 +5,12 @@ const mongoose = require("mongoose");
 const User = require("../models/User");
 
 router.post("/", (req, res) => {
-  //   User.find()
-  //     // .sort({ date: -1 })
-  //     .then(posts => res.json(posts))
-  //     .catch(err => res.status(404).json({ nosongsfound: "No videos found" }));
-  console.log(req.body);
+  const newUser = new Video({
+    name: req.body.user,
+    pass: req.body.pass
+  });
+
+  newUser.save().then(user => res.json(users));
 });
 
 module.exports = router;
