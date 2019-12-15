@@ -19,28 +19,33 @@ class RegisterForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   onSubmit(e) {
-    // e.preventDefault();
-    // if (this.state.password === this.state.password2) {
-    //   var url = new URL("http://localhost:8080/create");
-    //   const options = {
-    //     method: "post",
-    //     accepts: new Headers({ "content-type": "application/json" })
-    //   };
-    //   options.body = [this.state.user, this.state.password];
-    //   (async () => {
-    //     const response = await fetch(url, options);
-    //     const content = await response.json();
-    //     console.log(content);
-    //     if (content) {
-    //       window.location.href = "/";
-    //       console.log("success");
-    //     } else {
-    //       alert("Username in use");
-    //     }
-    //   })();
-    // } else {
-    //   alert("Passwords don't match");
-    // }
+    e.preventDefault();
+    if (this.state.password === this.state.password2) {
+      const newUser = {
+        user: this.state.user,
+        pass: this.state.password
+      };
+      console.log(newUser);
+      const options = {
+        method: "post",
+        accepts: new Headers({ "content-type": "application/json" }),
+        body: JSON.stringify(newUser)
+      };
+
+      (async () => {
+        const response = await fetch("api/register/", options);
+        const content = await response.json();
+        // console.log(content);
+        // if (content) {
+        //   window.location.href = "/";
+        //   console.log("success");
+        // } else {
+        //   alert("Username in use");
+        // }
+      })();
+    } else {
+      alert("Passwords don't match");
+    }
   }
   render() {
     return (
