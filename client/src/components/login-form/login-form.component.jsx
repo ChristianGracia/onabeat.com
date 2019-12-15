@@ -6,12 +6,13 @@ import { withRouter } from "react-router";
 
 import { Button } from "react-bootstrap";
 class LoginForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       user: "",
-      password: ""
+      password: "",
+      isLoginSuccess: false
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -49,6 +50,18 @@ class LoginForm extends React.Component {
         className="m-auto"
         style={{ display: "flex", justifyContent: "center", width: "80%" }}
       >
+        {this.props.loginError && (
+          <div
+            style={{
+              color: "red",
+              fontWeight: "bold",
+              textAlign: "center",
+              marginBottom: 5
+            }}
+          >
+            {this.props.loginError.message}
+          </div>
+        )}
         <form className="mr-0 ml-0" onSubmit={this.onSubmit}>
           <TextInput
             placeholder="Username"

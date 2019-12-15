@@ -45,7 +45,7 @@ class CreateVideoForm extends React.Component {
   }
   render() {
     return (
-      <div className="m-auto" style={{ width: "80%" }}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <form onSubmit={this.onSubmit}>
           <TextInput
             placeholder="Name of Video"
@@ -56,18 +56,20 @@ class CreateVideoForm extends React.Component {
           />
 
           <TextInput
-            placeholder="Description of Video (optional)"
-            name="description"
-            type="text"
-            value={this.state.description}
-            onChange={this.onChange}
-          />
-
-          <TextInput
             placeholder="Video youtube url"
             name="videoUrl"
             type="text"
             value={this.state.videoUrl}
+            onChange={this.onChange}
+          />
+
+          <span>optional</span>
+
+          <TextInput
+            placeholder="Description of video"
+            name="description"
+            type="text"
+            value={this.state.description}
             onChange={this.onChange}
           />
 

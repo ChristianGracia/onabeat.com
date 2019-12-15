@@ -48,6 +48,7 @@ async function callLoginApi(user, password, callback) {
   console.log(userObject);
   const options = {
     method: "POST",
+    mode: "no-cors",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userObject)
   };
