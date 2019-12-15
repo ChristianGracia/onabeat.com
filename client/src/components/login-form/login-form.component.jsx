@@ -48,7 +48,12 @@ class LoginForm extends React.Component {
     return (
       <div
         className="m-auto"
-        style={{ display: "flex", justifyContent: "center", width: "80%" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          width: "80%",
+          flexDirection: "column"
+        }}
       >
         {this.props.loginError && (
           <div
