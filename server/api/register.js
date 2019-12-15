@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 
 const User = require("../models/User");
 
+router.get("/", (req, res) => {
+  res.json("register api route");
+});
+
 router.post("/create-user", (req, res) => {
   const newUser = new User({
     user: req.body.user,
