@@ -14,7 +14,13 @@ class SpotifyBox extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around"
+        }}
+      >
         {this.state.songs.map(song => {
           return (
             <div key={song.name}>

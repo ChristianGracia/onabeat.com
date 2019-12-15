@@ -6,7 +6,7 @@ const SpotifyPlayer = ({ songUrl, name }) => (
       title={name}
       src={songUrl}
       width="300"
-      height="380"
+      height="300"
       frameborder="0"
       allowtransparency="true"
       allow="encrypted-media"

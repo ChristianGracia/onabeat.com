@@ -25,7 +25,7 @@ const DashboardPage = () => (
       <Button
         style={{ padding: 5, margin: 5 }}
         onClick={() =>
-          (window.location.href = "http://www.onabeat.com/create-content")
+          (window.location.href = "http://www.onabeat.com/add-video")
         }
       >
         Add a video
