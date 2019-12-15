@@ -18,7 +18,7 @@ class RegisterForm extends React.Component {
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  onSubmit(e) {
+  async onSubmit(e) {
     e.preventDefault();
     if (this.state.password === this.state.password2) {
       const newUser = {
@@ -32,20 +32,12 @@ class RegisterForm extends React.Component {
         body: JSON.stringify(newUser)
       };
 
-      (async () => {
-        const response = await fetch(
-          "http://www.onabeat.com/api/register/create-user",
-          options
-        );
-        const content = await response.json();
-        // console.log(content);
-        // if (content) {
-        //   window.location.href = "/";
-        //   console.log("success");
-        // } else {
-        //   alert("Username in use");
-        // }
-      })();
+      const response = await fetch(
+        "http://www.onabeat.com/api/register/create-user",
+        options
+      );
+      const content = await response.json();
+      console.log(content);
     } else {
       alert("Passwords don't match");
     }
