@@ -22,24 +22,26 @@ class LoginForm extends React.Component {
   }
   async onSubmit(e) {
     e.preventDefault();
+    let user = this.state.user;
+    let password = this.state.password;
 
-    const user = {
-      user: this.state.user,
-      pass: this.state.password
-    };
-    console.log(user);
-    const options = {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(user)
-    };
+    if (user === "") {
+      alert("You have not entered a username");
+    } else if (password === "") {
+      alert("You have not entered a password");
+    }
 
-    const response = await fetch(
-      "http://www.onabeat.com/api/login/login-user",
-      options
-    );
-    const content = await response.json();
-    console.log(content);
+    this.props.login(user, password);
+    this.setState({ user: "", password: "" });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.isLoginSuccess !== prevProps.isLoginSuccess) {
+      this.props.history.push({
+        pathname: "/dashboard",
+        state: { isLoginSuccess: true }
+      });
+    }
   }
   render() {
     return (
@@ -75,4 +77,21 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+const mapStateToProps = state => {
+  return {
+    isLoginPending: state.isLoginPending,
+    isLoginSuccess: state.isLoginSuccess,
+    loginError: state.loginError
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    login: (user, password) => dispatch(login(user, password))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(LoginForm));

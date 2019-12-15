@@ -40,27 +40,33 @@ function setLoginError(loginError) {
   };
 }
 
-function callLoginApi(user, password, callback) {
-  var url = new URL("http://localhost:8080/login");
-
+async function callLoginApi(user, password, callback) {
+  const userObject = {
+    user: user,
+    pass: password
+  };
+  console.log(userObject);
   const options = {
-    method: "post",
-    accepts: new Headers({ "content-type": "application/json" })
+    method: "POST",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(userObject)
   };
 
-  options.body = [user, password];
+  const response = await fetch(
+    "http://www.onabeat.com/api/login/login-user",
+    options
+  );
+  const content = await response.json();
+  console.log(content);
+  if (content == null) {
+    alert("incorrect username or password");
+  }
 
-  (async () => {
-    const response = await fetch(url, options);
-
-    const content = await response.json();
-    console.log(content);
-    if (content === true) {
-      return callback(null);
-    } else {
-      return callback(new Error("Invalid email and password"));
-    }
-  })();
+  if (content === true) {
+    return callback(null);
+  } else {
+    return callback(new Error("Invalid email and password"));
+  }
 }
 
 export default function reducer(
