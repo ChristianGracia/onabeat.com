@@ -58,7 +58,7 @@ async function callLoginApi(user, password, callback) {
   );
   const content = await response.json();
   console.log(content);
-  if (content == null) {
+  if (content == {}) {
     alert("incorrect username or password");
   }
 
