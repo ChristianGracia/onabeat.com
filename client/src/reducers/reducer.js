@@ -48,7 +48,7 @@ async function callLoginApi(user, password, callback) {
   console.log(userObject);
   const options = {
     method: "POST",
-    mode: "no-cors",
+
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userObject)
   };
@@ -60,7 +60,7 @@ async function callLoginApi(user, password, callback) {
   const content = await response.json();
   console.log(content);
 
-  if (content != null) {
+  if (content === true) {
     return callback(null);
   } else {
     return callback(new Error("Invalid email and password"));
