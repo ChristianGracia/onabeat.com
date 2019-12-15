@@ -30,6 +30,8 @@ router.get("/all", (req, res) => {
 app.use(router);
 app.use("/api/videos", videos);
 app.use("/api/songs", songs);
+app.use("/api/login", login);
+app.use("/api/register", register);
 
 app.use("/*", staticFiles);
 
