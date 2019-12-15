@@ -1,5 +1,6 @@
 import React from "react";
 import CreateVideoForm from "../create-video-form/create-video-form.component";
+import DeleteVideoForm from "../delete-video-form/delete-video-form.component";
 import { Button } from "react-bootstrap";
 import RegisterForm from "../register-form/register-form.component";
 
@@ -8,16 +9,24 @@ class EditSite extends React.Component {
     super(props);
     this.state = {
       showAddVideo: false,
-      showRegister: false
+      showRegister: false,
+      showDeleteVideo: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick = e => {
     let name = e.nativeEvent.target.name;
-    this.setState({ showAddVideo: false, showRegister: false });
+    this.setState({
+      showAddVideo: false,
+      showRegister: false,
+      showDeleteVideo: false
+    });
     switch (name) {
-      case "add-a-video":
+      case "add-video":
         this.setState({ showAddVideo: true });
+        break;
+      case "delete-video":
+        this.setState({ showDeleteVideo: true });
         break;
       case "register":
         this.setState({ showRegister: true });
@@ -42,13 +51,13 @@ class EditSite extends React.Component {
             <Button
               style={{ margin: 5, fontWeight: "bold" }}
               onClick={this.handleClick}
-              name="add-a-video"
+              name="add-video"
             >
               Add a video
             </Button>
             <Button
               onClick={this.handleClick}
-              name="remove-a-video"
+              name="delete-video"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Remove a video
@@ -98,6 +107,7 @@ class EditSite extends React.Component {
         <div style={{ marginTop: 50 }}>
           {this.state.showAddVideo ? <CreateVideoForm /> : null}
           {this.state.showRegister ? <RegisterForm /> : null}
+          {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
         </div>
       </div>
     );

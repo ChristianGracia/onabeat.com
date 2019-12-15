@@ -47,7 +47,10 @@ class CreateVideoForm extends React.Component {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
         <form onSubmit={this.onSubmit}>
-          <p>Video Name</p>
+          <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+            Add a video
+          </span>
+
           <TextInput
             placeholder="Name of video"
             name="name"
