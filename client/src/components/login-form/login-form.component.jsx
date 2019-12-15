@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  async onSubmit(e) {
+  onSubmit(e) {
     e.preventDefault();
     let user = this.state.user;
     let password = this.state.password;
