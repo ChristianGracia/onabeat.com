@@ -34,7 +34,7 @@ class RegisterForm extends React.Component {
 
       (async () => {
         const response = await fetch(
-          "http://www.onabeat.com/api/register",
+          "http://www.onabeat.com/api/register/create-user",
           options
         );
         const content = await response.json();
