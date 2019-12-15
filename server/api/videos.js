@@ -20,4 +20,9 @@ router.post("/create-video", (req, res) => {
 
   newVideo.save().then(videos => res.json(videos));
 });
+
+router.delete("/:id", (req, res) => {
+  console.log(req.params.id);
+  // Video.findOne({ _id: req.video.id }).then();
+});
 module.exports = router;
