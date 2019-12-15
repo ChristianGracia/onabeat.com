@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const User = require("../models/User");
 
 router.post("/", (req, res) => {
-  const newUser = new Video({
+  const newUser = new User({
     name: req.body.user,
     pass: req.body.pass
   });
