@@ -10,7 +10,7 @@ router.post("/", (req, res) => {
     pass: req.body.pass
   });
 
-  newUser.save().then(user => res.json(users));
+  newUser.save().then(users => res.json(users));
 });
 
 module.exports = router;
