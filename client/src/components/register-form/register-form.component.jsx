@@ -27,8 +27,8 @@ class RegisterForm extends React.Component {
       };
       console.log(newUser);
       const options = {
-        method: "post",
-        accepts: new Headers({ "content-type": "application/json" }),
+        method: "POST",
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(newUser)
       };
 
