@@ -46,8 +46,11 @@ class LoginForm extends React.Component {
   }
   render() {
     return (
-      <div className="m-auto" style={{ width: "80%" }}>
-        <form onSubmit={this.onSubmit}>
+      <div
+        className="m-auto"
+        style={{ display: "flex", justifyContent: "center", width: "80%" }}
+      >
+        <form className="mr-0 ml-0" onSubmit={this.onSubmit}>
           <TextInput
             placeholder="Username"
             name="user"
