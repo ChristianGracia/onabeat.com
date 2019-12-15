@@ -19,48 +19,25 @@ const HomePage = () => (
       />
     </div>
 
-    {/* <div
-      className="row"
-      style={{ justifyContent: "center", alignItems: "center" }}
-    > */}
-    {/* <iframe
-        src="https://open.spotify.com/embed/track/1fcJd3YvKhhpo13mUpcUwP"
-        width="300"
-        height="380"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-      ></iframe>
-      <iframe
-        src="https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy"
-        width="300"
-        height="380"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-      ></iframe> */}
-    {/* </div>
-    <div style={{ padding: 15 }}></div> */}
     <div
     // className="row"
     // style={{ justifyContent: "center", alignItems: "center" }}
     >
-      {" "}
-      {/* <iframe
-        className="mr-0 ml-0"
-        width="360"
-        height="315"
-        src="https://www.youtube.com/embed/yXxhHFeprk0"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe> */}
       <SpotifyBox />
       <div style={{ padding: 30 }}></div>
       <VideoBox />
     </div>
 
-    <p style={{ marginTop: 10 }}>Full site coming soon...</p>
+    <p style={{ marginTop: 10, color: "red" }}>
+      Site written by{" "}
+      <a href="http://www.christiangracia.com">Christian Gracia</a>
+      <i
+        class="fab fa-react fa-spin"
+        style={{ color: "#9CFF00", fontWeight: "bold" }}
+      ></i>
+    </p>
+    <a href="http://www.christiangracia.com">christiangracia.com</a>
+
     <p style={{ fontWeight: "bold" }}></p>
     <ContentGrid />
   </div>

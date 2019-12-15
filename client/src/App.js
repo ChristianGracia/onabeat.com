@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
-        <Route exact path="/create-content" component={CreatePage} />
+
         <Route exact path="/artists" component={ArtistsPage} />
       </Switch>
       {/* for local */}
@@ -30,6 +30,9 @@ function App() {
       {/* for heroku */}
       <Switch>
         <PrivateRoute exact path="/dashboard" component={DashboardPage} />
+      </Switch>
+      <Switch>
+        <PrivateRoute exact path="/add-video" component={CreatePage} />
       </Switch>
 
       <div style={{ paddingBottom: 300 }}></div>

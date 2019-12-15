@@ -21,8 +21,7 @@ class ContentGrid extends React.Component {
   render() {
     return (
       <div>
-        <p>hi</p>
-        <AutoResponsive ref="container">{this.renderItems()}</AutoResponsive>
+        {/* <AutoResponsive ref="container">{this.renderItems()}</AutoResponsive> */}
       </div>
     );
   }
