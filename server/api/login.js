@@ -4,11 +4,11 @@ const mongoose = require("mongoose");
 
 const User = require("../models/User");
 
-router.get("/", (req, res) => {
-  User.find()
-    // .sort({ date: -1 })
-    .then(posts => res.json(posts))
-    .catch(err => res.status(404).json({ nosongsfound: "No videos found" }));
+router.post("/login-user", (req, res) => {
+  const user = req.body;
+  User.findOne(user)
+    .then(user => res.json(user))
+    .catch(err => res.status(404).json({ error: "error" }));
 });
 
 module.exports = router;

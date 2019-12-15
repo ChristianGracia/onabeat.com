@@ -20,29 +20,26 @@ class LoginForm extends React.Component {
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-  onSubmit(e) {
-    // e.preventDefault();
-    // if (this.state.password === this.state.password2) {
-    //   var url = new URL("http://localhost:8080/create");
-    //   const options = {
-    //     method: "post",
-    //     accepts: new Headers({ "content-type": "application/json" })
-    //   };
-    //   options.body = [this.state.user, this.state.password];
-    //   (async () => {
-    //     const response = await fetch(url, options);
-    //     const content = await response.json();
-    //     console.log(content);
-    //     if (content) {
-    //       window.location.href = "/";
-    //       console.log("success");
-    //     } else {
-    //       alert("Username in use");
-    //     }
-    //   })();
-    // } else {
-    //   alert("Passwords don't match");
-    // }
+  async onSubmit(e) {
+    e.preventDefault();
+
+    const user = {
+      user: this.state.user,
+      pass: this.state.password
+    };
+    console.log(user);
+    const options = {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(user)
+    };
+
+    const response = await fetch(
+      "http://www.onabeat.com/api/login/login-user",
+      options
+    );
+    const content = await response.json();
+    console.log(content);
   }
   render() {
     return (
