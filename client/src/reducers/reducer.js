@@ -60,10 +60,10 @@ async function callLoginApi(user, password, callback) {
   const content = await response.json();
   console.log(content);
 
-  if (content === true) {
-    return callback(null);
-  } else {
+  if (content == {}) {
     return callback(new Error("Invalid email and password"));
+  } else {
+    return callback(null);
   }
 }
 
