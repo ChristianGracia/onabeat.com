@@ -23,9 +23,13 @@ function App() {
         <Route exact path="/register" component={RegisterPage} />
         <Route exact path="/create-content" component={CreatePage} />
         <Route exact path="/artists" component={ArtistsPage} />
-        <Switch>
-          <PrivateRoute exact path="/dashboard" component={DashboardPage} />
-        </Switch>
+      </Switch>
+      {/* for local */}
+      {/* <Route exact path="/dashboard" component={DashboardPage} /> */}
+
+      {/* for heroku */}
+      <Switch>
+        <PrivateRoute exact path="/dashboard" component={DashboardPage} />
       </Switch>
 
       <div style={{ paddingBottom: 300 }}></div>

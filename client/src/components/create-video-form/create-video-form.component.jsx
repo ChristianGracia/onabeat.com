@@ -48,7 +48,7 @@ class CreateVideoForm extends React.Component {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <form onSubmit={this.onSubmit}>
           <TextInput
-            placeholder="Name of Video"
+            placeholder="Name of video"
             name="name"
             type="text"
             value={this.state.name}
@@ -63,7 +63,9 @@ class CreateVideoForm extends React.Component {
             onChange={this.onChange}
           />
 
-          <span>optional</span>
+          <span style={{ color: "black", fontWeight: "bold", fontSize: 16 }}>
+            optional
+          </span>
 
           <TextInput
             placeholder="Description of video"

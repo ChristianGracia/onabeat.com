@@ -16,7 +16,7 @@ const RegisterPage = () => (
         }}
       />
     </div>
-    <p>Register</p>
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Register</p>
     <RegisterForm />
   </div>
 );

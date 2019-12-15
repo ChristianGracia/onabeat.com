@@ -16,7 +16,7 @@ const CreatePage = () => (
         }}
       />
     </div>
-    <p>Create</p>
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Create</p>
     <CreateVideoForm />
   </div>
 );

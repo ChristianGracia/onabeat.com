@@ -17,9 +17,35 @@ const DashboardPage = () => (
         }}
       />
     </div>
-    <p>dashboard</p>
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Dashboard</p>
+    <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+      Video
+    </span>
+    <div>
+      <Button
+        style={{ padding: 5, margin: 5 }}
+        onClick={() =>
+          (window.location.href = "http://www.onabeat.com/create-content")
+        }
+      >
+        Add a video
+      </Button>
+      <Button style={{ padding: 5, margin: 5 }}>Remove a video</Button>
+    </div>
+    <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+      Music
+    </span>
+    <div>
+      <Button style={{ padding: 5, margin: 5 }}>Add a song</Button>
+      <Button style={{ padding: 5, margin: 5 }}>Remove a song</Button>
+    </div>
 
-    <Button></Button>
+    <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+      Site Layout
+    </span>
+    <div>
+      <Button style={{ padding: 5, margin: 5 }}>Change site layout </Button>
+    </div>
   </div>
 );
 export default DashboardPage;

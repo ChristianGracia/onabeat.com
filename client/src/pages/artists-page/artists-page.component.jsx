@@ -15,7 +15,7 @@ const ArtistsPage = () => (
         }}
       />
     </div>
-    <p>Artists</p>
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Artists</p>
   </div>
 );
 export default ArtistsPage;

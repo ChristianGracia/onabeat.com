@@ -16,7 +16,7 @@ const LoginPage = () => (
         }}
       />
     </div>
-    <p>Login</p>
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Login</p>
     <LoginForm />
   </div>
 );
