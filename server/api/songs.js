@@ -24,4 +24,14 @@ router.post(
     newSong.save().then(songs => res.json(songs));
   }
 );
+
+router.delete("/:id", (req, res) => {
+  console.log(req.params.id);
+  Song.findById(req.params.id).then(song => {
+    // delete
+    song.remove().then(() => {
+      res.json({ success: true });
+    });
+  });
+});
 module.exports = router;
