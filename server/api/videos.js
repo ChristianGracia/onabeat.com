@@ -23,6 +23,12 @@ router.post("/create-video", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   console.log(req.params.id);
-  // Video.findOne({ _id: req.video.id }).then();
+  Video.findById(req.params.id)
+    .then(video => {
+      // delete
+      video.remove().then(() => {
+        res.json({ success: true });
+      });
+
 });
 module.exports = router;
