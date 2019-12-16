@@ -5,6 +5,7 @@ import DeleteVideoForm from "../delete-video-form/delete-video-form.component";
 import RegisterForm from "../register-form/register-form.component";
 import CreateSongForm from "../create-song-form/create-song-form.component";
 import DeleteSongForm from "../delete-song-form/delete-song-form.component";
+import ChangeLayoutForm from "../change-layout-form/change-layout-form.component";
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class EditSite extends React.Component {
       showRegister: false,
       showDeleteVideo: false,
       showAddSong: false,
-      showDeleteSong: false
+      showDeleteSong: false,
+      showChangeLayout: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -25,7 +27,8 @@ class EditSite extends React.Component {
       showRegister: false,
       showDeleteVideo: false,
       showAddSong: false,
-      showDeleteSong: false
+      showDeleteSong: false,
+      showChangeLayout: false
     });
     switch (name) {
       case "add-video":
@@ -42,6 +45,11 @@ class EditSite extends React.Component {
         break;
       case "register":
         this.setState({ showRegister: true });
+        break;
+      case "edit-site":
+        this.setState({ showChangeLayout: true });
+        break;
+      default:
         break;
     }
   };
@@ -122,6 +130,7 @@ class EditSite extends React.Component {
           {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
           {this.state.showAddSong ? <CreateSongForm /> : null}{" "}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
+          {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
         </div>
       </div>
     );

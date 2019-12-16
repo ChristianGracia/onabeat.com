@@ -18,13 +18,10 @@ const router = express.Router();
 const staticFiles = express.static(path.join(__dirname, "../../client/build"));
 app.use(staticFiles);
 
-router.get("/all", (req, res) => {
-  const titles = [
-    { id: "1", name: "on a beat", url: "dededed" },
-    { id: "2", name: "back end working", url: "d3dd3" },
-    { id: "3", name: ":)", url: "ddidedh" }
-  ];
-  res.json(titles);
+router.get("/api", (req, res) => {
+  res.send(
+    "Welcome to On a Beat API - By Christian Gracia - JSON routes: /api/songs/all /api/videos/all"
+  );
 });
 
 app.use(router);

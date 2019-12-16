@@ -27,11 +27,9 @@ router.post(
 
 router.delete("/:id", (req, res) => {
   console.log(req.params.id);
-  Song.findById(req.params.id).then(song => {
-    // delete
-    song.remove().then(() => {
-      res.json({ success: true });
-    });
-  });
+
+  Song.findOneAndRemove({ _id: req.parms.id }).then(() =>
+    res.json({ success: true })
+  );
 });
 module.exports = router;

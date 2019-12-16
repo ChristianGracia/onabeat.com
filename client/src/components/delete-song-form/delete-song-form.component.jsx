@@ -46,6 +46,7 @@ class DeleteSongForm extends React.Component {
       `http://www.onabeat.com/api/songs/delete-song/${this.state.currentSongId}`,
       options
     );
+
     const songs = await response.json();
     console.log(songs);
   }
