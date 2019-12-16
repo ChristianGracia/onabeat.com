@@ -23,7 +23,10 @@ class VideoBox extends React.Component {
       >
         {this.state.videos.map(video => {
           return (
-            <div key={video.name}>
+            <div
+              key={video.name}
+              style={{ width: "40%", minWidth: 320, marginTop: 15 }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -35,8 +38,8 @@ class VideoBox extends React.Component {
                   style={{
                     color: "red",
                     fontWeight: "bold",
-                    fontSize: 20,
-                    padding: 20
+                    fontSize: 18,
+                    marginTop: 5
                   }}
                 >
                   {video.name}
@@ -44,15 +47,16 @@ class VideoBox extends React.Component {
                 <span
                   style={{
                     color: "black",
-
-                    fontSize: 20,
-                    padding: 20
+                    marginTop: 5,
+                    fontSize: 14
                   }}
                 >
                   {video.description}
                 </span>
               </div>
-              <VideoPlayer key={video.name} videoUrl={video.videoUrl} />
+              <div style={{ marginTop: 10 }}>
+                <VideoPlayer key={video.name} videoUrl={video.videoUrl} />
+              </div>
             </div>
           );
         })}

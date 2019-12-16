@@ -24,11 +24,11 @@ const HomePage = () => (
     // style={{ justifyContent: "center", alignItems: "center" }}
     >
       <SpotifyBox />
-      <div style={{ padding: 30 }}></div>
+      <div style={{ padding: 10 }}></div>
       <VideoBox />
     </div>
 
-    <p style={{ marginTop: 10, color: "red" }}>
+    <p style={{ marginTop: 30, color: "red" }}>
       Site written by{" "}
       <a href="http://www.christiangracia.com">Christian Gracia</a>
       <i
