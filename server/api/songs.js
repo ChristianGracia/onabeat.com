@@ -16,9 +16,9 @@ router.post(
 
   (req, res) => {
     const newSong = new Song({
-      name: "Eyes",
-      artist: "Tobias Why",
-      songUrl: "https://open.spotify.com/embed/track/7y8qzwuKCN43ntWCCFEEGy"
+      name: req.body.name,
+      artist: req.body.artist,
+      songUrl: req.body.songUrl
     });
 
     newSong.save().then(songs => res.json(songs));

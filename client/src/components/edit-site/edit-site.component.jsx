@@ -1,8 +1,9 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import CreateVideoForm from "../create-video-form/create-video-form.component";
 import DeleteVideoForm from "../delete-video-form/delete-video-form.component";
-import { Button } from "react-bootstrap";
 import RegisterForm from "../register-form/register-form.component";
+import CreateSongForm from "../create-song-form/create-song-form.component";
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class EditSite extends React.Component {
     this.state = {
       showAddVideo: false,
       showRegister: false,
-      showDeleteVideo: false
+      showDeleteVideo: false,
+      showAddSong: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -19,7 +21,8 @@ class EditSite extends React.Component {
     this.setState({
       showAddVideo: false,
       showRegister: false,
-      showDeleteVideo: false
+      showDeleteVideo: false,
+      showAddSong: false
     });
     switch (name) {
       case "add-video":
@@ -27,6 +30,9 @@ class EditSite extends React.Component {
         break;
       case "delete-video":
         this.setState({ showDeleteVideo: true });
+        break;
+      case "add-song":
+        this.setState({ showAddSong: true });
         break;
       case "register":
         this.setState({ showRegister: true });
@@ -70,14 +76,14 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="add-a-song"
+              name="add-song"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add a song
             </Button>
             <Button
               onClick={this.handleClick}
-              name="remove-a-song"
+              name="remove-song"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Remove a song
@@ -108,6 +114,7 @@ class EditSite extends React.Component {
           {this.state.showAddVideo ? <CreateVideoForm /> : null}
           {this.state.showRegister ? <RegisterForm /> : null}
           {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
+          {this.state.showAddSong ? <CreateSongForm /> : null}
         </div>
       </div>
     );
