@@ -24,7 +24,7 @@ router.post("/create-video", (req, res) => {
 router.delete("/:id", (req, res) => {
   console.log(req.params.id);
 
-  Video.findOneAndRemove({ _id: req.parms.id }).then(() =>
+  Video.findOneAndRemove({ _id: req.params.id }).then(() =>
     res.json({ success: true })
   );
 });

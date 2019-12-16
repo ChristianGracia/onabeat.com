@@ -28,7 +28,7 @@ router.post(
 router.delete("/:id", (req, res) => {
   console.log(req.params.id);
 
-  Song.findOneAndRemove({ _id: req.parms.id }).then(() =>
+  Song.findOneAndRemove({ _id: req.params.id }).then(() =>
     res.json({ success: true })
   );
 });
