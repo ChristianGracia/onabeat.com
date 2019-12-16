@@ -62,7 +62,13 @@ class CreateVideoForm extends React.Component {
               Unique YouTube Url: found after https://www.youtube.com/watch?v=
             </p>
             https://www.youtube.com/watch?v=
-            <span style={{ backgroundColor: "red", color: "white" }}>
+            <span
+              style={{
+                backgroundColor: "red",
+                color: "white",
+                fontWeight: "bold"
+              }}
+            >
               ZZ5LpwO-An4
             </span>
           </p>

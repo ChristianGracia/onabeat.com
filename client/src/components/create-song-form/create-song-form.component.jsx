@@ -67,13 +67,6 @@ class CreateSongForm extends React.Component {
             onChange={this.onChange}
           />
 
-          <p>
-            <p>
-              Spotify Url: ex:
-              https://open.spotify.com/embed/track/72fYhRjY4wMDYsYNt4pI6p
-            </p>
-          </p>
-
           <TextInput
             placeholder="Spotify url"
             name="songUrl"
