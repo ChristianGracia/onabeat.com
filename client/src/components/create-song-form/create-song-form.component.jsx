@@ -39,9 +39,19 @@ class CreateSongForm extends React.Component {
       "http://www.onabeat.com/api/songs/create-song",
       options
     );
-    // const videos = await response.json();
-    const songs = await response.json();
-    console.log(songs);
+
+    const song = await response.json();
+
+    if (song.name == this.state.name) {
+      alert("Song posted");
+      this.setState({
+        name: "",
+        artist: "",
+        songUrl: ""
+      });
+    } else {
+      alert("Error posting song");
+    }
   }
   render() {
     return (
@@ -96,7 +106,17 @@ class CreateSongForm extends React.Component {
             </p>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
+          >
+            <span>Song name: {this.state.name}</span>
+            <span>Artist: {this.state.artist}</span>
+            <span>Song Url: {this.state.songUrl}</span>
+          </div>
+
+          <div
+            style={{ display: "flex", justifyContent: "center", marginTop: 10 }}
+          >
             <Button type="submit" variant="primary">
               Submit
             </Button>
