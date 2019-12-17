@@ -18,28 +18,35 @@ const HomePage = () => (
         }}
       />
     </div>
-
     <div
-    // className="row"
-    // style={{ justifyContent: "center", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center"
+      }}
     >
-      <SpotifyBox />
-      <div style={{ padding: 10 }}></div>
-      <VideoBox />
+      <div
+      // className="row"
+      // style={{ justifyContent: "center", alignItems: "center" }}
+      >
+        <SpotifyBox />
+        <div style={{ padding: 10 }}></div>
+        <div className="mr-auto">
+          <VideoBox />
+        </div>
+      </div>
+      <div>
+        <p style={{ marginTop: 30, color: "red" }}>
+          Site written by{" "}
+          <a href="http://www.christiangracia.com">Christian Gracia</a>
+          <i
+            class="fab fa-react fa-spin"
+            style={{ color: "#9CFF00", fontWeight: "bold" }}
+          ></i>
+        </p>
+        <a href="http://www.christiangracia.com">christiangracia.com</a>
+      </div>
     </div>
-
-    <p style={{ marginTop: 30, color: "red" }}>
-      Site written by{" "}
-      <a href="http://www.christiangracia.com">Christian Gracia</a>
-      <i
-        class="fab fa-react fa-spin"
-        style={{ color: "#9CFF00", fontWeight: "bold" }}
-      ></i>
-    </p>
-    <a href="http://www.christiangracia.com">christiangracia.com</a>
-
-    <p style={{ fontWeight: "bold" }}></p>
-    <ContentGrid />
   </div>
 );
 export default HomePage;
