@@ -45,7 +45,14 @@ class CreateSongForm extends React.Component {
   }
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
         <form onSubmit={this.onSubmit}>
           <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
             Add a song
@@ -57,6 +64,9 @@ class CreateSongForm extends React.Component {
             type="text"
             value={this.state.name}
             onChange={this.onChange}
+            style={{
+              maxWidth: 320
+            }}
           />
 
           <TextInput
@@ -68,12 +78,23 @@ class CreateSongForm extends React.Component {
           />
 
           <TextInput
-            placeholder="Spotify url"
+            placeholder="Spotify embed url"
             name="songUrl"
             type="text"
             value={this.state.songUrl}
             onChange={this.onChange}
           />
+          <div style={{ marginTop: 20 }}>
+            <p>To get spotify embed url...</p>
+            <p>
+              Right click share and then copy embed code and paste that
+              somewhere
+            </p>
+            <p>Paste the part this red part into spotify embed url field.</p>
+            <p style={{ color: "red", fontWeight: "bold" }}>
+              https://open.spotify.com/embed/track/72fYhRjY4wMDYsYNt4pI6p
+            </p>
+          </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button type="submit" variant="primary">

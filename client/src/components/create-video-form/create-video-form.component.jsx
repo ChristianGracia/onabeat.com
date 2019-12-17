@@ -39,40 +39,44 @@ class CreateVideoForm extends React.Component {
       "http://www.onabeat.com/api/videos/create-video",
       options
     );
-    const videos = await response.json();
-    console.log(videos);
+    const video = await response.json();
+    if (video.name != this.state.name) {
+      alert("Video posted");
+      this.setState({
+        name: "",
+        description: "",
+        videoUrl: ""
+      });
+    } else {
+      alert("error posting video");
+    }
   }
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <form onSubmit={this.onSubmit}>
-          <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-            Add a video
-          </span>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
+        <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+          Add a video
+        </span>
 
+        <form onSubmit={this.onSubmit}>
           <TextInput
             placeholder="Name of video"
             name="name"
             type="text"
             value={this.state.name}
             onChange={this.onChange}
+            style={{ maxWidth: 320 }}
           />
           <p>
-            <p>
-              Unique YouTube Url: found after https://www.youtube.com/watch?v=
-            </p>
-            https://www.youtube.com/watch?v=
-            <span
-              style={{
-                backgroundColor: "red",
-                color: "white",
-                fontWeight: "bold"
-              }}
-            >
-              ZZ5LpwO-An4
-            </span>
+            Enter only the random letters/numbers after www.youtube.com/watch?v=
           </p>
-
           <TextInput
             placeholder="Video youtube url"
             name="videoUrl"
@@ -92,6 +96,26 @@ class CreateVideoForm extends React.Component {
             value={this.state.description}
             onChange={this.onChange}
           />
+
+          <div
+            style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
+          >
+            <span>Video name: {this.state.name}</span>
+            <span>Description: {this.state.description}</span>
+            <span>
+              Video Url: https://www.youtube.com/watch?v={this.state.videoUrl}
+            </span>
+
+            <p
+              style={{
+                color: "red",
+                fontWeight: "bold"
+              }}
+            >
+              Video url should look like =
+              https://www.youtube.com/watch?v=ZZ5LpwO-An4
+            </p>
+          </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button type="submit" variant="primary">
