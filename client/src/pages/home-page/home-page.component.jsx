@@ -31,7 +31,7 @@ const HomePage = () => (
       >
         <SpotifyBox />
         <div style={{ padding: 10 }}></div>
-        <div className="mr-auto">
+        <div>
           <VideoBox />
         </div>
       </div>
