@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const Video = require("../models/Video");
 
@@ -22,11 +23,13 @@ router.post("/create-video", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  console.log(req.params.id);
+  Video.findById(req.params.id)
+    .then(video => video.remove().then(res.json({ sucess: "true" })))
+    .catch(err => res.status(404).json({ videonotfound: "No video found" }));
 
-  Video.findOneAndRemove({ _id: req.params.id }).then(() =>
-    res.json({ success: true })
-  );
+  // Video.findOneAndRemove({ _id: req.params.id }).then(() =>
+  //   res.json({ success: true })
+  // );
 });
 
 module.exports = router;
