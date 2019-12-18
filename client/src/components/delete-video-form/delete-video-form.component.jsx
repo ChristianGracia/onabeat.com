@@ -39,15 +39,10 @@ class DeleteVideoForm extends React.Component {
   }
   async handleDelete(e) {
     const options = {
-      method: "DELETE",
-      headers: {
-        "Content-type": "application/json"
-      }
+      method: "DELETE"
     };
-    const response = await fetch(
-      `http://localhost:3001/api/videos/delete-video/${this.state.currentVidId}`,
-      options
-    );
+    let id = this.state.currentVidId;
+    const response = await fetch(`/api/videos/${id}`, options);
     const videos = await response.json();
     console.log(videos);
   }

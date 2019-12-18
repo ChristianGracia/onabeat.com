@@ -22,9 +22,8 @@ router.post("/create-video", (req, res) => {
   newVideo.save().then(videos => res.json(videos));
 });
 
-router.delete("/api/videos/:id", (req, res) => {
-  console.log("ddd");
-  console.log(req.params.id);
+router.delete("/:id", (req, res) => {
+  console.log(req.body);
   Video.findById(req.params.id)
     .then(video => video.remove().then(res.json({ sucess: "true" })))
     .catch(err => res.status(404).json({ videonotfound: "No video found" }));
