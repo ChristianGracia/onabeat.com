@@ -63,7 +63,12 @@ class CreateSongForm extends React.Component {
           alignItems: "center"
         }}
       >
-        <form onSubmit={this.onSubmit}>
+        <form
+          onSubmit={this.onSubmit}
+          style={{
+            maxWidth: 320
+          }}
+        >
           <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
             Add a song
           </span>
@@ -74,9 +79,6 @@ class CreateSongForm extends React.Component {
             type="text"
             value={this.state.name}
             onChange={this.onChange}
-            style={{
-              maxWidth: 320
-            }}
           />
 
           <TextInput
@@ -101,9 +103,15 @@ class CreateSongForm extends React.Component {
               somewhere
             </p>
             <p>Paste the part this red part into spotify embed url field.</p>
-            <p style={{ color: "red", fontWeight: "bold" }}>
-              https://open.spotify.com/embed/track/72fYhRjY4wMDYsYNt4pI6p
-            </p>
+            <span
+              style={{
+                color: "red",
+                fontWeight: "bold",
+                width: "99%"
+              }}
+            >
+              https://open.spotify.com/embed/ track/72fYhRjY4wMDYsYNt4pI6p
+            </span>
           </div>
 
           <div
