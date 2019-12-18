@@ -39,16 +39,21 @@ class DeleteSongForm extends React.Component {
   }
   async handleDelete(e) {
     const options = {
-      method: "DELETE",
-      headers: { "Content-type": "application/json" }
+      method: "DELETE"
     };
-    const response = await fetch(
-      `http://www.onabeat.com/api/songs/delete-song/${this.state.currentSongId}`,
-      options
-    );
-
+    let id = this.state.currentVidId;
+    const response = await fetch(`/api/songs/${id}`, options);
     const songs = await response.json();
     console.log(songs);
+    if (songs.success != undefined) {
+      alert("delete song sucess");
+      this.setState({
+        currentSongName: "",
+        currentSongId: ""
+      });
+    } else {
+      alert("error");
+    }
   }
 
   render() {

@@ -43,8 +43,18 @@ class DeleteVideoForm extends React.Component {
     };
     let id = this.state.currentVidId;
     const response = await fetch(`/api/videos/${id}`, options);
-    const videos = await response.json();
-    console.log(videos);
+    const video = await response.json();
+    console.log(video);
+
+    if (video.success != undefined) {
+      alert("delete video sucess");
+      this.setState({
+        currentVidName: "",
+        currentVidId: ""
+      });
+    } else {
+      alert("error");
+    }
   }
 
   render() {
