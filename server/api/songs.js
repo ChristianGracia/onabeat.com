@@ -28,7 +28,7 @@ router.post(
 router.delete("/:id", (req, res) => {
   console.log(req.body);
   Song.findById(req.params.id)
-    .then(song => song.remove().then(res.json({ sucess: "true" })))
+    .then(song => song.remove().then(res.json({ success: "true" })))
     .catch(err => res.status(404).json({ videonotfound: "No song found" }));
   res.send;
 });

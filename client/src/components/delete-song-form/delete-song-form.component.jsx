@@ -41,11 +41,11 @@ class DeleteSongForm extends React.Component {
     const options = {
       method: "DELETE"
     };
-    let id = this.state.currentVidId;
+    let id = this.state.currentSongId;
     const response = await fetch(`/api/songs/${id}`, options);
     const song = await response.json();
     console.log(song);
-    if (song.success != undefined) {
+    if (song.success == "true") {
       alert("delete song success");
       this.setState({
         currentSongName: "",

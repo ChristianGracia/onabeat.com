@@ -25,12 +25,9 @@ router.post("/create-video", (req, res) => {
 router.delete("/:id", (req, res) => {
   console.log(req.body);
   Video.findById(req.params.id)
-    .then(video => video.remove().then(res.json({ sucess: "true" })))
+    .then(video => video.remove().then(res.json({ success: "true" })))
     .catch(err => res.status(404).json({ videonotfound: "No video found" }));
-
-  // Video.findOneAndRemove({ _id: req.params.id }).then(() =>
-  //   res.json({ success: true })
-  // );
+  res.send;
 });
 
 module.exports = router;
