@@ -84,13 +84,14 @@ class CreateVideoForm extends React.Component {
             value={this.state.videoUrl}
             onChange={this.onChange}
           />
-
-          <span style={{ color: "black", fontWeight: "bold", fontSize: 16 }}>
-            Optional
-          </span>
+          <div>
+            <span style={{ marginBottom: 15, fontWeight: "bold" }}>
+              Current Url: www.youtube.com/watch?v={this.state.videoUrl}
+            </span>
+          </div>
 
           <TextInput
-            placeholder="Description of video"
+            placeholder="Description of video (optional)"
             name="description"
             type="text"
             value={this.state.description}
