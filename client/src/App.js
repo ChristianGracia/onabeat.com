@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import HomePage from "./pages/home-page/home-page.component";
 import LoginPage from "./pages/login-page/login-page.component";
 import AboutPage from "./pages/about-page/about-page.component";
-import RegisterPage from "./pages/register-page/register-page.component";
+// import RegisterPage from "./pages/register-page/register-page.component";
 import ArtistsPage from "./pages/artists-page/artists-page.component";
 import DashboardPage from "./pages/dashboard-page/dashboard-page.component";
 
@@ -26,12 +26,12 @@ function App() {
         <Route exact path="/artists" component={ArtistsPage} />
       </Switch>
       {/* for local */}
-      {/* <Route exact path="/dashboard" component={DashboardPage} /> */}
+      <Route exact path="/dashboard" component={DashboardPage} />
 
       {/* for heroku */}
-      <Switch>
+      {/* <Switch>
         <PrivateRoute exact path="/dashboard" component={DashboardPage} />
-      </Switch>
+      </Switch> */}
 
       <div style={{ paddingBottom: 300 }}></div>
     </div>

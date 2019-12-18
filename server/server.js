@@ -6,6 +6,15 @@ const path = require("path");
 
 const app = express();
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 const videos = require("./api/videos");
 const songs = require("./api/songs");
 const login = require("./api/login");
@@ -39,10 +48,10 @@ app.listen(app.get("port"), () => {
 });
 
 //local
-// const database = require("./config/keys").mongoURI;
+const database = require("./config/keys").mongoURI;
 
 // //heroku
-const database = process.env.MONGO;
+// const database = process.env.MONGO;
 // console.log(database);
 
 mongoose

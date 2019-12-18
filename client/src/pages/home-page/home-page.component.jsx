@@ -3,7 +3,7 @@ import logo from "../../assets/logo.PNG";
 import "./home-page.styles.scss";
 import VideoBox from "../../components/video-box/video-box.component";
 import SpotifyBox from "../../components/spotify-box/spotify-box.component";
-import ContentGrid from "../../components/grid/grid-component";
+// import ContentGrid from "../../components/grid/grid-component";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>

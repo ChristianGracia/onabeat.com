@@ -1,6 +1,6 @@
 import React from "react";
 import VideoPlayer from "../video-player/video-player.component";
-import AutoResponsive from "autoresponsive-react";
+// import AutoResponsive from "autoresponsive-react";
 
 class VideoBox extends React.Component {
   constructor(props) {

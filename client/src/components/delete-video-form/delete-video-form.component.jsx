@@ -1,5 +1,5 @@
 import React from "react";
-import TextInput from "../common/text-input/text-input.component";
+// import TextInput from "../common/text-input/text-input.component";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 import { Button } from "react-bootstrap";
@@ -41,12 +41,11 @@ class DeleteVideoForm extends React.Component {
     const options = {
       method: "DELETE",
       headers: {
-        Accept: "application/json",
         "Content-type": "application/json"
       }
     };
     const response = await fetch(
-      `/api/videos/delete-video/${this.state.currentVidId}`,
+      `http://localhost:3001/api/videos/delete-video/${this.state.currentVidId}`,
       options
     );
     const videos = await response.json();
@@ -81,7 +80,7 @@ class DeleteVideoForm extends React.Component {
         </DropdownButton>
         <div>
           <p>{this.state.currentVid}</p>
-          {this.state.currentVidName != "" ? (
+          {this.state.currentVidName !== "" ? (
             <Button onClick={this.handleDelete} variant="danger">
               Delete Video
             </Button>

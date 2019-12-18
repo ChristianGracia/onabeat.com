@@ -1,5 +1,5 @@
 import React from "react";
-import TextInput from "../common/text-input/text-input.component";
+// import TextInput from "../common/text-input/text-input.component";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 import { Button } from "react-bootstrap";
@@ -79,7 +79,7 @@ class DeleteSongForm extends React.Component {
         </DropdownButton>
         <div>
           <p>{this.state.currentSong}</p>
-          {this.state.currentSongName != "" ? (
+          {this.state.currentSongName !== "" ? (
             <Button onClick={this.handleDelete} variant="danger">
               Delete Song
             </Button>

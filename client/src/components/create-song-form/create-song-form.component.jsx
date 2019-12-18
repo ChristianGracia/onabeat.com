@@ -42,7 +42,7 @@ class CreateSongForm extends React.Component {
 
     const song = await response.json();
 
-    if (song.name == this.state.name) {
+    if (song.name === this.state.name) {
       alert("Song posted");
       this.setState({
         name: "",

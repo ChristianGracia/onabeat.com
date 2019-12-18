@@ -40,7 +40,7 @@ class CreateVideoForm extends React.Component {
       options
     );
     const video = await response.json();
-    if (video.name == this.state.name) {
+    if (video.name === this.state.name) {
       alert("Video posted");
       this.setState({
         name: "",
