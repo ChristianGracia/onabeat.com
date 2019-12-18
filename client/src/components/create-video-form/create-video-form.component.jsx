@@ -84,8 +84,8 @@ class CreateVideoForm extends React.Component {
             value={this.state.videoUrl}
             onChange={this.onChange}
           />
-          <div>
-            <span style={{ marginBottom: 15, fontWeight: "bold" }}>
+          <div style={{ marginBottom: 15 }}>
+            <span style={{ fontWeight: "bold" }}>
               Current Url: www.youtube.com/watch?v={this.state.videoUrl}
             </span>
           </div>
