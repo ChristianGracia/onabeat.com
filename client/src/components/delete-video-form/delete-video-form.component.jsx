@@ -47,7 +47,7 @@ class DeleteVideoForm extends React.Component {
     console.log(video);
 
     if (video.success != undefined) {
-      alert("delete video sucess");
+      alert("delete video success");
       this.setState({
         currentVidName: "",
         currentVidId: ""
