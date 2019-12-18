@@ -22,10 +22,15 @@ class CreateSongForm extends React.Component {
   async onSubmit(e) {
     e.preventDefault();
 
+    let url = this.state.songUrl
+      .slice(13)
+      .split(" ")[0]
+      .slice(0, -1);
+
     const newSong = {
       name: this.state.name,
       artist: this.state.artist,
-      songUrl: this.state.songUrl
+      songUrl: url
     };
     console.log(newSong);
 
@@ -99,19 +104,9 @@ class CreateSongForm extends React.Component {
           <div style={{ marginTop: 20 }}>
             <p>To get spotify embed url...</p>
             <p>
-              Right click share and then copy embed code and paste that
-              somewhere
+              Right click share and then copy embed code and paste that into the
+              spotify embed url field.
             </p>
-            <p>Paste the part this red part into spotify embed url field.</p>
-            <span
-              style={{
-                color: "red",
-                fontWeight: "bold",
-                width: "99%"
-              }}
-            >
-              https://open.spotify.com/embed/ track/72fYhRjY4wMDYsYNt4pI6p
-            </span>
           </div>
 
           <div
@@ -119,7 +114,7 @@ class CreateSongForm extends React.Component {
           >
             <span>Song name: {this.state.name}</span>
             <span>Artist: {this.state.artist}</span>
-            <span>Song Url: {this.state.songUrl}</span>
+            <span>Spotify embed url: {this.state.songUrl}</span>
           </div>
 
           <div
