@@ -2,6 +2,7 @@ import React from "react";
 
 import "./about-page.styles.scss";
 import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -25,26 +26,35 @@ const AboutPage = () => (
         justifyContent: "center",
         alignItems: "center",
         padding: 30,
-        color: "red"
+        color: "red",
+        fontSize: 20
       }}
     >
-      <div style={{}}>
-        <Fade left>
+      <Pulse>
+        {" "}
+        <i style={{ fontSize: 70 }} class="fas fa-drum"></i>
+      </Pulse>
+      <Fade left>
+        <div style={{ marginTop: 30 }}>
           <p style={{ fontSize: 27 }}>
             <span style={{ fontWeight: "bold" }}>On A Beat</span> is a
             performance company...{" "}
           </p>
-        </Fade>
-      </div>
+        </div>{" "}
+      </Fade>
       <Fade right>
-        <div>
-          <p style={{ marginTop: 20 }}>
-            We create shows for all occasions (parties dinners dances religious
-            services corporate functions &c) and locations (clubs, bars,
-            weddings, galleries, churches corners.){" "}
-          </p>{" "}
+        <div style={{}}>
+          <p style={{ marginTop: 20 }}>We create shows for...</p>
+          <p>
+            all occasions (parties dinners dances religious services corporate
+            functions &c)
+          </p>
+          <p>
+            and locations (clubs, bars, weddings, galleries, churches, corners.){" "}
+          </p>
         </div>
       </Fade>
+      <i style={{ fontSize: 60 }} class="fas fa-guitar"></i>
       <Fade left>
         <div style={{ marginTop: 20 }}>
           <p>
