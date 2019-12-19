@@ -19,7 +19,9 @@ const LoginPage = () => (
         }}
       />
     </div>
-    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>
+    <p
+      style={{ color: "red", fontWeight: "bold", fontSize: 30, marginTop: 20 }}
+    >
       Site Dashboard Login
     </p>
     <LoginForm />

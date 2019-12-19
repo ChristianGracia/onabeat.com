@@ -3,6 +3,8 @@ import React from "react";
 import "./about-page.styles.scss";
 import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
+import Zoom from "react-reveal/Zoom";
+import RubberBand from "react-reveal/RubberBand";
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -43,23 +45,24 @@ const AboutPage = () => (
         </div>{" "}
       </Fade>
       <Fade right>
-        <div style={{}}>
+        <div style={{ marginTop: 20 }}>
           {" "}
           <Fade top cascade>
-            <p style={{ marginTop: 20 }}>We create shows for...</p>
-
+            <p style={{}}>We create shows for all ...</p>
+            <p style={{ fontWeight: "bold" }}> Occasions</p>
             <p>
-              all occasions (parties dinners dances religious services corporate
-              functions &c)
+              (parties dinners dances religious services corporate functions &c)
             </p>
-            <p>
-              and locations (clubs, bars, weddings, galleries, churches,
-              corners.){" "}
-            </p>
+            <span>+</span> <p style={{ fontWeight: "bold" }}>Locations</p>
+            <p>(clubs, bars, weddings, galleries, churches, corners.) </p>
           </Fade>
         </div>
       </Fade>
-      <i style={{ fontSize: 60, margin: 20 }} class="fas fa-guitar"></i>
+      <RubberBand>
+        <div>
+          <i style={{ fontSize: 60, margin: 20 }} class="fas fa-guitar"></i>
+        </div>{" "}
+      </RubberBand>
       <Fade top cascade>
         <div style={{ marginTop: 20 }}>
           <p>
@@ -78,8 +81,18 @@ const AboutPage = () => (
           </p>
         </div>
       </Fade>
+
+      <i
+        style={{ fontSize: 60, margin: 20 }}
+        class="fas fa-globe-americas fa-pulse"
+      ></i>
+
       <div style={{ marginTop: 20 }}>
-        <span style={{ fontWeight: "bold" }}>More content coming soon</span>
+        <Zoom left>
+          <span style={{ fontWeight: "bold", fontSize: 40 }}>
+            More content coming soon
+          </span>
+        </Zoom>
       </div>
     </div>
   </div>
