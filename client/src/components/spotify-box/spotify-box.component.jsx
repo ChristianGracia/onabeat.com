@@ -17,13 +17,22 @@ class SpotifyBox extends React.Component {
       <div
         style={{
           display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around"
+          alignItems: "center",
+          justifyContent: "center",
+          flexWrap: "wrap"
         }}
       >
         {this.state.songs.map(song => {
           return (
-            <div key={song.name}>
+            <div
+              key={song.name}
+              style={{
+                width: "33%",
+                minWidth: 320,
+                height: 400,
+                marginTop: 15
+              }}
+            >
               {" "}
               <div
                 style={{
@@ -40,7 +49,17 @@ class SpotifyBox extends React.Component {
                     paddingBottom: 20
                   }}
                 >
-                  {song.name} by {song.artist}
+                  {song.name}
+                </span>
+                <span
+                  style={{
+                    color: "red",
+
+                    fontSize: 15,
+                    paddingBottom: 20
+                  }}
+                >
+                  {song.artist}
                 </span>
               </div>
               <SpotifyPlayer key={song.name} songUrl={song.songUrl} />

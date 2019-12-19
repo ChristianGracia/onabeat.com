@@ -6,6 +6,7 @@ import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 // import ContentGrid from "../../components/grid/grid-component";
 import Signature from "../../components/common/signature/Signature.component";
 import Bounce from "react-reveal/Bounce";
+import Fade from "react-reveal/Fade";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -33,9 +34,28 @@ const HomePage = () => (
       // className="row"
       // style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <SpotifyBox />
+        <Fade left>
+          <div style={{}}>
+            <p
+              style={{
+                fontSize: 40,
+                fontWeight: "bold",
+                color: "#F8D100"
+              }}
+            >
+              Music
+            </p>
+          </div>
+        </Fade>
+        <div style={{ margin: 20 }}>
+          <SpotifyBox />
+        </div>
         <div style={{ padding: 10 }}></div>
         <div>
+          <p style={{ fontSize: 40, fontWeight: "bold", color: "#F8D100" }}>
+            Videos
+          </p>
+
           <VideoBox />
         </div>
       </div>
