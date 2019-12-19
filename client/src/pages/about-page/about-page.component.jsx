@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.PNG";
 import "./about-page.styles.scss";
+import Fade from "react-reveal/Fade";
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -28,10 +29,12 @@ const AboutPage = () => (
       }}
     >
       <div style={{}}>
-        <p style={{ fontSize: 27 }}>
-          <span style={{ fontWeight: "bold" }}>On A Beat</span> is a performance
-          company...{" "}
-        </p>
+        <Fade left>
+          <p style={{ fontSize: 27 }}>
+            <span style={{ fontWeight: "bold" }}>On A Beat</span> is a
+            performance company...{" "}
+          </p>
+        </Fade>
       </div>
       <div>
         <p style={{ marginTop: 20 }}>
