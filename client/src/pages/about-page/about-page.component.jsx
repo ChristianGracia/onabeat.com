@@ -44,18 +44,23 @@ const AboutPage = () => (
       </Fade>
       <Fade right>
         <div style={{}}>
-          <p style={{ marginTop: 20 }}>We create shows for...</p>
-          <p>
-            all occasions (parties dinners dances religious services corporate
-            functions &c)
-          </p>
-          <p>
-            and locations (clubs, bars, weddings, galleries, churches, corners.){" "}
-          </p>
+          {" "}
+          <Fade top cascade>
+            <p style={{ marginTop: 20 }}>We create shows for...</p>
+
+            <p>
+              all occasions (parties dinners dances religious services corporate
+              functions &c)
+            </p>
+            <p>
+              and locations (clubs, bars, weddings, galleries, churches,
+              corners.){" "}
+            </p>
+          </Fade>
         </div>
       </Fade>
-      <i style={{ fontSize: 60 }} class="fas fa-guitar"></i>
-      <Fade left>
+      <i style={{ fontSize: 60, margin: 20 }} class="fas fa-guitar"></i>
+      <Fade top cascade>
         <div style={{ marginTop: 20 }}>
           <p>
             Our ultimate goal is to create pan American symphonies, musicals,
@@ -64,8 +69,7 @@ const AboutPage = () => (
             lovers, we will play almost anything almost any where.{" "}
           </p>
         </div>
-      </Fade>
-      <Fade right>
+
         <div style={{ marginTop: 20 }}>
           <p>
             Both more and less than a band: we feature a revolving group of
@@ -74,6 +78,9 @@ const AboutPage = () => (
           </p>
         </div>
       </Fade>
+      <div style={{ marginTop: 20 }}>
+        <span style={{ fontWeight: "bold" }}>More content coming soon</span>
+      </div>
     </div>
   </div>
 );
