@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
 import Zoom from "react-reveal/Zoom";
 import RubberBand from "react-reveal/RubberBand";
+import Signature from "../../components/common/signature/Signature.component";
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -45,7 +46,7 @@ const AboutPage = () => (
         </div>{" "}
       </Fade>
       <Fade right>
-        <div style={{ marginTop: 20 }}>
+        <div style={{ marginTop: 10 }}>
           {" "}
           <Fade top cascade>
             <p style={{}}>We create shows for all ...</p>
@@ -93,6 +94,9 @@ const AboutPage = () => (
             More content coming soon
           </span>
         </Zoom>
+      </div>
+      <div>
+        <Signature />
       </div>
     </div>
   </div>

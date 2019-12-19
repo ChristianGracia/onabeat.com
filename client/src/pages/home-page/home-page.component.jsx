@@ -4,6 +4,7 @@ import "./home-page.styles.scss";
 import VideoBox from "../../components/video-box/video-box.component";
 import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 // import ContentGrid from "../../components/grid/grid-component";
+import Signature from "../../components/common/signature/Signature.component";
 import Bounce from "react-reveal/Bounce";
 
 const HomePage = () => (
@@ -39,15 +40,7 @@ const HomePage = () => (
         </div>
       </div>
       <div>
-        <p style={{ marginTop: 30, color: "red" }}>
-          Site written by{" "}
-          <a href="http://www.christiangracia.com">Christian Gracia</a>
-          <i
-            class="fab fa-react fa-spin"
-            style={{ color: "#9CFF00", fontWeight: "bold" }}
-          ></i>
-        </p>
-        <a href="http://www.christiangracia.com">christiangracia.com</a>
+        <Signature />
       </div>
     </div>
   </div>
