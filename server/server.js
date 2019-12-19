@@ -54,7 +54,6 @@ app.listen(app.get("port"), () => {
 
 // //heroku
 const database = process.env.MONGO;
-// console.log(database);
 
 mongoose
   .connect(database)
