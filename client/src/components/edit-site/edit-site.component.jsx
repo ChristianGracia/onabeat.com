@@ -6,6 +6,7 @@ import RegisterForm from "../register-form/register-form.component";
 import CreateSongForm from "../create-song-form/create-song-form.component";
 import DeleteSongForm from "../delete-song-form/delete-song-form.component";
 import ChangeLayoutForm from "../change-layout-form/change-layout-form.component";
+import CreateSoundcloudForm from "../create-soundcloud-form/create-soundcloud-form.component";
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -15,8 +16,10 @@ class EditSite extends React.Component {
       showRegister: false,
       showDeleteVideo: false,
       showAddSong: false,
+      showAddSoundCloud: false,
       showDeleteSong: false,
-      showChangeLayout: false
+      showChangeLayout: false,
+      songSelect: true
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -28,7 +31,8 @@ class EditSite extends React.Component {
       showDeleteVideo: false,
       showAddSong: false,
       showDeleteSong: false,
-      showChangeLayout: false
+      showChangeLayout: false,
+      showAddSoundCloud: false
     });
     switch (name) {
       case "add-video":
@@ -39,6 +43,9 @@ class EditSite extends React.Component {
         break;
       case "add-song":
         this.setState({ showAddSong: true });
+        break;
+      case "add-song-soundcloud":
+        this.setState({ showAddSoundCloud: true });
         break;
       case "delete-song":
         this.setState({ showDeleteSong: true });
@@ -60,12 +67,14 @@ class EditSite extends React.Component {
           style={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
+            flexWrap: "wrap",
+            textAlign: "center"
           }}
         >
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-              Video
+              Youtube
             </span>
 
             <Button
@@ -85,12 +94,32 @@ class EditSite extends React.Component {
           </div>{" "}
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-              Music
+              Spotify
             </span>
 
             <Button
               onClick={this.handleClick}
               name="add-song"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Add a song
+            </Button>
+            <Button
+              onClick={this.handleClick}
+              name="delete-song"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Remove a song
+            </Button>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+              SoundCloud
+            </span>
+
+            <Button
+              onClick={this.handleClick}
+              name="add-song-soundcloud"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add a song
@@ -129,6 +158,7 @@ class EditSite extends React.Component {
           {this.state.showRegister ? <RegisterForm /> : null}
           {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
           {this.state.showAddSong ? <CreateSongForm /> : null}{" "}
+          {this.state.showAddSoundCloud ? <CreateSoundcloudForm /> : null}{" "}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
           {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
         </div>
