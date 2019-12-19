@@ -16,6 +16,7 @@ const ArtistsPage = () => (
       />
     </div> */}
     <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Artists</p>
+    <p style={{ fontWeight: "bold", marginTop: 20 }}>COMING SOON</p>
   </div>
 );
 export default ArtistsPage;
