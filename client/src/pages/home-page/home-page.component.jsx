@@ -4,20 +4,23 @@ import "./home-page.styles.scss";
 import VideoBox from "../../components/video-box/video-box.component";
 import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 // import ContentGrid from "../../components/grid/grid-component";
+import Bounce from "react-reveal/Bounce";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
-    <div className="logo mr-auto ml-auto">
-      <div
-        className="logo-image"
-        style={{
-          backgroundImage: `url(
+    <Bounce left>
+      <div className="logo mr-auto ml-auto">
+        <div
+          className="logo-image"
+          style={{
+            backgroundImage: `url(
             ${logo}
           )`,
-          backgroundRepeat: "no-repeat"
-        }}
-      />
-    </div>
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+      </div>
+    </Bounce>
     <div
       style={{
         display: "flex",
