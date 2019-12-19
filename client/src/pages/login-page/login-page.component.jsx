@@ -4,6 +4,7 @@ import "./login-page.styles.scss";
 import LoginForm from "../../components/login-form/login-form.component";
 import LightSpeed from "react-reveal/LightSpeed";
 import Tada from "react-reveal/Tada";
+import { Button } from "react-bootstrap";
 
 const LoginPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -25,7 +26,7 @@ const LoginPage = () => (
     <LightSpeed left>
       <p style={{ marginTop: 20, color: "red", fontSize: 14 }}>
         Only <span style={{ fontWeight: "bold", color: "red" }}>On a Beat</span>{" "}
-        members have the ability create accounts
+        members are allowed to create accounts
       </p>
     </LightSpeed>
     <Tada>
@@ -34,6 +35,12 @@ const LoginPage = () => (
         For now...
       </p>
     </Tada>
+    <Button
+      variant="danger"
+      onClick={() => (window.location.href = "http://onabeat.com")}
+    >
+      Go back to home
+    </Button>
   </div>
 );
 export default LoginPage;
