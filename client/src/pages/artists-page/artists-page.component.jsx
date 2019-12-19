@@ -4,7 +4,7 @@ import "./artists-page.styles.scss";
 
 const ArtistsPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
-    <div className="logo mr-auto ml-auto">
+    {/* <div className="logo mr-auto ml-auto">
       <div
         className="logo-image"
         style={{
@@ -14,7 +14,7 @@ const ArtistsPage = () => (
           backgroundRepeat: "no-repeat"
         }}
       />
-    </div>
+    </div> */}
     <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Artists</p>
   </div>
 );

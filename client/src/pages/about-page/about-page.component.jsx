@@ -4,8 +4,8 @@ import "./about-page.styles.scss";
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
-    <div className="logo mr-auto ml-auto">
-      <div
+    {/* <div className="logo mr-auto ml-auto"> */}
+    {/* <div
         className="logo-image"
         style={{
           backgroundImage: `url(
@@ -14,8 +14,8 @@ const AboutPage = () => (
           backgroundRepeat: "no-repeat"
         }}
       />
-    </div>
-    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>About</p>
+    </div> */}
+    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>About Us</p>
 
     <div
       style={{
@@ -30,7 +30,7 @@ const AboutPage = () => (
       <div style={{}}>
         <p style={{ fontSize: 27 }}>
           <span style={{ fontWeight: "bold" }}>On A Beat</span> is a performance
-          company.{" "}
+          company...{" "}
         </p>
       </div>
       <div>
