@@ -21,6 +21,12 @@ class CreateSoundCloudForm extends React.Component {
   }
   async onSubmit(e) {
     e.preventDefault();
+    console.log(
+      this.state.songUrl
+        .split(" ")[6]
+        .substring(5)
+        .split('"')[0]
+    );
 
     let url = this.state.songUrl
       .slice(13)

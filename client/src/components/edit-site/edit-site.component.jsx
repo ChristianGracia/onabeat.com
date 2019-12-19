@@ -157,8 +157,8 @@ class EditSite extends React.Component {
           {this.state.showAddVideo ? <CreateVideoForm /> : null}
           {this.state.showRegister ? <RegisterForm /> : null}
           {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
-          {this.state.showAddSpotify ? <CreateSpotifyForm /> : null}{" "}
-          {this.state.showAddSoundCloud ? <CreateSoundcloudForm /> : null}{" "}
+          {this.state.showAddSpotify ? <CreateSpotifyForm /> : null}
+          {this.state.showAddSoundCloud ? <CreateSoundcloudForm /> : null}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
           {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
         </div>
