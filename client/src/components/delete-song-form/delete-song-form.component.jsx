@@ -22,7 +22,7 @@ class DeleteSongForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   async componentDidMount() {
-    const response = await fetch("api/songs/all");
+    const response = await fetch("http://www.onabeat.com/api/songs/all");
     const songs = await response.json();
 
     this.setState({ songs: songs });
@@ -42,7 +42,10 @@ class DeleteSongForm extends React.Component {
       method: "DELETE"
     };
     let id = this.state.currentSongId;
-    const response = await fetch(`/api/songs/${id}`, options);
+    const response = await fetch(
+      `http://www.onabeat.com/api/songs/${id}`,
+      options
+    );
     const song = await response.json();
     console.log(song);
     if (song.success === "true") {
