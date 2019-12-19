@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import CreateVideoForm from "../create-video-form/create-video-form.component";
 import DeleteVideoForm from "../delete-video-form/delete-video-form.component";
 import RegisterForm from "../register-form/register-form.component";
-import CreateSongForm from "../create-song-form/create-song-form.component";
+import CreateSpotifyForm from "../create-spotify-form/create-spotify-form.component";
 import DeleteSongForm from "../delete-song-form/delete-song-form.component";
 import ChangeLayoutForm from "../change-layout-form/change-layout-form.component";
 import CreateSoundcloudForm from "../create-soundcloud-form/create-soundcloud-form.component";
@@ -15,7 +15,7 @@ class EditSite extends React.Component {
       showAddVideo: false,
       showRegister: false,
       showDeleteVideo: false,
-      showAddSong: false,
+      showAddSpotify: false,
       showAddSoundCloud: false,
       showDeleteSong: false,
       showChangeLayout: false,
@@ -29,7 +29,7 @@ class EditSite extends React.Component {
       showAddVideo: false,
       showRegister: false,
       showDeleteVideo: false,
-      showAddSong: false,
+      showAddSpotify: false,
       showDeleteSong: false,
       showChangeLayout: false,
       showAddSoundCloud: false
@@ -41,8 +41,8 @@ class EditSite extends React.Component {
       case "delete-video":
         this.setState({ showDeleteVideo: true });
         break;
-      case "add-song":
-        this.setState({ showAddSong: true });
+      case "add-song-spotify":
+        this.setState({ showAddSpotify: true });
         break;
       case "add-song-soundcloud":
         this.setState({ showAddSoundCloud: true });
@@ -99,7 +99,7 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="add-song"
+              name="add-song-spotify"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add a song
@@ -157,7 +157,7 @@ class EditSite extends React.Component {
           {this.state.showAddVideo ? <CreateVideoForm /> : null}
           {this.state.showRegister ? <RegisterForm /> : null}
           {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
-          {this.state.showAddSong ? <CreateSongForm /> : null}{" "}
+          {this.state.showAddSpotify ? <CreateSpotifyForm /> : null}{" "}
           {this.state.showAddSoundCloud ? <CreateSoundcloudForm /> : null}{" "}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
           {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}

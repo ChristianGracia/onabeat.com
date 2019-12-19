@@ -3,7 +3,7 @@ import TextInput from "../common/text-input/text-input.component";
 
 import { Button } from "react-bootstrap";
 
-class CreateSongForm extends React.Component {
+class CreateSpotifyForm extends React.Component {
   constructor() {
     super();
 
@@ -130,4 +130,4 @@ class CreateSongForm extends React.Component {
   }
 }
 
-export default CreateSongForm;
+export default CreateSpotifyForm;
