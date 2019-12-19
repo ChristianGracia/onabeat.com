@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.PNG";
+// import logo from "../../assets/logo.PNG";
 import "./dashboard-page.styles.scss";
 import EditSite from "../../components/edit-site/edit-site.component";
 
