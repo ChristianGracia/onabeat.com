@@ -1,6 +1,5 @@
 import React from "react";
 import VideoPlayer from "../video-player/video-player.component";
-// import AutoResponsive from "autoresponsive-react";
 
 class VideoBox extends React.Component {
   constructor(props) {
@@ -23,17 +22,6 @@ class VideoBox extends React.Component {
           flexWrap: "wrap"
         }}
       >
-        {/* <AutoResponsive
-          ref="container"
-          align="center"
-          style={
-            {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }
-          }
-        > */}
         {this.state.videos.map(video => {
           return (
             <div
@@ -80,7 +68,6 @@ class VideoBox extends React.Component {
             </div>
           );
         })}
-        {/* </AutoResponsive> */}
       </div>
     );
   }
