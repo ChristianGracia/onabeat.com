@@ -5,7 +5,7 @@ import EditSite from "../../components/edit-site/edit-site.component";
 
 const DashboardPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
-    <div className="logo mr-auto ml-auto">
+    {/* <div className="logo mr-auto ml-auto">
       <div
         className="logo-image"
         style={{
@@ -15,7 +15,7 @@ const DashboardPage = () => (
           backgroundRepeat: "no-repeat"
         }}
       />
-    </div>
+    </div> */}
     <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>Dashboard</p>
 
     <EditSite />
