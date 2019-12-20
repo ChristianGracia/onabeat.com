@@ -47,7 +47,7 @@ const HomePage = () => (
             </p>
           </div>
         </Fade>
-        <div style={{ margin: 20 }}>
+        <div style={{ margin: 20, marginTop: 30 }}>
           <SpotifyBox />
         </div>
         <div style={{ padding: 10 }}></div>
