@@ -75,47 +75,10 @@ class CreateBlockForm extends React.Component {
                     }}
                 >
                     <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-                        Add a song
+                        Add a content block
           </span>
 
-                    <TextInput
-                        placeholder="Name of song"
-                        name="name"
-                        type="text"
-                        value={this.state.name}
-                        onChange={this.onChange}
-                    />
 
-                    <TextInput
-                        placeholder="Artist name"
-                        name="artist"
-                        type="text"
-                        value={this.state.artist}
-                        onChange={this.onChange}
-                    />
-
-                    <TextInput
-                        placeholder="Soundcloud embed url"
-                        name="songUrl"
-                        type="text"
-                        value={this.state.songUrl}
-                        onChange={this.onChange}
-                    />
-                    <div style={{ marginTop: 20 }}>
-                        <p>To get soundcloud embed url...</p>
-                        <p>
-                            Right click share and then copy embed code and paste that into the
-                            soundcloud embed url field.
-            </p>
-                    </div>
-
-                    <div
-                        style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
-                    >
-                        <span>Song name: {this.state.name}</span>
-                        <span>Artist: {this.state.artist}</span>
-                        <span>soundcloud embed url: {this.state.songUrl}</span>
-                    </div>
 
                     <div
                         style={{ display: "flex", justifyContent: "center", marginTop: 10 }}
