@@ -8,7 +8,7 @@ export default class Header extends Component {
         <Navbar
           style={{ justifyContent: "right", backgroundColor: "transparent" }}
         >
-          <Navbar.Brand href="/" style={{ color: "red" }}>
+          <Navbar.Brand href="/" style={{ color: "black" }}>
             Home{" "}
             <i
               className="fas fa-compact-disc fa-spin"
@@ -20,13 +20,13 @@ export default class Header extends Component {
           </Navbar.Brand>
 
           <Nav className="ml-auto">
-            <Nav.Link href="/artists" style={{ color: "red" }}>
+            <Nav.Link href="/artists" style={{ color: "black" }}>
               Artists
             </Nav.Link>
-            <Nav.Link href="/about" style={{ color: "red" }}>
+            <Nav.Link href="/about" style={{ color: "black" }}>
               About
             </Nav.Link>
-            <Nav.Link href="/login" style={{ color: "red" }}>
+            <Nav.Link href="/login" style={{ color: "black" }}>
               Login
             </Nav.Link>
           </Nav>

@@ -8,9 +8,7 @@ class CreateBlockForm extends React.Component {
         super();
 
         this.state = {
-            name: "",
-            artist: "",
-            songUrl: ""
+
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
