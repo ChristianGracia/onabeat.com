@@ -53,7 +53,7 @@ class SpotifyBox extends React.Component {
                 </span>
                 <span
                   style={{
-                    color: "red",
+                    color: "black",
 
                     fontSize: 15,
                     paddingBottom: 20
