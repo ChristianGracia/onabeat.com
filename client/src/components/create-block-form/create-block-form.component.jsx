@@ -20,41 +20,9 @@ class CreateBlockForm extends React.Component {
     async onSubmit(e) {
         e.preventDefault();
 
-        let url = this.state.songUrl
-            .split(" ")[6]
-            .substring(5)
-            .split('"')[0];
 
-        const newSong = {
-            name: this.state.name,
-            artist: this.state.artist,
-            songUrl: url
-        };
-        console.log(newSong);
 
-        const options = {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify(newSong)
-        };
 
-        const response = await fetch(
-            "http://www.onabeat.com/api/songs/create-song",
-            options
-        );
-
-        const song = await response.json();
-
-        if (song.name === this.state.name) {
-            alert("Song posted");
-            this.setState({
-                name: "",
-                artist: "",
-                songUrl: ""
-            });
-        } else {
-            alert("Error posting song");
-        }
     }
     render() {
         return (
