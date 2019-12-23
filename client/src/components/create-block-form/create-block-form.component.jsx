@@ -49,6 +49,19 @@ class CreateBlockForm extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
+                <DropdownButton id="dropdown-item-button" title="Video List">
+                    {this.state.videos.map(x => (
+                        <Dropdown.Item
+                            key={x._id}
+                            name={x.name}
+                            value={x._id}
+                            onClick={this.onSubmit}
+                            as="button"
+                        >
+                            {x.name}
+                        </Dropdown.Item>
+                    ))}
+                </DropdownButton>
                 <form
                     onSubmit={this.onSubmit}
                     style={{
