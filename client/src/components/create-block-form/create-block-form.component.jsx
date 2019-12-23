@@ -1,14 +1,15 @@
 import React from "react";
 import TextInput from "../common/text-input/text-input.component";
+import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 
-import { Button } from "react-bootstrap";
 
 class CreateBlockForm extends React.Component {
     constructor() {
         super();
 
         this.state = {
-
+            songs: [],
+            videos: []
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -26,6 +27,7 @@ class CreateBlockForm extends React.Component {
     }
     render() {
         return (
+
             <div
                 style={{
                     display: "flex",
@@ -34,6 +36,19 @@ class CreateBlockForm extends React.Component {
                     alignItems: "center"
                 }}
             >
+                <DropdownButton id="dropdown-item-button" title="Song List">
+                    {this.state.songs.map(x => (
+                        <Dropdown.Item
+                            key={x._id}
+                            name={x.name}
+                            value={x._id}
+                            onClick={this.onSubmit}
+                            as="button"
+                        >
+                            {x.name} - {x.artist}
+                        </Dropdown.Item>
+                    ))}
+                </DropdownButton>
                 <form
                     onSubmit={this.onSubmit}
                     style={{
@@ -43,9 +58,6 @@ class CreateBlockForm extends React.Component {
                     <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
                         Add a content block
           </span>
-
-
-
                     <div
                         style={{ display: "flex", justifyContent: "center", marginTop: 10 }}
                     >
