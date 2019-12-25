@@ -7,6 +7,7 @@ import CreateSpotifyForm from "../create-spotify-form/create-spotify-form.compon
 import DeleteSongForm from "../delete-song-form/delete-song-form.component";
 import ChangeLayoutForm from "../change-layout-form/change-layout-form.component";
 import CreateSoundcloudForm from "../create-soundcloud-form/create-soundcloud-form.component";
+import CreateBlockForm from "../create-block-form/create-block-form.component"
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class EditSite extends React.Component {
       showAddSoundCloud: false,
       showDeleteSong: false,
       showChangeLayout: false,
+      showAddContentBlock: false,
       songSelect: true
     };
     this.handleClick = this.handleClick.bind(this);
@@ -32,7 +34,8 @@ class EditSite extends React.Component {
       showAddSpotify: false,
       showDeleteSong: false,
       showChangeLayout: false,
-      showAddSoundCloud: false
+      showAddSoundCloud: false,
+      showAddContentBlock: false
     });
     switch (name) {
       case "add-video":
@@ -46,6 +49,9 @@ class EditSite extends React.Component {
         break;
       case "add-song-soundcloud":
         this.setState({ showAddSoundCloud: true });
+        break;
+      case "add-content-block":
+        this.setState({ showAddContentBlock: true });
         break;
       case "delete-song":
         this.setState({ showDeleteSong: true });

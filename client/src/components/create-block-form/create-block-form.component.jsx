@@ -36,6 +36,10 @@ class CreateBlockForm extends React.Component {
                     alignItems: "center"
                 }}
             >
+                <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+                    Add a content block
+          </span>
+
                 <DropdownButton id="dropdown-item-button" title="Song List">
                     {this.state.songs.map(x => (
                         <Dropdown.Item
@@ -68,9 +72,7 @@ class CreateBlockForm extends React.Component {
                         maxWidth: 320
                     }}
                 >
-                    <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-                        Add a content block
-          </span>
+
                     <div
                         style={{ display: "flex", justifyContent: "center", marginTop: 10 }}
                     >
