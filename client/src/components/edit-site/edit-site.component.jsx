@@ -8,6 +8,7 @@ import DeleteSongForm from "../delete-song-form/delete-song-form.component";
 import ChangeLayoutForm from "../change-layout-form/change-layout-form.component";
 import CreateSoundcloudForm from "../create-soundcloud-form/create-soundcloud-form.component";
 import CreateBlockForm from "../create-block-form/create-block-form.component"
+import DeleteBlockForm from "../delete-block-form/delete-block-form.component"
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class EditSite extends React.Component {
       showDeleteSong: false,
       showChangeLayout: false,
       showAddContentBlock: false,
-      showRemoveContentBlock: false,
+      showDeleteContentBlock: false,
       songSelect: true
     };
     this.handleClick = this.handleClick.bind(this);
@@ -36,7 +37,8 @@ class EditSite extends React.Component {
       showDeleteSong: false,
       showChangeLayout: false,
       showAddSoundCloud: false,
-      showAddContentBlock: false
+      showAddContentBlock: false,
+      showDeleteContentBlock: false
     });
     switch (name) {
       case "add-video":
@@ -51,11 +53,11 @@ class EditSite extends React.Component {
       case "add-song-soundcloud":
         this.setState({ showAddSoundCloud: true });
         break;
-      case "add-content-block":
+      case "add-media-block":
         this.setState({ showAddContentBlock: true });
         break;
-      case "remove-content-block":
-        this.setState({ showRemoveContentBlock: true });
+      case "remove-media-block":
+        this.setState({ showDeleteContentBlock: true });
         break;
       case "delete-song":
         this.setState({ showDeleteSong: true });
@@ -149,14 +151,14 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="edit-site"
+              name="add-media-block"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add Media Block{" "}
             </Button>
             <Button
               onClick={this.handleClick}
-              name="register"
+              name="remove-media-block"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Remove Media Block{" "}
@@ -190,6 +192,8 @@ class EditSite extends React.Component {
           {this.state.showDeleteVideo ? <DeleteVideoForm /> : null}
           {this.state.showAddSpotify ? <CreateSpotifyForm /> : null}
           {this.state.showAddSoundCloud ? <CreateSoundcloudForm /> : null}
+          {this.state.showAddContentBlock ? <CreateBlockForm /> : null}
+          {this.state.showDeleteContentBlock ? <DeleteBlockForm /> : null}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
           {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
         </div>
