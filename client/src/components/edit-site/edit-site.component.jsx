@@ -21,6 +21,7 @@ class EditSite extends React.Component {
       showDeleteSong: false,
       showChangeLayout: false,
       showAddContentBlock: false,
+      showRemoveContentBlock: false,
       songSelect: true
     };
     this.handleClick = this.handleClick.bind(this);
@@ -52,6 +53,9 @@ class EditSite extends React.Component {
         break;
       case "add-content-block":
         this.setState({ showAddContentBlock: true });
+        break;
+      case "remove-content-block":
+        this.setState({ showRemoveContentBlock: true });
         break;
       case "delete-song":
         this.setState({ showDeleteSong: true });
