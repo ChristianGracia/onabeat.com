@@ -144,6 +144,27 @@ class EditSite extends React.Component {
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+              Media Block
+            </span>
+
+            <Button
+              onClick={this.handleClick}
+              name="edit-site"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Add Media Block{" "}
+            </Button>
+            <Button
+              onClick={this.handleClick}
+              name="register"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Remove Media Block{" "}
+            </Button>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
               Site
             </span>
 
