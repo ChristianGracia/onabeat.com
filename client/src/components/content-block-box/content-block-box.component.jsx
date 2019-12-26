@@ -26,11 +26,11 @@ class ContentBlockBox extends React.Component {
                     </div>
                     <div className="item" >
                         <p className="title">Pic</p>
-                        <img height="300" width="300" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/11/25/11/istock-1069317442.jpg?w968" />
+                        <img height="250" width="250" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/11/25/11/istock-1069317442.jpg?w968" />
                     </div>
                     <div className="item">
                         <p className="title">Loop</p>
-                        <iframe height="300" width="300" src="https://giphy.com/embed/11JTxkrmq4bGE0" frameBorder="0" class="" allowFullScreen></iframe>
+                        <iframe height="250" width="250" src="https://giphy.com/embed/11JTxkrmq4bGE0" frameBorder="0" class="" allowFullScreen></iframe>
                     </div>
 
                 </div>
