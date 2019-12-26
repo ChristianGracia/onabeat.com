@@ -1,8 +1,12 @@
-.item {
-  flex: 1 0 80px;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+//   background: pink;
 
-  margin: 0.5em;
-  padding: 1em;
-  text-align: center;
-  background-color: lightblue;
+}
+.item {
+  flex: 1;
+  padding: 5px;
 }
