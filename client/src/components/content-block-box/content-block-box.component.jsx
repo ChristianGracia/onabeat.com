@@ -18,7 +18,7 @@ class ContentBlockBox extends React.Component {
                             <VideoPlayer videoUrl="ZZ5LpwO-An4" />
                         </Col>
                         <Col>
-                            <Row><SpotifyPlayer songUrl="https://open.spotify.com/embed/track/59QmjU5K8XQTfj9JjFNb4Z" /></Row>
+                            <Row><iframe src="https://open.spotify.com/embed/track/59QmjU5K8XQTfj9JjFNb4Z" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></Row>
                             <Row><span>Hi</span></Row>
 
                         </Col>
