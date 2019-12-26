@@ -5,8 +5,8 @@ const SpotifyPlayer = ({ songUrl, name }) => (
     <iframe
       title={name}
       src={songUrl}
-      width="300"
-      height="300"
+      width="250"
+      height="250"
       frameborder="0"
       allowtransparency="true"
       allow="encrypted-media"
