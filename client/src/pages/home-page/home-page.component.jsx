@@ -36,7 +36,7 @@ const HomePage = () => (
       }}
     >
       <ContentBlockBox />
-      <p style={{ marginTop: 30 }}>New content will be coming every week</p>
+      <p style={{ marginTop: 30, fontStyle: "italic", color: "red", fontSize: 20 }}>New content will be coming every week</p>
       <div
       // className="row"
       // style={{ justifyContent: "center", alignItems: "center" }}
