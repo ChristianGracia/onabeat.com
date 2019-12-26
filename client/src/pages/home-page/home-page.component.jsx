@@ -31,16 +31,18 @@ const HomePage = () => (
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center"
+        justifyContent: "center",
+        marginTop: 30
       }}
     >
       <ContentBlockBox />
+      <p style={{ marginTop: 30 }}>New content will be coming every week</p>
       <div
       // className="row"
       // style={{ justifyContent: "center", alignItems: "center" }}
       >
         <Fade left>
-          <div style={{}}>
+          <div style={{ marginTop: 30 }}>
             <p
               style={{
                 fontSize: 40,
