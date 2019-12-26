@@ -31,9 +31,12 @@ class LoginForm extends React.Component {
     } else if (password === "") {
       alert("You have not entered a password");
     }
+    else {
+      this.props.login(user, password);
+      this.setState({ user: "", password: "" });
 
-    this.props.login(user, password);
-    this.setState({ user: "", password: "" });
+    }
+
   }
 
   componentDidUpdate(prevProps) {
