@@ -14,19 +14,17 @@ class ContentBlockBox extends React.Component {
                 <div>Content</div>
                 <Container >
                     <Row>
-                        <Col>
-                            <VideoPlayer videoUrl="ZZ5LpwO-An4" />
-                        </Col>
-                        <Col>
-                            <Row><iframe src="https://open.spotify.com/embed/track/59QmjU5K8XQTfj9JjFNb4Z" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></Row>
-                            <Row><span>Hi</span></Row>
 
-                        </Col>
+                        <VideoPlayer videoUrl="ZZ5LpwO-An4" />
+
+                        {/* <iframe src="https://open.spotify.com/embed/track/59QmjU5K8XQTfj9JjFNb4Z" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> */}
+                        <SpotifyPlayer songUrl="https://open.spotify.com/embed/track/59QmjU5K8XQTfj9JjFNb4Z" />
+                        <iframe src="https://giphy.com/embed/11JTxkrmq4bGE0" width="200" height="200" frameBorder="0" class="" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-computer-working-11JTxkrmq4bGE0"></a></p>
                     </Row>
                 </Container >
 
 
-            </div>
+            </div >
         )
     }
 }
