@@ -14,6 +14,7 @@ hosted on a single dyno on Heroku
 
 MongoDB, Redux Sass
 
+Product Owners can fully edit and arrange site with the backend I wrote them
 
 ## Features
 
