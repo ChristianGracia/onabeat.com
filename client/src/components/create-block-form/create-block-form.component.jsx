@@ -11,7 +11,11 @@ class CreateBlockForm extends React.Component {
             songs: [],
             videos: [],
             pics: [],
-            gifs: []
+            gifs: [],
+            Song: "",
+            Vid: "",
+            Pic: "",
+            Gif: ""
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -38,6 +42,14 @@ class CreateBlockForm extends React.Component {
     }
     async onSubmit(e) {
         e.preventDefault();
+        let id = e.nativeEvent.target.value;
+        console.log(e.nativeEvent.target.value);
+        let type = e.nativeEvent.target.id;
+        console.log(type);
+        this.setState({
+            [type]: id
+        });
+
 
     }
     render() {
@@ -55,7 +67,7 @@ class CreateBlockForm extends React.Component {
                     Add a content block
           </span>
 
-                <DropdownButton id="dropdown-item-button" title="Song List">
+                <DropdownButton id="dropdown-item-button" title="Song List" style={{ marginBottom: 10 }}>
                     {this.state.songs.map(x => (
                         <Dropdown.Item
                             key={x._id}
@@ -63,12 +75,13 @@ class CreateBlockForm extends React.Component {
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
+                            id="Song"
                         >
                             {x.name} - {x.artist}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <DropdownButton id="dropdown-item-button" title="Video List">
+                <DropdownButton id="dropdown-item-button" title="Video List" style={{ marginBottom: 10 }}>
                     {this.state.videos.map(x => (
                         <Dropdown.Item
                             key={x._id}
@@ -76,12 +89,13 @@ class CreateBlockForm extends React.Component {
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
+                            id="Vid"
                         >
                             {x.name}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <DropdownButton id="dropdown-item-button" title="Gif List">
+                <DropdownButton id="dropdown-item-button" title="Gif List" style={{ marginBottom: 10 }}>
                     {this.state.gifs.map(x => (
                         <Dropdown.Item
                             key={x._id}
@@ -89,12 +103,13 @@ class CreateBlockForm extends React.Component {
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
+                            id="Gif"
                         >
                             {x.name}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <DropdownButton id="dropdown-item-button" title="Pic List">
+                <DropdownButton id="dropdown-item-button" title="Pic List" style={{ marginBottom: 10 }}>
                     {this.state.pics.map(x => (
                         <Dropdown.Item
                             key={x._id}
@@ -102,6 +117,7 @@ class CreateBlockForm extends React.Component {
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
+                            id="Pic"
                         >
                             {x.name}
                         </Dropdown.Item>
@@ -117,7 +133,15 @@ class CreateBlockForm extends React.Component {
                     <div
                         style={{ display: "flex", justifyContent: "center", marginTop: 10 }}
                     >
-                        <Button type="submit" variant="primary">
+                        <Button type="submit" variant="primary" onClick={() => {
+
+                            const newBlock = {
+                                vid: this.state.Vid,
+                                song: this.state.Song, gif: this.state.Gif, pic: this.state.Pic
+                            }
+                            console.log(newBlock)
+
+                        }}>
                             Submit
             </Button>
                     </div>
