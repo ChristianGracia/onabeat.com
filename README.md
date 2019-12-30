@@ -41,6 +41,14 @@ Users can add gif to database
 
 gif displayed on front-end
 
+### pics
+
+Stores pic info on MongoDb database
+
+Users can add pics to database
+
+pics displayed on front-end
+
 
 
 ### Auth
