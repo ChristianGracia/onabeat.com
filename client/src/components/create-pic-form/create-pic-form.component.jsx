@@ -10,7 +10,7 @@ class CreatePicForm extends React.Component {
         this.state = {
             name: "",
             description: "",
-            videoUrl: ""
+            picUrl: ""
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -22,33 +22,33 @@ class CreatePicForm extends React.Component {
     async onSubmit(e) {
         e.preventDefault();
 
-        const newVideo = {
+        const newGif = {
             name: this.state.name,
-            videoUrl: this.state.videoUrl,
+            picUrl: this.state.picUrl,
             description: this.state.description
         };
-        console.log(newVideo);
+        console.log(newGif);
 
         const options = {
             method: "POST",
             headers: { "Content-type": "application/json" },
-            body: JSON.stringify(newVideo)
+            body: JSON.stringify(newGif)
         };
 
         const response = await fetch(
-            "http://www.onabeat.com/api/videos/create-video",
+            "http://www.onabeat.com/api/pics/create-pic",
             options
         );
-        const video = await response.json();
-        if (video.name === this.state.name) {
-            alert("Video posted");
+        const pic = await response.json();
+        if (pic.name === this.state.name) {
+            alert("Pic posted");
             this.setState({
                 name: "",
                 description: "",
-                videoUrl: ""
+                picUrl: ""
             });
         } else {
-            alert("Error posting video");
+            alert("Error posting pic");
         }
     }
     render() {
@@ -67,38 +67,38 @@ class CreatePicForm extends React.Component {
 
                 <form onSubmit={this.onSubmit}>
                     <TextInput
-                        placeholder="Name of video"
+                        placeholder="Name of gif"
                         name="name"
                         type="text"
                         value={this.state.name}
                         onChange={this.onChange}
                         style={{ maxWidth: 320 }}
                     />
-                    <p>
+                    {/* <p>
                         Enter only the random letters/numbers after www.youtube.com/watch?v=
-          </p>
+          </p> */}
                     <TextInput
-                        placeholder="Video youtube url"
-                        name="videoUrl"
+                        placeholder="GIF url"
+                        name="gifUrl"
                         type="text"
-                        value={this.state.videoUrl}
+                        value={this.state.gifUrl}
                         onChange={this.onChange}
                     />
-                    <div style={{ marginBottom: 15 }}>
+                    {/* <div style={{ marginBottom: 15 }}>
                         <span style={{ fontWeight: "bold" }}>
                             Current Url: www.youtube.com/watch?v={this.state.videoUrl}
                         </span>
-                    </div>
+                    </div> */}
 
                     <TextInput
-                        placeholder="Description of video (optional)"
+                        placeholder="Description of gif (optional)"
                         name="description"
                         type="text"
                         value={this.state.description}
                         onChange={this.onChange}
                     />
 
-                    <div
+                    {/* <div
                         style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                     >
                         <span>Video name: {this.state.name}</span>
@@ -116,7 +116,7 @@ class CreatePicForm extends React.Component {
                             Video url should look like =
                             https://www.youtube.com/watch?v=ZZ5LpwO-An4
             </p>
-                    </div>
+                    </div> */}
 
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Button type="submit" variant="primary">

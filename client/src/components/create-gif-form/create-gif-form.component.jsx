@@ -41,7 +41,7 @@ class CreateGifForm extends React.Component {
         );
         const gif = await response.json();
         if (gif.name === this.state.name) {
-            alert("Video posted");
+            alert("Gif posted");
             this.setState({
                 name: "",
                 description: "",
