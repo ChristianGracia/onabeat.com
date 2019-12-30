@@ -30,6 +30,7 @@ class CreateBlockForm extends React.Component {
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onSubmitBlock = this.onSubmitBlock.bind(this);
     }
 
     async componentDidMount() {
@@ -52,17 +53,57 @@ class CreateBlockForm extends React.Component {
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
+    async onSubmitBlock(e) {
+        e.preventDefault();
+
+        const newBlock = {
+            title: this.state.title,
+            vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, vidUrl: this.state.vidUrl },
+            song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
+            pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
+            gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }
+
+        }
+        console.log(newBlock)
+
+        const options = {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(newBlock)
+        };
+
+        const response = await fetch(
+            "http://www.onabeat.com/api/blocks/create-block",
+            options
+        );
+        const block = await response.json();
+        if (block.title === this.state.title) {
+            alert("block posted");
+            this.setState({
+                songName: "",
+                songArtist: "",
+                songUrl: "",
+                vidName: "",
+                vidDescription: "",
+                vidUrl: "",
+                picName: "",
+                picDescription: "",
+                picUrl: "",
+                gifName: "",
+                gifDescription: "",
+                gifUrl: "",
+
+
+                title: ""
+            });
+        } else {
+            alert("Error posting block");
+        }
+    }
     async onSubmit(e) {
         e.preventDefault();
-        // let id = e.nativeEvent.target.value;
-
         let type = e.nativeEvent.target.id;
         console.log(type);
-        // this.setState({
-        //     [type]: id
-        // });
-
-
         switch (type) {
             case "Song":
                 this.setState({
@@ -95,9 +136,6 @@ class CreateBlockForm extends React.Component {
                 break;
             default:
                 break;
-
-
-
 
         }
 
@@ -199,19 +237,7 @@ class CreateBlockForm extends React.Component {
                     <div
                         style={{ display: "flex", justifyContent: "center", marginTop: 10 }}
                     >
-                        <Button type="submit" variant="primary" onClick={() => {
-
-                            const newBlock = {
-                                title: this.state.title,
-                                vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, vidUrl: this.state.vidUrl },
-                                song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
-                                pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
-                                gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }
-
-                            }
-                            console.log(newBlock)
-
-                        }}>
+                        <Button type="submit" variant="primary" onClick={this.onSubmitBlock}>
                             Submit
             </Button>
                     </div>
