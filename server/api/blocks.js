@@ -13,7 +13,7 @@ router.get("/all", (req, res) => {
 
 router.post(
     "/create-block", (req, res) => {
-        const newBlock = new Gif({
+        const newBlock = new Block({
             title: req.body.title,
             vid: req.body.vid,
             song: req.body.song,
