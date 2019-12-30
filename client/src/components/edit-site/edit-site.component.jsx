@@ -23,6 +23,11 @@ class EditSite extends React.Component {
       showChangeLayout: false,
       showAddContentBlock: false,
       showDeleteContentBlock: false,
+      showAddGif: false,
+      showAddPic: false,
+      showRemoveGif: false,
+      showRemovePic: false,
+
       songSelect: true
     };
     this.handleClick = this.handleClick.bind(this);
@@ -58,6 +63,18 @@ class EditSite extends React.Component {
         break;
       case "remove-media-block":
         this.setState({ showDeleteContentBlock: true });
+        break;
+      case "add-pic":
+        this.setState({ showAddPic: true });
+        break;
+      case "remove-pic":
+        this.setState({ showDeletePic: true });
+        break;
+      case "add-gif":
+        this.setState({ showAddGif: true });
+        break;
+      case "remove-gif":
+        this.setState({ showDeleteGif: true });
         break;
       case "delete-song":
         this.setState({ showDeleteSong: true });
@@ -152,14 +169,14 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="add-media-block"
+              name="add-pic"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add a Pic{" "}
             </Button>
             <Button
               onClick={this.handleClick}
-              name="remove-media-block"
+              name="remove-pic"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Remove a Pic{" "}
@@ -173,14 +190,14 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="add-media-block"
+              name="add-loop"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add a gif{" "}
             </Button>
             <Button
               onClick={this.handleClick}
-              name="remove-media-block"
+              name="remove-loop"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Remove a gif{" "}
