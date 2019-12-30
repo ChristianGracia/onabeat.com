@@ -15,7 +15,8 @@ class CreateBlockForm extends React.Component {
             Song: "",
             Vid: "",
             Pic: "",
-            Gif: ""
+            Gif: "",
+            title: ""
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -66,6 +67,14 @@ class CreateBlockForm extends React.Component {
                 <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
                     Add a content block
           </span>
+
+                <TextInput
+                    placeholder="Block Title"
+                    name="title"
+                    type="text"
+                    value={this.state.title}
+                    onChange={this.onChange}
+                />
 
                 <DropdownButton id="dropdown-item-button" title="Song List" style={{ marginBottom: 10 }}>
                     {this.state.songs.map(x => (
@@ -136,6 +145,7 @@ class CreateBlockForm extends React.Component {
                         <Button type="submit" variant="primary" onClick={() => {
 
                             const newBlock = {
+                                title: this.state.title,
                                 vid: this.state.Vid,
                                 song: this.state.Song, gif: this.state.Gif, pic: this.state.Pic
                             }
