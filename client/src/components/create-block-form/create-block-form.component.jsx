@@ -93,6 +93,8 @@ class CreateBlockForm extends React.Component {
                     gifUrl: e.nativeEvent.target.attributes["gifurl"].value
                 })
                 break;
+            default:
+                break;
 
 
 
@@ -160,6 +162,8 @@ class CreateBlockForm extends React.Component {
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}
+                            description={x.description}
+                            gifurl={x.gifUrl}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -174,6 +178,8 @@ class CreateBlockForm extends React.Component {
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}
+                            description={x.description}
+                            picurl={x.picUrl}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -195,12 +201,15 @@ class CreateBlockForm extends React.Component {
                     >
                         <Button type="submit" variant="primary" onClick={() => {
 
-                            // const newBlock = {
-                            //     title: this.state.title,
-                            //     vid: this.state.Vid,
-                            //     song: this.state.Song, gif: this.state.Gif, pic: this.state.Pic
-                            // }
-                            // console.log(newBlock)
+                            const newBlock = {
+                                title: this.state.title,
+                                vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, videoUrl: this.state.videoUrl },
+                                song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
+                                pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
+                                gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }
+
+                            }
+                            console.log(newBlock)
 
                         }}>
                             Submit
