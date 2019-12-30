@@ -12,13 +12,11 @@ router.get("/all", (req, res) => {
 });
 
 router.post(
-    "/create-gif",
-
-    (req, res) => {
-        const newGif = new Pic({
+    "/create-gif", (req, res) => {
+        const newGif = new Gif({
             name: req.body.name,
-            description: req.body.description,
-            gifUrl: req.body.gifUrl
+            gifUrl: req.body.gifUrl,
+            description: req.body.description
         });
 
         newGif.save().then(gifs => res.json(gifs));
