@@ -2,6 +2,7 @@ import React from "react";
 
 import "./content-block-box.styles.scss";
 import ContentBlockPlayer from "../content-block-player/content-block-player.component"
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -19,16 +20,21 @@ class ContentBlockBox extends React.Component {
 
     render() {
         return (
+
             <div style={{}}>
 
 
+
                 {this.state.blocks.map(block => {
-                    return (
+                    return (<Fade left>
                         <ContentBlockPlayer data={block} />
+                    </Fade>
                     );
                 })}
 
+
             </div >
+
         )
     }
 }

@@ -1,11 +1,10 @@
 import React from "react";
 import SpotifyPlayer from "../spotify-player/spotify-player.component";
 import VideoPlayer from "../video-player/video-player.component";
-import Fade from "react-reveal/Fade";
 
 const ContentPlayer = ({ data }) => {
-    return (<div> <Fade left><div class="week" ><span class="week">{data.title}</span></div></Fade>
-        <div className="container">
+    return (<div> <div class="week" ><span class="week">{data.title}</span></div>
+        <div className="container" >
             {data.vid.vidUrl == "" ? null :
                 <div className="item">
                     <p className="title">{data.vid.videoName} </p>
