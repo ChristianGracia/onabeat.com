@@ -33,6 +33,14 @@ Users can add songs to database
 
 songs displayed on front-end
 
+### Gifs
+
+Stores gif info on MongoDb database
+
+Users can add gif to database
+
+gif displayed on front-end
+
 
 
 ### Auth
