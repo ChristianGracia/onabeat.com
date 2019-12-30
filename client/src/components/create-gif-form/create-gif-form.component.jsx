@@ -88,12 +88,6 @@ class CreateGifForm extends React.Component {
                         value={this.state.gifUrl}
                         onChange={this.onChange}
                     />
-                    {/* <div style={{ marginBottom: 15 }}>
-                        <span style={{ fontWeight: "bold" }}>
-                            Current Url: www.youtube.com/watch?v={this.state.videoUrl}
-                        </span>
-                    </div> */}
-
                     <TextInput
                         placeholder="Description of gif (optional)"
                         name="description"
@@ -101,11 +95,9 @@ class CreateGifForm extends React.Component {
                         value={this.state.description}
                         onChange={this.onChange}
                     />
-
                     <div
                         style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                     >
-
                         <p
                             style={{
                                 color: "red",
