@@ -11,6 +11,8 @@ import CreateBlockForm from "../create-block-form/create-block-form.component"
 import DeleteBlockForm from "../delete-block-form/delete-block-form.component"
 import CreateGifForm from "../create-gif-form/create-gif-form.component"
 import CreatePicForm from "../create-pic-form/create-pic-form.component"
+import DeletePicForm from "../delete-pic-form/delete-pic-form.component"
+import DeleteGifForm from "../delete-gif-form/delete-gif-form.component"
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -27,8 +29,8 @@ class EditSite extends React.Component {
       showDeleteContentBlock: false,
       showAddGif: false,
       showAddPic: false,
-      showRemoveGif: false,
-      showRemovePic: false,
+      showDeleteGif: false,
+      showDeletePic: false,
 
       songSelect: true
     };
@@ -48,6 +50,8 @@ class EditSite extends React.Component {
       showDeleteContentBlock: false,
       showAddPic: false,
       showAddGif: false,
+      showDeletePic: false,
+      showDeleteGif: false
     });
     switch (name) {
       case "add-video":
@@ -261,6 +265,8 @@ class EditSite extends React.Component {
           {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
           {this.state.showAddPic ? <CreatePicForm /> : null}
           {this.state.showAddGif ? <CreateGifForm /> : null}
+          {this.state.showDeletePic ? <DeletePicForm /> : null}
+          {this.state.showDeleteGif ? <DeleteGifForm /> : null}
         </div>
       </div>
     );
