@@ -21,6 +21,8 @@ const videos = require("./api/videos");
 const songs = require("./api/songs");
 const login = require("./api/login");
 const register = require("./api/register");
+const pics = require("./api/pics");
+const gifs = require("./api/gifs");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -38,6 +40,8 @@ router.get("/api", (req, res) => {
 app.use(router);
 app.use("/api/videos", videos);
 app.use("/api/songs", songs);
+app.use("/api/gifs", gifs);
+app.use("/api/pics", pics);
 app.use("/api/login", login);
 app.use("/api/register", register);
 

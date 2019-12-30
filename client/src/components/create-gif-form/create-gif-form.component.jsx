@@ -24,7 +24,7 @@ class CreateGifForm extends React.Component {
 
         const newGif = {
             name: this.state.name,
-            gifUrl: this.state.videoUrl,
+            gifUrl: this.state.gifUrl,
             description: this.state.description
         };
         console.log(newGif);
@@ -36,7 +36,7 @@ class CreateGifForm extends React.Component {
         };
 
         const response = await fetch(
-            "http://www.onabeat.com/api/videos/create-gif",
+            "http://www.onabeat.com/api/gifs/create-gif",
             options
         );
         const gif = await response.json();
