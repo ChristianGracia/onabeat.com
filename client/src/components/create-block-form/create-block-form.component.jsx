@@ -190,8 +190,7 @@ class CreateBlockForm extends React.Component {
                             onClick={this.onSubmit}
                             as="button"
                             id="Vid"
-                        >
-                            {x.name}
+                        >{x.name}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
@@ -206,8 +205,7 @@ class CreateBlockForm extends React.Component {
                             onClick={this.onSubmit}
                             as="button"
                             id="Gif"
-                        >
-                            {x.name}
+                        >{x.name}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
@@ -227,6 +225,20 @@ class CreateBlockForm extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
+                <div
+                    style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
+                >
+                    <span>Video name: {this.state.vidName}</span>
+                    <span>Song Name: {this.state.songName}</span>
+                    <span>
+                        Gif Name: {this.state.gifName}
+                    </span>
+                    <span>
+                        Pic Name: {this.state.picName}
+                    </span>
+
+
+                </div>
                 <form
                     onSubmit={this.onSubmit}
                     style={{

@@ -1,5 +1,4 @@
 import React from "react";
-// import TextInput from "../common/text-input/text-input.component";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 import { Button } from "react-bootstrap";
@@ -9,9 +8,9 @@ class DeleteBlockForm extends React.Component {
         super();
 
         this.state = {
-            songs: [],
-            currentSongName: "",
-            currentSongId: ""
+            blocks: [],
+            currentBlockName: "",
+            currentBlockId: ""
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -22,37 +21,37 @@ class DeleteBlockForm extends React.Component {
         this.setState({ [e.target.name]: e.target.value });
     }
     async componentDidMount() {
-        const response = await fetch("http://www.onabeat.com/api/songs/all");
-        const songs = await response.json();
+        const response = await fetch("http://www.onabeat.com/api/blocks/all");
+        const blocks = await response.json();
 
-        this.setState({ songs: songs });
-        console.log(songs);
+        this.setState({ blocks: blocks });
+
     }
     async onSubmit(e) {
         e.preventDefault();
         let id = e.nativeEvent.target.value;
         console.log(e.nativeEvent.target.value);
         this.setState({
-            currentSongName: e.nativeEvent.target.name,
-            currentSongId: id
+            currentBlockName: e.nativeEvent.target.name,
+            currentBlockId: id
         });
     }
     async handleDelete(e) {
         const options = {
             method: "DELETE"
         };
-        let id = this.state.currentSongId;
+        let id = this.state.currentBlockId;
         const response = await fetch(
-            `http://www.onabeat.com/api/songs/${id}`,
+            `http://www.onabeat.com/api/blocks/${id}`,
             options
         );
-        const song = await response.json();
-        console.log(song);
-        if (song.success === "true") {
-            alert("delete song success");
+        const block = await response.json();
+        console.log(block);
+        if (block.success === "true") {
+            alert("delete block success");
             this.setState({
-                currentSongName: "",
-                currentSongId: ""
+                currentBlockName: "",
+                currentBlockId: ""
             });
         } else {
             alert("error");
@@ -72,8 +71,8 @@ class DeleteBlockForm extends React.Component {
                     Remove a Block
         </span>
 
-                <DropdownButton id="dropdown-item-button" title="Song List">
-                    {this.state.songs.map(x => (
+                <DropdownButton id="dropdown-item-button" title="Block List">
+                    {this.state.blocks.map(x => (
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}
@@ -81,7 +80,7 @@ class DeleteBlockForm extends React.Component {
                             onClick={this.onSubmit}
                             as="button"
                         >
-                            {x.name} - {x.artist}
+                            {x.title}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
@@ -89,7 +88,7 @@ class DeleteBlockForm extends React.Component {
                     <p>{this.state.currentSong}</p>
                     {this.state.currentSongName !== "" ? (
                         <Button onClick={this.handleDelete} variant="danger">
-                            Delete Song
+                            Delete Block
             </Button>
                     ) : null}
                 </div>

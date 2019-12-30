@@ -81,7 +81,7 @@ class DeletePicForm extends React.Component {
                             onClick={this.onSubmit}
                             as="button"
                         >
-                            {x.name} - {x.artist}
+                            {x.name}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>

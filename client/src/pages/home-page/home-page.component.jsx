@@ -41,7 +41,7 @@ const HomePage = () => (
       // className="row"
       // style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <Fade left>
+        {/* <Fade left>
           <div style={{ marginTop: 30 }}>
             <p
               style={{
@@ -53,7 +53,7 @@ const HomePage = () => (
               Music
             </p>
           </div>
-        </Fade>
+        </Fade> */}
         {/* <div style={{ margin: 20, marginTop: 30 }}>
           <SpotifyBox />
         </div>
