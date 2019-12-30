@@ -7,10 +7,7 @@ import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
 
-
-
 import Bounce from "react-reveal/Bounce";
-import Fade from "react-reveal/Fade";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
