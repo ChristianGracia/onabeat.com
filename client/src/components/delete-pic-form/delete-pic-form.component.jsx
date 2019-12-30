@@ -69,7 +69,7 @@ class DeletePicForm extends React.Component {
                 }}
             >
                 <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-                    Remove a pic
+                    Remove a Pic
         </span>
 
                 <DropdownButton id="dropdown-item-button" title="Pic List">
