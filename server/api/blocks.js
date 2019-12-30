@@ -7,7 +7,7 @@ const Block = require("../models/Block");
 router.get("/all", (req, res) => {
     Block.find()
         // .sort({ date: -1 })
-        .then(gifs => res.json(gifs))
+        .then(blocks => res.json(gifs))
         .catch(err => res.status(404).json({ nogifsfound: "No gifs found" }));
 });
 

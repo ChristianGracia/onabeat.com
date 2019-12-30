@@ -203,7 +203,7 @@ class CreateBlockForm extends React.Component {
 
                             const newBlock = {
                                 title: this.state.title,
-                                vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, videoUrl: this.state.videoUrl },
+                                vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, vidUrl: this.state.vidUrl },
                                 song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
                                 pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
                                 gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }

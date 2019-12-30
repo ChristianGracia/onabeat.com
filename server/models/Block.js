@@ -6,19 +6,46 @@ const BlockSchema = new Schema({
         type: String,
         required: true
     },
-
     vid: {
-        type: String,
+        videoName: {
+            type: String
+        },
+        videoDescription: {
+            type: String
+        },
+        videoUrl: { type: String }
     },
     song: {
-        type: String,
-    },
-    gif: {
-        type: String,
+        songName: {
+            type: String
+        },
+        songArtist: {
+            type: String
+        },
+        songUrl: { type: String }
     },
     pic: {
-        type: String,
+        picName: {
+            type: String
+        },
+        picDescription: {
+            type: String
+        },
+        picUrl: { type: String }
+    },
+    gif: {
+        gifName: {
+            type: String
+        },
+        gifDescription: {
+            type: String
+        },
+        gifUrl: { type: String }
     }
+
+
+
+
 });
 
 module.exports = mongoose.model("block", BlockSchema);
