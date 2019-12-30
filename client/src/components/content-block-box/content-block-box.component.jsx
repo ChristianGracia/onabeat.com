@@ -5,7 +5,6 @@ import ContentBlockPlayer from "../content-block-player/content-block-player.com
 import Fade from 'react-reveal/Fade';
 
 
-
 class ContentBlockBox extends React.Component {
     constructor(props) {
         super(props);
@@ -14,27 +13,19 @@ class ContentBlockBox extends React.Component {
     async componentDidMount() {
         const response = await fetch("http://www.onabeat.com/api/blocks/all");
         const blocks = await response.json();
-        console.log(blocks.reverse())
         this.setState({ blocks: blocks });
     }
 
     render() {
         return (
-
             <div style={{}}>
-
-
-
                 {this.state.blocks.map(block => {
                     return (<Fade left>
                         <ContentBlockPlayer data={block} />
                     </Fade>
                     );
                 })}
-
-
             </div >
-
         )
     }
 }
