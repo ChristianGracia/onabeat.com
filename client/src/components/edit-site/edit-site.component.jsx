@@ -9,6 +9,8 @@ import ChangeLayoutForm from "../change-layout-form/change-layout-form.component
 import CreateSoundcloudForm from "../create-soundcloud-form/create-soundcloud-form.component";
 import CreateBlockForm from "../create-block-form/create-block-form.component"
 import DeleteBlockForm from "../delete-block-form/delete-block-form.component"
+import CreateGifForm from "../create-gif-form/create-gif-form.component"
+import CreatePicForm from "../create-pic-form/create-pic-form.component"
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -43,7 +45,9 @@ class EditSite extends React.Component {
       showChangeLayout: false,
       showAddSoundCloud: false,
       showAddContentBlock: false,
-      showDeleteContentBlock: false
+      showDeleteContentBlock: false,
+      showAddPic: false,
+      showAddGif: false,
     });
     switch (name) {
       case "add-video":
@@ -190,14 +194,14 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="add-loop"
+              name="add-gif"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Add a gif{" "}
             </Button>
             <Button
               onClick={this.handleClick}
-              name="remove-loop"
+              name="remove-gif"
               style={{ margin: 5, fontWeight: "bold" }}
             >
               Remove a gif{" "}
@@ -255,6 +259,8 @@ class EditSite extends React.Component {
           {this.state.showDeleteContentBlock ? <DeleteBlockForm /> : null}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
           {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
+          {this.state.showAddPic ? <CreatePicForm /> : null}
+          {this.state.showAddGif ? <CreateGifForm /> : null}
         </div>
       </div>
     );

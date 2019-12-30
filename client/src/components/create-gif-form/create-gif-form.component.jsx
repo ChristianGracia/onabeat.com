@@ -9,8 +9,8 @@ class CreateGifForm extends React.Component {
 
         this.state = {
             name: "",
-            description: "",
-            videoUrl: ""
+            title: "",
+            gifUrl: ""
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -62,7 +62,7 @@ class CreateGifForm extends React.Component {
                 }}
             >
                 <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-                    Add a video
+                    Add a Gif
         </span>
 
                 <form onSubmit={this.onSubmit}>

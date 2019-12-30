@@ -62,7 +62,7 @@ class CreatePicForm extends React.Component {
                 }}
             >
                 <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-                    Add a video
+                    Add a Pic
         </span>
 
                 <form onSubmit={this.onSubmit}>
