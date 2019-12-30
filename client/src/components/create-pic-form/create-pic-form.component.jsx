@@ -98,14 +98,10 @@ class CreatePicForm extends React.Component {
                         onChange={this.onChange}
                     />
 
-                    {/* <div
+                    <div
                         style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                     >
-                        <span>Video name: {this.state.name}</span>
-                        <span>Description: {this.state.description}</span>
-                        <span>
-                            Video Url: https://www.youtube.com/watch?v={this.state.videoUrl}
-                        </span>
+
 
                         <p
                             style={{
@@ -113,10 +109,9 @@ class CreatePicForm extends React.Component {
                                 fontWeight: "bold"
                             }}
                         >
-                            Video url should look like =
-                            https://www.youtube.com/watch?v=ZZ5LpwO-An4
+                            To get Pic Url, Right click any photo on internet, click Copy Image Address, Paste into url bar
             </p>
-                    </div> */}
+                    </div>
 
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Button type="submit" variant="primary">

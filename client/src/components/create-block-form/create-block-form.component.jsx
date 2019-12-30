@@ -56,48 +56,54 @@ class CreateBlockForm extends React.Component {
     async onSubmitBlock(e) {
         e.preventDefault();
 
-        const newBlock = {
-            title: this.state.title,
-            vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, vidUrl: this.state.vidUrl },
-            song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
-            pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
-            gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }
-
+        if (this.state.title == "") {
+            alert("Enter a title for this week's post!")
         }
-        console.log(newBlock)
+        else {
 
-        const options = {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify(newBlock)
-        };
+            const newBlock = {
+                title: this.state.title,
+                vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, vidUrl: this.state.vidUrl },
+                song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
+                pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
+                gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }
 
-        const response = await fetch(
-            "http://www.onabeat.com/api/blocks/create-block",
-            options
-        );
-        const block = await response.json();
-        if (block.title === this.state.title) {
-            alert("block posted");
-            this.setState({
-                songName: "",
-                songArtist: "",
-                songUrl: "",
-                vidName: "",
-                vidDescription: "",
-                vidUrl: "",
-                picName: "",
-                picDescription: "",
-                picUrl: "",
-                gifName: "",
-                gifDescription: "",
-                gifUrl: "",
+            }
+            console.log(newBlock)
+
+            const options = {
+                method: "POST",
+                headers: { "Content-type": "application/json" },
+                body: JSON.stringify(newBlock)
+            };
+
+            const response = await fetch(
+                "http://www.onabeat.com/api/blocks/create-block",
+                options
+            );
+            const block = await response.json();
+            if (block.title === this.state.title) {
+                alert("block posted");
+                this.setState({
+                    songName: "",
+                    songArtist: "",
+                    songUrl: "",
+                    vidName: "",
+                    vidDescription: "",
+                    vidUrl: "",
+                    picName: "",
+                    picDescription: "",
+                    picUrl: "",
+                    gifName: "",
+                    gifDescription: "",
+                    gifUrl: "",
 
 
-                title: ""
-            });
-        } else {
-            alert("Error posting block");
+                    title: ""
+                });
+            } else {
+                alert("Error posting block");
+            }
         }
     }
     async onSubmit(e) {

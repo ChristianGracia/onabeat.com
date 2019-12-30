@@ -6,7 +6,7 @@ const Block = require("../models/Block");
 
 router.get("/all", (req, res) => {
     Block.find()
-        .sort({ date: -1 })
+        // .sort({ date: -1 })
         .then(blocks => res.json(blocks))
         .catch(err => res.status(404).json({ noblocksfound: "No blocks found" }));
 });

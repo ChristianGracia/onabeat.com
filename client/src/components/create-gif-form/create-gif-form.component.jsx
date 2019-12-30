@@ -22,12 +22,16 @@ class CreateGifForm extends React.Component {
     async onSubmit(e) {
         e.preventDefault();
 
+        let url = this.state.gifUrl.slice(13)
+            .split(" ")[0]
+            .slice(0, -1);
+
+
         const newGif = {
             name: this.state.name,
-            gifUrl: this.state.gifUrl,
+            gifUrl: url,
             description: this.state.description
         };
-        console.log(newGif);
 
         const options = {
             method: "POST",
@@ -98,14 +102,9 @@ class CreateGifForm extends React.Component {
                         onChange={this.onChange}
                     />
 
-                    {/* <div
+                    <div
                         style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                     >
-                        <span>Video name: {this.state.name}</span>
-                        <span>Description: {this.state.description}</span>
-                        <span>
-                            Video Url: https://www.youtube.com/watch?v={this.state.videoUrl}
-                        </span>
 
                         <p
                             style={{
@@ -113,10 +112,9 @@ class CreateGifForm extends React.Component {
                                 fontWeight: "bold"
                             }}
                         >
-                            Video url should look like =
-                            https://www.youtube.com/watch?v=ZZ5LpwO-An4
+                            To get Gif Url, upload gif to Giphy.com, click embed next to gif, copy and paste embed code to gif url
             </p>
-                    </div> */}
+                    </div>
 
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Button type="submit" variant="primary">
