@@ -228,13 +228,13 @@ class CreateBlockForm extends React.Component {
                 <div
                     style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                 >
-                    <span>Video name: {this.state.vidName}</span>
-                    <span>Song Name: {this.state.songName}</span>
-                    <span>
-                        Gif Name: {this.state.gifName}
+                    <span style={{ fontWeight: "bold" }}>Video name:   <span style={{ color: "red" }}>{this.state.vidName}</span></span>
+                    <span style={{ fontWeight: "bold" }}>Song Name:  <span style={{ color: "red" }}>{this.state.songName}</span></span>
+                    <span style={{ fontWeight: "bold" }}>
+                        Gif Name: <span style={{ color: "red" }}>{this.state.gifName}</span>
                     </span>
-                    <span>
-                        Pic Name: {this.state.picName}
+                    <span style={{ fontWeight: "bold" }}>
+                        Pic Name: <span style={{ color: "red" }}>{this.state.picName}</span>
                     </span>
 
 
