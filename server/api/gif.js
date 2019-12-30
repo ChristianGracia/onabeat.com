@@ -17,7 +17,7 @@ router.post(
     (req, res) => {
         const newGif = new Pic({
             name: req.body.name,
-            title: req.body.title,
+            description: req.body.description,
             gifUrl: req.body.gifUrl
         });
 

@@ -6,7 +6,7 @@ const GifSchema = new Schema({
         type: String,
         required: true
     },
-    title: {
+    description: {
         type: String
     },
     gifUrl: {
