@@ -13,7 +13,7 @@ const BlockSchema = new Schema({
         videoDescription: {
             type: String
         },
-        videoUrl: { type: String }
+        vidUrl: { type: String }
     },
     song: {
         songName: {
