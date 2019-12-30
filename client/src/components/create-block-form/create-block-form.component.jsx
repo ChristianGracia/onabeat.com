@@ -9,10 +9,28 @@ class CreateBlockForm extends React.Component {
 
         this.state = {
             songs: [],
-            videos: []
+            videos: [],
+            pics: [],
+            gifs: []
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    async componentDidMount() {
+        const songCall = await fetch("http://www.onabeat.com/api/songs/all");
+        const songs = await songCall.json();
+        const videoCall = await fetch("http://www.onabeat.com/api/videos/all");
+        const videos = await videoCall.json();
+        const picCall = await fetch("http://www.onabeat.com/api/pics/all");
+        const pics = await picCall.json();
+        const gifCall = await fetch("http://www.onabeat.com/api/gifs/all");
+        const gifs = await gifCall.json();
+
+        this.setState({
+            songs: songs,
+            videos: videos, pics: pics, gifs: gifs
+        });
     }
 
     onChange(e) {
@@ -20,9 +38,6 @@ class CreateBlockForm extends React.Component {
     }
     async onSubmit(e) {
         e.preventDefault();
-
-
-
 
     }
     render() {
@@ -55,6 +70,32 @@ class CreateBlockForm extends React.Component {
                 </DropdownButton>
                 <DropdownButton id="dropdown-item-button" title="Video List">
                     {this.state.videos.map(x => (
+                        <Dropdown.Item
+                            key={x._id}
+                            name={x.name}
+                            value={x._id}
+                            onClick={this.onSubmit}
+                            as="button"
+                        >
+                            {x.name}
+                        </Dropdown.Item>
+                    ))}
+                </DropdownButton>
+                <DropdownButton id="dropdown-item-button" title="Gif List">
+                    {this.state.gifs.map(x => (
+                        <Dropdown.Item
+                            key={x._id}
+                            name={x.name}
+                            value={x._id}
+                            onClick={this.onSubmit}
+                            as="button"
+                        >
+                            {x.name}
+                        </Dropdown.Item>
+                    ))}
+                </DropdownButton>
+                <DropdownButton id="dropdown-item-button" title="Pic List">
+                    {this.state.pics.map(x => (
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}

@@ -180,14 +180,14 @@ class EditSite extends React.Component {
               name="add-pic"
               style={{ margin: 5, fontWeight: "bold" }}
             >
-              Add a Pic{" "}
+              Add a pic{" "}
             </Button>
             <Button
               onClick={this.handleClick}
               name="remove-pic"
               style={{ margin: 5, fontWeight: "bold" }}
             >
-              Remove a Pic{" "}
+              Remove a pic{" "}
             </Button>
           </div>
 
@@ -221,14 +221,14 @@ class EditSite extends React.Component {
               name="add-media-block"
               style={{ margin: 5, fontWeight: "bold" }}
             >
-              Add Media Block{" "}
+              Add media block{" "}
             </Button>
             <Button
               onClick={this.handleClick}
               name="remove-media-block"
               style={{ margin: 5, fontWeight: "bold" }}
             >
-              Remove Media Block{" "}
+              Remove media block{" "}
             </Button>
           </div>
 
