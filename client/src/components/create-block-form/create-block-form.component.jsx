@@ -12,10 +12,20 @@ class CreateBlockForm extends React.Component {
             videos: [],
             pics: [],
             gifs: [],
-            Song: "",
-            Vid: "",
-            Pic: "",
-            Gif: "",
+            songName: "",
+            songArtist: "",
+            songUrl: "",
+            vidName: "",
+            vidDescription: "",
+            vidUrl: "",
+            picName: "",
+            picDescription: "",
+            picUrl: "",
+            gifName: "",
+            gifDescription: "",
+            gifUrl: "",
+
+
             title: ""
         };
         this.onChange = this.onChange.bind(this);
@@ -36,6 +46,7 @@ class CreateBlockForm extends React.Component {
             songs: songs,
             videos: videos, pics: pics, gifs: gifs
         });
+        console.log(songs);
     }
 
     onChange(e) {
@@ -43,14 +54,50 @@ class CreateBlockForm extends React.Component {
     }
     async onSubmit(e) {
         e.preventDefault();
-        let id = e.nativeEvent.target.value;
-        console.log(e.nativeEvent.target.value);
+        // let id = e.nativeEvent.target.value;
+
         let type = e.nativeEvent.target.id;
         console.log(type);
-        this.setState({
-            [type]: id
-        });
+        // this.setState({
+        //     [type]: id
+        // });
 
+
+        switch (type) {
+            case "Song":
+                this.setState({
+                    songName: e.nativeEvent.target.attributes["name"].value,
+                    songArtist: e.nativeEvent.target.attributes["artist"].value,
+                    songUrl: e.nativeEvent.target.attributes["songurl"].value
+                })
+                break;
+            case "Vid":
+                console.log(e.nativeEvent.target.attributes);
+                this.setState({
+                    vidName: e.nativeEvent.target.attributes["name"].value,
+                    vidDescription: e.nativeEvent.target.attributes["description"].value,
+                    vidUrl: e.nativeEvent.target.attributes["videourl"].value
+                })
+                break;
+            case "Pic":
+                this.setState({
+                    picName: e.nativeEvent.target.attributes["name"].value,
+                    picDescription: e.nativeEvent.target.attributes["description"].value,
+                    picUrl: e.nativeEvent.target.attributes["picurl"].value
+                })
+                break;
+            case "Gif":
+                this.setState({
+                    gifName: e.nativeEvent.target.attributes["name"].value,
+                    gifDescription: e.nativeEvent.target.attributes["description"].value,
+                    gifUrl: e.nativeEvent.target.attributes["gifurl"].value
+                })
+                break;
+
+
+
+
+        }
 
     }
     render() {
@@ -81,6 +128,8 @@ class CreateBlockForm extends React.Component {
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}
+                            songurl={x.songUrl}
+                            artist={x.artist}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -95,6 +144,8 @@ class CreateBlockForm extends React.Component {
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}
+                            description={x.description}
+                            videourl={x.videoUrl}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -144,12 +195,12 @@ class CreateBlockForm extends React.Component {
                     >
                         <Button type="submit" variant="primary" onClick={() => {
 
-                            const newBlock = {
-                                title: this.state.title,
-                                vid: this.state.Vid,
-                                song: this.state.Song, gif: this.state.Gif, pic: this.state.Pic
-                            }
-                            console.log(newBlock)
+                            // const newBlock = {
+                            //     title: this.state.title,
+                            //     vid: this.state.Vid,
+                            //     song: this.state.Song, gif: this.state.Gif, pic: this.state.Pic
+                            // }
+                            // console.log(newBlock)
 
                         }}>
                             Submit

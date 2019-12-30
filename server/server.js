@@ -23,6 +23,7 @@ const login = require("./api/login");
 const register = require("./api/register");
 const pics = require("./api/pics");
 const gifs = require("./api/gifs");
+const blocks = require("./api/blocks");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -42,6 +43,7 @@ app.use("/api/videos", videos);
 app.use("/api/songs", songs);
 app.use("/api/gifs", gifs);
 app.use("/api/pics", pics);
+app.use("/api/blocks", blocks);
 app.use("/api/login", login);
 app.use("/api/register", register);
 
