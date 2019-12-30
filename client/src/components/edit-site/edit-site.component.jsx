@@ -144,6 +144,48 @@ class EditSite extends React.Component {
               Remove a song
             </Button>
           </div>
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+              Pic
+            </span>
+
+            <Button
+              onClick={this.handleClick}
+              name="add-media-block"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Add a Pic{" "}
+            </Button>
+            <Button
+              onClick={this.handleClick}
+              name="remove-media-block"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Remove a Pic{" "}
+            </Button>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
+              Loop/Gif
+            </span>
+
+            <Button
+              onClick={this.handleClick}
+              name="add-media-block"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Add a gif{" "}
+            </Button>
+            <Button
+              onClick={this.handleClick}
+              name="remove-media-block"
+              style={{ margin: 5, fontWeight: "bold" }}
+            >
+              Remove a gif{" "}
+            </Button>
+          </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
               Media Block
