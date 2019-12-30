@@ -13,13 +13,14 @@ class ContentBlockBox extends React.Component {
     async componentDidMount() {
         const response = await fetch("http://www.onabeat.com/api/blocks/all");
         const blocks = await response.json();
-        console.log(blocks)
+        console.log(blocks.reverse())
         this.setState({ blocks: blocks });
     }
 
     render() {
         return (
             <div style={{}}>
+
 
                 {this.state.blocks.map(block => {
                     return (
