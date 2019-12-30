@@ -6,7 +6,7 @@ const PicSchema = new Schema({
         type: String,
         required: true
     },
-    title: {
+    description: {
         type: String
     },
     picUrl: {

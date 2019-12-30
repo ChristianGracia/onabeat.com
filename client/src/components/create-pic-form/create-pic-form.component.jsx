@@ -67,7 +67,7 @@ class CreatePicForm extends React.Component {
 
                 <form onSubmit={this.onSubmit}>
                     <TextInput
-                        placeholder="Name of gif"
+                        placeholder="Name of pic"
                         name="name"
                         type="text"
                         value={this.state.name}
@@ -78,10 +78,10 @@ class CreatePicForm extends React.Component {
                         Enter only the random letters/numbers after www.youtube.com/watch?v=
           </p> */}
                     <TextInput
-                        placeholder="GIF url"
-                        name="gifUrl"
+                        placeholder="Pic url"
+                        name="picUrl"
                         type="text"
-                        value={this.state.gifUrl}
+                        value={this.state.picUrl}
                         onChange={this.onChange}
                     />
                     {/* <div style={{ marginBottom: 15 }}>
@@ -91,7 +91,7 @@ class CreatePicForm extends React.Component {
                     </div> */}
 
                     <TextInput
-                        placeholder="Description of gif (optional)"
+                        placeholder="Description of pic (optional)"
                         name="description"
                         type="text"
                         value={this.state.description}

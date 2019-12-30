@@ -17,7 +17,7 @@ router.post(
     (req, res) => {
         const newPic = new Pic({
             name: req.body.name,
-            title: req.body.title,
+            description: req.body.description,
             picUrl: req.body.picUrl
         });
 
