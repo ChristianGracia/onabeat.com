@@ -9,33 +9,26 @@ export default class Header extends Component {
         <Navbar
           style={{ justifyContent: "right", backgroundColor: "transparent" }}
         >
-          <Navbar.Brand href="/" style={{
-            color: "#4E4E4E"
-          }}>
+          <Navbar.Brand href="/" style={{ color: "#A9A9A9" }}>
             Home{" "}
             <i
               className="fas fa-compact-disc fa-spin"
               style={{
                 fontSize: 20,
                 color: "black"
+
               }}
             ></i>
           </Navbar.Brand>
 
           <Nav className="ml-auto">
-            <Nav.Link href="/artists" style={{
-              color: "#4E4E4E"
-            }} >
+            <Nav.Link href="/artists"  >
               Artists
             </Nav.Link>
-            <Nav.Link href="/about" style={{
-              color: "#4E4E4E"
-            }}>
+            <Nav.Link href="/about" >
               About
             </Nav.Link>
-            <Nav.Link href="/login" style={{
-              color: "#4E4E4E"
-            }}>
+            <Nav.Link href="/login" >
               Login
             </Nav.Link>
           </Nav>
