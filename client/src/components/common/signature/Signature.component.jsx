@@ -1,16 +1,17 @@
 import React from "react";
+import "./signature.styles.scss"
 
 const Signature = () => {
   return (
-    <div style={{ color: "#F8D100" }}>
-      <p style={{ marginTop: 30, fontSize: 20, fontWeight: "bold" }}>
+    <div style={{ color: "black", display: "flex", flexDirection: "column" }}>
+      <span style={{ marginTop: 30, fontSize: 20, fontWeight: "bold" }}>
         Site written by{" "}
         <a href="http://www.christiangracia.com">Christian Gracia</a>
         <i
           class="fab fa-react fa-spin"
           style={{ color: "#0082BE", fontWeight: "bold" }}
         ></i>
-      </p>
+      </span>
       <a href="http://www.christiangracia.com">christiangracia.com</a>
     </div>
   );

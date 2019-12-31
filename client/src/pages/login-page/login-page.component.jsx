@@ -20,20 +20,20 @@ const LoginPage = () => (
       />
     </div>
     <p
-      style={{ color: "red", fontWeight: "bold", fontSize: 30, marginTop: 20 }}
+      style={{ color: "black", fontWeight: "bold", fontSize: 30, marginTop: 20 }}
     >
       Site Dashboard Login
     </p>
     <LoginForm />
     <LightSpeed left>
-      <p style={{ marginTop: 20, color: "red", fontSize: 14 }}>
-        Only <span style={{ fontWeight: "bold", color: "red" }}>On a Beat</span>{" "}
+      <p style={{ marginTop: 20, color: "black", fontSize: 14 }}>
+        Only <span style={{ fontWeight: "bold", color: "black" }}>On a Beat</span>{" "}
         members are allowed to create accounts
       </p>
     </LightSpeed>
     <Tada>
       {" "}
-      <p style={{ fontWeight: "bold", color: "red", fontSize: 25 }}>
+      <p style={{ fontWeight: "bold", color: "black", fontSize: 25 }}>
         For now...
       </p>
     </Tada>

@@ -4,7 +4,7 @@ import "./home-page.styles.scss";
 import VideoBox from "../../components/video-box/video-box.component";
 import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 // import ContentGrid from "../../components/grid/grid-component";
-import Signature from "../../components/common/signature/Signature.component";
+import Signature from "../../components/common/signature/signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
 
 import Bounce from "react-reveal/Bounce";
@@ -33,7 +33,7 @@ const HomePage = () => (
       }}
     >
       <ContentBlockBox />
-      <p style={{ marginTop: 30, fontStyle: "italic", color: "red", fontSize: 20 }}>New content will be coming every week</p>
+      <p style={{ marginTop: 30, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New content will be coming every week!</p>
       <div
       // className="row"
       // style={{ justifyContent: "center", alignItems: "center" }}

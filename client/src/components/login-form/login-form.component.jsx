@@ -89,7 +89,7 @@ class LoginForm extends React.Component {
           />
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button type="submit" variant="primary">
+            <Button type="submit" variant="dark">
               Submit
             </Button>
           </div>

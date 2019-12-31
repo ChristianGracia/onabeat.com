@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import "./header.styles.scss"
 
 export default class Header extends Component {
   render() {
@@ -8,7 +9,9 @@ export default class Header extends Component {
         <Navbar
           style={{ justifyContent: "right", backgroundColor: "transparent" }}
         >
-          <Navbar.Brand href="/" style={{ color: "black" }}>
+          <Navbar.Brand href="/" style={{
+            color: "#4E4E4E"
+          }}>
             Home{" "}
             <i
               className="fas fa-compact-disc fa-spin"
@@ -20,18 +23,24 @@ export default class Header extends Component {
           </Navbar.Brand>
 
           <Nav className="ml-auto">
-            <Nav.Link href="/artists" style={{ color: "black" }}>
+            <Nav.Link href="/artists" style={{
+              color: "#4E4E4E"
+            }} >
               Artists
             </Nav.Link>
-            <Nav.Link href="/about" style={{ color: "black" }}>
+            <Nav.Link href="/about" style={{
+              color: "#4E4E4E"
+            }}>
               About
             </Nav.Link>
-            <Nav.Link href="/login" style={{ color: "black" }}>
+            <Nav.Link href="/login" style={{
+              color: "#4E4E4E"
+            }}>
               Login
             </Nav.Link>
           </Nav>
-        </Navbar>
-      </div>
+        </Navbar >
+      </div >
     );
   }
 }
