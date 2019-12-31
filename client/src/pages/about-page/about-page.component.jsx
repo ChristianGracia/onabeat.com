@@ -20,7 +20,7 @@ const AboutPage = () => (
         }}
       />
     </div> */}
-    <p style={{ color: "red", fontWeight: "bold", fontSize: 30 }}>About Us</p>
+    <p style={{ color: "black", fontWeight: "bold", fontSize: 30 }}>About Us</p>
 
     <div
       style={{
@@ -29,7 +29,7 @@ const AboutPage = () => (
         justifyContent: "center",
         alignItems: "center",
         padding: 30,
-        color: "red",
+        color: "black",
         fontSize: 20
       }}
     >
