@@ -1,6 +1,7 @@
 import React from "react";
 import SpotifyPlayer from "../spotify-player/spotify-player.component";
 import VideoPlayer from "../video-player/video-player.component";
+import "./content-block-player.styles.scss"
 
 const ContentPlayer = ({ data }) => {
     return (<div> <div class="week" ><span class="week">{data.title}</span></div>
