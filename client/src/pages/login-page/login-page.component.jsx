@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo2.PNG";
+import logo from "../../assets/logo.png";
 import "./login-page.styles.scss";
 import LoginForm from "../../components/login-form/login-form.component";
 import LightSpeed from "react-reveal/LightSpeed";
