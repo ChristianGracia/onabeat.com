@@ -14,7 +14,7 @@ export default class Header extends Component {
               className="fas fa-compact-disc fa-spin"
               style={{
                 fontSize: 20,
-                color: "red"
+                color: "black"
               }}
             ></i>
           </Navbar.Brand>
