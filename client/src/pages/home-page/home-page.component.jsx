@@ -7,6 +7,10 @@ import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
 
+import JoinEmailList from "../../components/join-email-list/join-email-list.component"
+
+
+
 import Bounce from "react-reveal/Bounce";
 
 const HomePage = () => (
@@ -24,6 +28,9 @@ const HomePage = () => (
         />
       </div>
     </Bounce>
+    <div style={{ display: "flex", justifyContent: "center", marginTop: 30 }}>
+      <JoinEmailList />
+    </div>
     <div
       style={{
         display: "flex",
@@ -34,35 +41,7 @@ const HomePage = () => (
     >
       <ContentBlockBox />
       <p style={{ marginTop: 30, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New content will be coming every week!</p>
-      <div
-      // className="row"
-      // style={{ justifyContent: "center", alignItems: "center" }}
-      >
-        {/* <Fade left>
-          <div style={{ marginTop: 30 }}>
-            <p
-              style={{
-                fontSize: 40,
-                fontWeight: "bold",
-                color: "#F8D100"
-              }}
-            >
-              Music
-            </p>
-          </div>
-        </Fade> */}
-        {/* <div style={{ margin: 20, marginTop: 30 }}>
-          <SpotifyBox />
-        </div>
-        <div style={{ padding: 10 }}></div>
-        <div>
-          <p style={{ fontSize: 40, fontWeight: "bold", color: "#F8D100" }}>
-            Videos
-          </p>
 
-          <VideoBox />
-        </div> */}
-      </div>
       <div>
         <Signature />
       </div>
