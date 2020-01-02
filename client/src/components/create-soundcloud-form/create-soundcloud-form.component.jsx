@@ -1,5 +1,6 @@
 import React from "react";
 import TextInput from "../common/text-input/text-input.component";
+import SpotifyPlayer from "../spotify-player/spotify-player.component";
 
 import { Button } from "react-bootstrap";
 
@@ -17,15 +18,27 @@ class CreateSoundCloudForm extends React.Component {
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+    if (e.target.name == "songUrl") {
+
+      let url = e.target.value
+        .split(" ")[6]
+        .substring(5)
+        .split('"')[0];
+
+      this.setState({
+        songUrl: url
+      })
+    }
+    else {
+      this.setState({ [e.target.name]: e.target.value });
+
+    }
   }
   async onSubmit(e) {
     e.preventDefault();
 
     let url = this.state.songUrl
-      .split(" ")[6]
-      .substring(5)
-      .split('"')[0];
+
 
     const newSong = {
       name: this.state.name,
@@ -107,6 +120,13 @@ class CreateSoundCloudForm extends React.Component {
               Right click share and then copy embed code and paste that into the
               soundcloud embed url field.
             </p>
+          </div>
+
+
+
+          <div style={{ marginBottom: 15 }}>
+            <SpotifyPlayer songUrl={this.state.songUrl} />
+            <span>Song should above should play if entered correctly</span>
           </div>
 
           <div

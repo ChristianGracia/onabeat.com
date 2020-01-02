@@ -39,9 +39,6 @@ class CreateSpotifyForm extends React.Component {
     e.preventDefault();
 
     let url = this.state.songUrl
-      .slice(13)
-      .split(" ")[0]
-      .slice(0, -1);
 
     const newSong = {
       name: this.state.name,
@@ -127,7 +124,7 @@ class CreateSpotifyForm extends React.Component {
 
           <div style={{ marginBottom: 15 }}>
             <SpotifyPlayer songUrl={this.state.songUrl} />
-            <span>Video should above should play if entered correctly</span>
+            <span>Song should above should play if entered correctly</span>
           </div>
 
           <div
