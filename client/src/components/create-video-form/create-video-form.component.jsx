@@ -91,10 +91,10 @@ class CreateVideoForm extends React.Component {
               Current Url: www.youtube.com/watch?v={this.state.videoUrl}
             </span>
           </div>
-
-          <VideoPlayer videoUrl={this.state.videoUrl} />
-          <span>Video should above should play if entered correctly</span>
-
+          <div style={{ marginBottom: 15 }}>
+            <VideoPlayer videoUrl={this.state.videoUrl} />
+            <span>Video should above should play if entered correctly</span>
+          </div>
           <TextInput
             placeholder="Description of video (optional)"
             name="description"

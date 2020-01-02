@@ -1,5 +1,6 @@
 import React from "react";
 import TextInput from "../common/text-input/text-input.component";
+import SpotifyPlayer from "../spotify-player/spotify-player.component";
 
 import { Button } from "react-bootstrap";
 
@@ -17,7 +18,22 @@ class CreateSpotifyForm extends React.Component {
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+
+    if (e.target.name == "songUrl") {
+
+      let url = e.target.value
+        .slice(13)
+        .split(" ")[0]
+        .slice(0, -1);
+
+      this.setState({
+        songUrl: url
+      })
+    }
+    else {
+      this.setState({ [e.target.name]: e.target.value });
+
+    }
   }
   async onSubmit(e) {
     e.preventDefault();
@@ -107,6 +123,11 @@ class CreateSpotifyForm extends React.Component {
               Right click share and then copy embed code and paste that into the
               spotify embed url field.
             </p>
+          </div>
+
+          <div style={{ marginBottom: 15 }}>
+            <SpotifyPlayer songUrl={this.state.songUrl} />
+            <span>Video should above should play if entered correctly</span>
           </div>
 
           <div
