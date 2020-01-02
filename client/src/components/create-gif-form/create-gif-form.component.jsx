@@ -17,15 +17,26 @@ class CreateGifForm extends React.Component {
     }
 
     onChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
+        if (e.target.name == "gifUrl") {
+
+            let url = e.target.value
+                .slice(13)
+                .split(" ")[0]
+                .slice(0, -1);
+
+            this.setState({
+                gifUrl: url
+            })
+        }
+        else {
+            this.setState({ [e.target.name]: e.target.value });
+
+        }
     }
     async onSubmit(e) {
         e.preventDefault();
 
-        let url = this.state.gifUrl.slice(13)
-            .split(" ")[0]
-            .slice(0, -1);
-
+        let url = this.state.gifUrl;
 
         const newGif = {
             name: this.state.name,
@@ -107,6 +118,9 @@ class CreateGifForm extends React.Component {
                             To get Gif Url, upload gif to Giphy.com, click embed next to gif, copy and paste embed code to gif url
             </p>
                     </div>
+
+                    <iframe height="250" width="250" src={this.state.gifUrl} frameBorder="0" class="" allowFullScreen></iframe>
+                    <p>GIF should load here if entered correctly</p>
 
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Button type="submit" variant="primary">
