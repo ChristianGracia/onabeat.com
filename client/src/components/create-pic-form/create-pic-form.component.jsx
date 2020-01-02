@@ -74,9 +74,6 @@ class CreatePicForm extends React.Component {
                         onChange={this.onChange}
                         style={{ maxWidth: 320 }}
                     />
-                    {/* <p>
-                        Enter only the random letters/numbers after www.youtube.com/watch?v=
-          </p> */}
                     <TextInput
                         placeholder="Pic url"
                         name="picUrl"
@@ -84,11 +81,6 @@ class CreatePicForm extends React.Component {
                         value={this.state.picUrl}
                         onChange={this.onChange}
                     />
-                    {/* <div style={{ marginBottom: 15 }}>
-                        <span style={{ fontWeight: "bold" }}>
-                            Current Url: www.youtube.com/watch?v={this.state.videoUrl}
-                        </span>
-                    </div> */}
 
                     <TextInput
                         placeholder="Description of pic (optional)"
@@ -101,8 +93,6 @@ class CreatePicForm extends React.Component {
                     <div
                         style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                     >
-
-
                         <p
                             style={{
                                 color: "red",
