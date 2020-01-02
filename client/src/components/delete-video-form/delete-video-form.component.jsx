@@ -86,8 +86,8 @@ class DeleteVideoForm extends React.Component {
             </Dropdown.Item>
           ))}
         </DropdownButton>
-        <div>
-          <p>{this.state.currentVid}</p>
+        <div style={{ marginTop: 20, color: "red" }}>
+          <p>Remove {this.state.currentVidName}?</p>
           {this.state.currentVidName !== "" ? (
             <Button onClick={this.handleDelete} variant="danger">
               Delete Video

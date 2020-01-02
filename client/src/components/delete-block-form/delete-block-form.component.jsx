@@ -30,9 +30,9 @@ class DeleteBlockForm extends React.Component {
     async onSubmit(e) {
         e.preventDefault();
         let id = e.nativeEvent.target.value;
-        console.log(e.nativeEvent.target.value);
+        console.log(e.nativeEvent);
         this.setState({
-            currentBlockName: e.nativeEvent.target.name,
+            currentBlockName: e.nativeEvent.target.innerText,
             currentBlockId: id
         });
     }
@@ -84,9 +84,9 @@ class DeleteBlockForm extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <div>
-                    <p>{this.state.currentSong}</p>
-                    {this.state.currentSongName !== "" ? (
+                <div style={{ marginTop: 20, color: "red" }}>
+                    <p>Remove {this.state.currentBlockName}?</p>
+                    {this.state.currentBlockName !== "" ? (
                         <Button onClick={this.handleDelete} variant="danger">
                             Delete Block
             </Button>

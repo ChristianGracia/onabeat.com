@@ -85,8 +85,8 @@ class DeletePicForm extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <div>
-                    <p>{this.state.currentPicName}</p>
+                <div style={{ marginTop: 20, color: "red" }}>
+                    <p>Remove {this.state.currentPicName}?</p>
                     {this.state.currentPicName !== "" ? (
                         <Button onClick={this.handleDelete} variant="danger">
                             Delete Pic

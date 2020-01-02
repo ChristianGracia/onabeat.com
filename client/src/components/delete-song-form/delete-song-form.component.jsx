@@ -85,8 +85,8 @@ class DeleteSongForm extends React.Component {
             </Dropdown.Item>
           ))}
         </DropdownButton>
-        <div>
-          <p>{this.state.currentSong}</p>
+        <div style={{ marginTop: 20, color: "red" }}>
+          <p>Remove {this.state.currentSongName}?</p>
           {this.state.currentSongName !== "" ? (
             <Button onClick={this.handleDelete} variant="danger">
               Delete Song

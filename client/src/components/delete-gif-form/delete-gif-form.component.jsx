@@ -85,9 +85,10 @@ class DeleteGifForm extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                <div>
-                    <p>{this.state.currentGifName}</p>
+                <div style={{ marginTop: 20, color: "red" }}>
+                    <p>Remove {this.state.currentGifName}?</p>
                     {this.state.currentGifName !== "" ? (
+
                         <Button onClick={this.handleDelete} variant="danger">
                             Delete Gif
             </Button>
