@@ -1,40 +1,62 @@
 import React from 'react'
 import { ButtonToolbar, OverlayTrigger, Popover, Button } from "react-bootstrap"
+import TextInput from "../common/text-input/text-input.component";
 
 class JoinEmailList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            showEmailInput: false,
+            emailAddress: ""
+        };
+        this.onChange = this.onChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick(e) {
+
+        if (this.state.showEmailInput == true) {
+            this.setState({ showEmailInput: false })
+
+        }
+        else {
+            this.setState({ showEmailInput: true })
+        }
+
+
+    }
+    onChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
+
     }
     render() {
         return (
+            <div>
 
-            <ButtonToolbar>
-                {['bottom'].map(placement => (
-                    <OverlayTrigger
-                        trigger="click"
-                        key={placement}
-                        placement={placement}
-                        overlay={
-                            <Popover id={`popover-positioned-${placement}`}>
-                                <Popover.Title as="h3">Email Address</Popover.Title>
-                                <Popover.Content>
-                                    <input type="email" />
-                                    <div style={{ padding: 5 }}></div>
-                                    <Button variant="secondary">Join</Button>
-                                </Popover.Content>
-                            </Popover>
-                        }
-                    >
-                        <Button variant="secondary">Join Email List</Button>
-                    </OverlayTrigger>
-                ))}
-            </ButtonToolbar>
+
+                {
+                    this.state.showEmailInput == false ? (<div><Button variant="secondary" onClick={this.handleClick}>Join Email List</Button></div>) :
+                        (<div>       <form
+                            action="https://sendpoint.io/id/onabeat-email"
+                            method="POST"
+                            style={{}}
+                        >    <TextInput
+                                placeholder="Email Address"
+                                name="emailAddress"
+                                type=""
+                                value={this.state.emailAddress}
+                                onChange={this.onChange}
+                            />
+                            <div style={{ padding: 5 }}></div>
+                            <Button variant="secondary" type="submit">Join</Button></form></div>)
+                }
+
+            </div>
         )
+
+
+
     }
-
-
 }
 
 export default JoinEmailList;
