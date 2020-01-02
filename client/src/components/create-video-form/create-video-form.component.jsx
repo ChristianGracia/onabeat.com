@@ -3,6 +3,8 @@ import TextInput from "../common/text-input/text-input.component";
 
 import { Button } from "react-bootstrap";
 
+import VideoPlayer from "../video-player/video-player.component"
+
 class CreateVideoForm extends React.Component {
   constructor() {
     super();
@@ -89,6 +91,9 @@ class CreateVideoForm extends React.Component {
               Current Url: www.youtube.com/watch?v={this.state.videoUrl}
             </span>
           </div>
+
+          <VideoPlayer videoUrl={this.state.videoUrl} />
+          <span>Video should above should play if entered correctly</span>
 
           <TextInput
             placeholder="Description of video (optional)"
