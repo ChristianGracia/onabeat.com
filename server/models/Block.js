@@ -45,7 +45,7 @@ const BlockSchema = new Schema({
         description: {
             type: String
         },
-        Url: { type: String },
+        url: { type: String },
 
         type: { type: String }
     }
