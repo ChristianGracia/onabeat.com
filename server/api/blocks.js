@@ -15,10 +15,10 @@ router.post(
     "/create-block", (req, res) => {
         const newBlock = new Block({
             title: req.body.title,
-            vid: req.body.vid,
-            song: req.body.song,
-            pic: req.body.pic,
-            gif: req.body.gif
+            first: req.body.first,
+            second: req.body.second,
+            third: req.body.third,
+            fourth: req.body.fourth
         });
         newBlock.save().then(blocks => res.json(blocks));
     }
