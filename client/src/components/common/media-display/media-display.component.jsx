@@ -4,10 +4,10 @@ import MediaType from "../media-type/media-type.component";
 const MediaDisplay = ({ data }) => {
     return (<div>
         <div className="item">
-            <p className="title">{data.first.name}
+            <p className="title">{data.name}
             </p>
 
-            <p className="artist">{data.first.description} </p><MediaType url={data.first.url} type={data.first.type} />
+            <p className="artist">{data.description} </p><MediaType url={data.url} type={data.type} />
         </div>
 
 
