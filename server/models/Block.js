@@ -6,41 +6,48 @@ const BlockSchema = new Schema({
         type: String,
         required: true
     },
-    vid: {
-        videoName: {
+    first: {
+        name: {
             type: String
         },
-        videoDescription: {
+        description: {
             type: String
         },
-        vidUrl: { type: String }
+        url: { type: String },
+        type: { type: String }
     },
-    song: {
-        songName: {
+    second: {
+        name: {
             type: String
         },
-        songArtist: {
+        description: {
             type: String
         },
-        songUrl: { type: String }
+        url: { type: String }
+        ,
+        type: { type: String }
     },
-    pic: {
-        picName: {
+    third: {
+        name: {
             type: String
         },
-        picDescription: {
+        description: {
             type: String
         },
-        picUrl: { type: String }
+        url: { type: String }
+        ,
+        type: { type: String }
     },
-    gif: {
-        gifName: {
+    fourth: {
+        name: {
             type: String
         },
-        gifDescription: {
+        description: {
             type: String
         },
-        gifUrl: { type: String }
+        Url: { type: String },
+
+        type: { type: String }
     }
 
 

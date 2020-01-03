@@ -12,21 +12,24 @@ class CreateBlockForm extends React.Component {
             videos: [],
             pics: [],
             gifs: [],
-            songName: "",
-            songArtist: "",
-            songUrl: "",
-            vidName: "",
-            vidDescription: "",
-            vidUrl: "",
-            picName: "",
-            picDescription: "",
-            picUrl: "",
-            gifName: "",
-            gifDescription: "",
-            gifUrl: "",
-
-
-            title: ""
+            firstName: "",
+            firstArtist: "",
+            firstUrl: "",
+            firstType: "",
+            secondName: "",
+            secondDescription: "",
+            secondUrl: "",
+            secondType: "",
+            thirdName: "",
+            thirdDescription: "",
+            thirdUrl: "",
+            thirdType: "",
+            fourthName: "",
+            fourthDescription: "",
+            fourthUrl: "",
+            fourthType: "",
+            title: "",
+            counter: 0
         };
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -47,11 +50,12 @@ class CreateBlockForm extends React.Component {
             songs: songs,
             videos: videos, pics: pics, gifs: gifs
         });
-        console.log(songs);
+
     }
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
+
     }
     async onSubmitBlock(e) {
         e.preventDefault();
@@ -63,10 +67,10 @@ class CreateBlockForm extends React.Component {
 
             const newBlock = {
                 title: this.state.title,
-                vid: { videoName: this.state.vidName, videoDescription: this.state.vidDescription, vidUrl: this.state.vidUrl },
-                song: { songName: this.state.songName, songArtist: this.state.songArtist, songUrl: this.state.songUrl },
-                pic: { picName: this.state.picName, picDescription: this.state.picDescription, picUrl: this.state.picUrl },
-                gif: { gifName: this.state.gifName, gifDescription: this.state.gifDescription, gifUrl: this.state.gifUrl }
+                first: { name: this.state.firstName, description: this.state.firstDescription, url: this.state.firstUrl, type: this.state.firstType },
+                second: { name: this.state.secondName, description: this.state.secondDescription, url: this.state.secondUrl, type: this.state.secondType },
+                third: { name: this.state.thirdName, description: this.state.thirdDescription, url: this.state.thirdUrl, type: this.state.thirdType },
+                fourth: { name: this.state.fourthName, description: this.state.fourthDescription, url: this.state.fourthUrl, type: this.state.fourthType }
 
             }
             console.log(newBlock)
@@ -85,21 +89,24 @@ class CreateBlockForm extends React.Component {
             if (block.title === this.state.title) {
                 alert("block posted");
                 this.setState({
-                    songName: "",
-                    songArtist: "",
-                    songUrl: "",
-                    vidName: "",
-                    vidDescription: "",
-                    vidUrl: "",
-                    picName: "",
-                    picDescription: "",
-                    picUrl: "",
-                    gifName: "",
-                    gifDescription: "",
-                    gifUrl: "",
-
-
-                    title: ""
+                    firstName: "",
+                    firstArtist: "",
+                    firstUrl: "",
+                    firstType: "",
+                    secondName: "",
+                    secondDescription: "",
+                    secondUrl: "",
+                    secondType: "",
+                    thirdName: "",
+                    thirdDescription: "",
+                    thirdUrl: "",
+                    thirdType: "",
+                    fourthName: "",
+                    fourthDescription: "",
+                    fourthUrl: "",
+                    fourthType: "",
+                    title: "",
+                    counter: 0
                 });
             } else {
                 alert("Error posting block");
@@ -109,41 +116,53 @@ class CreateBlockForm extends React.Component {
     async onSubmit(e) {
         e.preventDefault();
         let type = e.nativeEvent.target.id;
-        console.log(type);
-        switch (type) {
-            case "Song":
+        let count = this.state.counter + 1;
+
+
+        switch (this.state.counter) {
+            case 0:
                 this.setState({
-                    songName: e.nativeEvent.target.attributes["name"].value,
-                    songArtist: e.nativeEvent.target.attributes["artist"].value,
-                    songUrl: e.nativeEvent.target.attributes["songurl"].value
+                    firstName: e.nativeEvent.target.attributes["name"].value,
+                    firstDescription: e.nativeEvent.target.attributes["description"].value,
+                    firstUrl: e.nativeEvent.target.attributes["url"].value,
+                    firstType: type,
+
                 })
                 break;
-            case "Vid":
+            case 1:
                 console.log(e.nativeEvent.target.attributes);
                 this.setState({
-                    vidName: e.nativeEvent.target.attributes["name"].value,
-                    vidDescription: e.nativeEvent.target.attributes["description"].value,
-                    vidUrl: e.nativeEvent.target.attributes["videourl"].value
+                    secondName: e.nativeEvent.target.attributes["name"].value,
+                    secondDescription: e.nativeEvent.target.attributes["description"].value,
+                    secondUrl: e.nativeEvent.target.attributes["url"].value,
+                    secondType: type,
+
                 })
                 break;
-            case "Pic":
+            case 2:
                 this.setState({
-                    picName: e.nativeEvent.target.attributes["name"].value,
-                    picDescription: e.nativeEvent.target.attributes["description"].value,
-                    picUrl: e.nativeEvent.target.attributes["picurl"].value
+                    thirdName: e.nativeEvent.target.attributes["name"].value,
+                    thirdDescription: e.nativeEvent.target.attributes["description"].value,
+                    thirdUrl: e.nativeEvent.target.attributes["url"].value,
+                    thirdType: type,
+
                 })
                 break;
-            case "Gif":
+            case 3:
                 this.setState({
-                    gifName: e.nativeEvent.target.attributes["name"].value,
-                    gifDescription: e.nativeEvent.target.attributes["description"].value,
-                    gifUrl: e.nativeEvent.target.attributes["gifurl"].value
+                    fourthName: e.nativeEvent.target.attributes["name"].value,
+                    fourthDescription: e.nativeEvent.target.attributes["description"].value,
+                    fourthUrl: e.nativeEvent.target.attributes["url"].value,
+                    fourthType: type,
+
                 })
                 break;
             default:
                 break;
 
+
         }
+        this.setState({ counter: count })
 
     }
     render() {
@@ -174,8 +193,8 @@ class CreateBlockForm extends React.Component {
                         <Dropdown.Item
                             key={x._id}
                             name={x.name}
-                            songurl={x.songUrl}
-                            artist={x.artist}
+                            url={x.songUrl}
+                            description={x.artist}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -191,7 +210,7 @@ class CreateBlockForm extends React.Component {
                             key={x._id}
                             name={x.name}
                             description={x.description}
-                            videourl={x.videoUrl}
+                            url={x.videoUrl}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -206,7 +225,7 @@ class CreateBlockForm extends React.Component {
                             key={x._id}
                             name={x.name}
                             description={x.description}
-                            gifurl={x.gifUrl}
+                            url={x.gifUrl}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -221,7 +240,7 @@ class CreateBlockForm extends React.Component {
                             key={x._id}
                             name={x.name}
                             description={x.description}
-                            picurl={x.picUrl}
+                            url={x.picUrl}
                             value={x._id}
                             onClick={this.onSubmit}
                             as="button"
@@ -234,17 +253,17 @@ class CreateBlockForm extends React.Component {
                 <div
                     style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                 >
-                    <span style={{ fontWeight: "bold" }}>Video name:   <span style={{ color: "red" }}>{this.state.vidName}</span></span>
-                    <span style={{ fontWeight: "bold" }}>Song Name:  <span style={{ color: "red" }}>{this.state.songName}</span></span>
+                    <span style={{ fontWeight: "bold" }}>First name:   <span style={{ color: "red" }}>{this.state.firstName} </span> Type:  <span style={{ color: "red" }}>{this.state.firstType}</span></span>
+                    <span style={{ fontWeight: "bold" }}>Second Name:  <span style={{ color: "red" }}>{this.state.secondName} </span> Type:  <span style={{ color: "red" }}>{this.state.secondType}</span></span>
                     <span style={{ fontWeight: "bold" }}>
-                        Gif Name: <span style={{ color: "red" }}>{this.state.gifName}</span>
+                        Third Name: <span style={{ color: "red" }}>{this.state.thirdName} </span> Type:  <span style={{ color: "red" }}>{this.state.thirdType}</span>
                     </span>
                     <span style={{ fontWeight: "bold" }}>
-                        Pic Name: <span style={{ color: "red" }}>{this.state.picName}</span>
+                        Fourth Name: <span style={{ color: "red" }}>{this.state.fourthName} </span> Type:  <span style={{ color: "red" }}>{this.state.fourthType}</span>
                     </span>
 
 
-                </div>
+                </div >
                 <form
                     onSubmit={this.onSubmit}
                     style={{
@@ -260,7 +279,7 @@ class CreateBlockForm extends React.Component {
             </Button>
                     </div>
                 </form>
-            </div>
+            </div >
         );
     }
 }
