@@ -22,7 +22,7 @@ class ContentBlockBox extends React.Component {
             <div style={{}}>
                 {this.state.blocks.map(block => {
                     return (<Fade left>
-                        <ContentBlockPlayer data={block} />
+                        <ContentBlockPlayer key={block._id} data={block} />
                     </Fade>
                     );
                 })}

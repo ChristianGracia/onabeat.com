@@ -6,27 +6,32 @@ import "./content-block-player.styles.scss"
 const ContentPlayer = ({ data }) => {
     return (<div> <div class="week" ><span class="week">{data.title}</span></div>
         <div className="container" >
-            {data.song.songUrl == "" ? null : <div className="item">
-                <p className="title">{data.song.songName}
+
+
+            {data.first.url == "" ? null : <div className="item">
+                <p className="title">{data.first.name}
                 </p>
-                <p className="artist">{data.song.songArtist} </p><SpotifyPlayer songUrl={data.song.songUrl} />
+                <p className="artist">{data.first.description} </p><SpotifyPlayer songUrl={data.first.url} />
             </div>}
-            {data.vid.vidUrl == "" ? null :
+            {data.second.url == "" ? null :
                 <div className="item">
-                    <p className="title">{data.vid.videoName} </p>
-                    <p className="description">{data.vid.videoDescription} </p>
-                    <VideoPlayer videoUrl={data.vid.vidUrl} />
+                    <p className="title">{data.second.name} </p>
+                    <p className="description">{data.second.description} </p>
+                    <VideoPlayer videoUrl={data.second.url} />
                 </div>
             }
-            {data.pic.picUrl == "" ? null : <div className="item" >
-                <p className="title">{data.pic.picName}</p>
-                <p className="description">{data.pic.picDescription}</p>
-                <img height="250" width="250" src={data.pic.picUrl} />
+            {data.third.url == "" ? null : <div className="item" >
+                <p className="title">{data.third.name}</p>
+                <p className="description">{data.third.description}</p>
+
+                <iframe height="250" width="250" src={data.third.url} frameBorder="0" class="" allowFullScreen></iframe>
+
             </div>}
-            {data.gif.gifUrl == "" ? null : <div className="item">
-                <p className="title">{data.gif.gifName}</p>
-                <p className="description">{data.gif.gifDescription}</p>
-                <iframe height="250" width="250" src={data.gif.gifUrl} frameBorder="0" class="" allowFullScreen></iframe>
+            {data.fourth.url == "" ? null : <div className="item">
+                <p className="title">{data.fourth.name}</p>
+                <p className="description">{data.fourth.description}</p>
+                <img height="250" width="250" src={data.fourth.url} />
+
             </div>
             }
 
