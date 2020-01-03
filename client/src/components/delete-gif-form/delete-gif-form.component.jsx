@@ -26,12 +26,12 @@ class DeleteGifForm extends React.Component {
         const gifs = await response.json();
 
         this.setState({ gifs: gifs });
-        console.log(gifs);
+
     }
     async onSubmit(e) {
         e.preventDefault();
         let id = e.nativeEvent.target.value;
-        console.log(e.nativeEvent.target.value);
+
         this.setState({
             currentGifName: e.nativeEvent.target.name,
             currentGifId: id
