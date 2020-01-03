@@ -7,23 +7,14 @@ const MediaType = ({ type, url }) => {
     switch (type) {
         case "Song":
             return <SpotifyPlayer songUrl={url} />;
-
         case "Vid":
             return <VideoPlayer videoUrl={url} />;
         case "Gif":
             return <iframe height="250" width="250" src={url} frameBorder="0" class="" allowFullScreen></iframe>
         case "Pic":
             return <img height="250" width="250" src={url} />
-
-
-
-        // case "Pic":
-        // case "Video":
-        //     Case "Gif":
         default:
             return null
     }
-
-
 }
 export default MediaType;
