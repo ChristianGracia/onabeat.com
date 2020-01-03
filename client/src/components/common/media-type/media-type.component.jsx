@@ -3,7 +3,6 @@ import SpotifyPlayer from "../../spotify-player/spotify-player.component"
 import VideoPlayer from "../../video-player/video-player.component"
 
 const MediaType = ({ type, url }) => {
-
     switch (type) {
         case "Song":
             return <SpotifyPlayer songUrl={url} />;

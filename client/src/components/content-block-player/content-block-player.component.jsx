@@ -1,6 +1,5 @@
 import React from "react";
 import "./content-block-player.styles.scss"
-import MediaType from "../common/media-type/media-type.component"
 import MediaDisplay from "../common/media-display/media-display.component"
 
 const ContentPlayer = ({ data }) => {
