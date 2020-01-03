@@ -253,7 +253,7 @@ class CreateBlockForm extends React.Component {
                 <div
                     style={{ marginTop: 10, display: "flex", flexDirection: "column" }}
                 >
-                    <span style={{ fontWeight: "bold" }}>First name:   <span style={{ color: "red" }}>{this.state.firstName} </span> Type:  <span style={{ color: "red" }}>{this.state.firstType}</span></span>
+                    <span style={{ fontWeight: "bold" }}>First Name:   <span style={{ color: "red" }}>{this.state.firstName} </span> Type:  <span style={{ color: "red" }}>{this.state.firstType}</span></span>
                     <span style={{ fontWeight: "bold" }}>Second Name:  <span style={{ color: "red" }}>{this.state.secondName} </span> Type:  <span style={{ color: "red" }}>{this.state.secondType}</span></span>
                     <span style={{ fontWeight: "bold" }}>
                         Third Name: <span style={{ color: "red" }}>{this.state.thirdName} </span> Type:  <span style={{ color: "red" }}>{this.state.thirdType}</span>
