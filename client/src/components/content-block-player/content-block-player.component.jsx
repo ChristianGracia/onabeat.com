@@ -6,6 +6,11 @@ import "./content-block-player.styles.scss"
 const ContentPlayer = ({ data }) => {
     return (<div> <div class="week" ><span class="week">{data.title}</span></div>
         <div className="container" >
+            {data.song.songUrl == "" ? null : <div className="item">
+                <p className="title">{data.song.songName}
+                </p>
+                <p className="artist">{data.song.songArtist} </p><SpotifyPlayer songUrl={data.song.songUrl} />
+            </div>}
             {data.vid.vidUrl == "" ? null :
                 <div className="item">
                     <p className="title">{data.vid.videoName} </p>
@@ -13,11 +18,6 @@ const ContentPlayer = ({ data }) => {
                     <VideoPlayer videoUrl={data.vid.vidUrl} />
                 </div>
             }
-            {data.song.songUrl == "" ? null : <div className="item">
-                <p className="title">{data.song.songName}
-                </p>
-                <p className="artist">{data.song.songArtist} </p><SpotifyPlayer songUrl={data.song.songUrl} />
-            </div>}
             {data.pic.picUrl == "" ? null : <div className="item" >
                 <p className="title">{data.pic.picName}</p>
                 <p className="description">{data.pic.picDescription}</p>
