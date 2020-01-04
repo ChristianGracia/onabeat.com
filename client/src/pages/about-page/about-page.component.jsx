@@ -7,6 +7,7 @@ import Zoom from "react-reveal/Zoom";
 import RubberBand from "react-reveal/RubberBand";
 import Signature from "../../components/common/signature/Signature.component";
 import LightSpeed from 'react-reveal/LightSpeed';
+import ContactEmail from "../../components/common/contact-email/contact-email.component"
 
 
 const AboutPage = () => (
@@ -37,7 +38,7 @@ const AboutPage = () => (
     >
       <Pulse>
         {" "}
-        <i style={{ fontSize: 70 }} class="fas fa-drum"></i>
+        <i style={{ fontSize: 70, color: "#F8D101" }} class="fas fa-drum"></i>
       </Pulse>
       <Fade left>
         <div style={{ marginTop: 30 }}>
@@ -57,7 +58,7 @@ const AboutPage = () => (
           <p style={{ fontWeight: "bold", fontSize: 30 }}>Occasions</p>
           <div>
             <Fade right>
-              <div><span>parties,</span><span> dinners,</span>    <span>dances,</span><span> religious services,</span>    <span> corporate functions,</span><span>   &c</span></div></Fade>
+              <div><span>parties,</span><span> dinners,</span><span> dances,</span><span> religious services,</span> <span> corporate functions,</span><span> &c</span></div></Fade>
           </div>
 
           <span>+</span> <p style={{ fontWeight: "bold", fontSize: 30 }}>Locations</p>
@@ -102,13 +103,16 @@ const AboutPage = () => (
         class="fas fa-globe-americas fa-pulse"
       ></i>
 
-      <div style={{ marginTop: 20 }}>
+      <ContactEmail />
+
+      <div style={{ marginTop: 40 }}>
         <Zoom left>
           <span style={{ fontWeight: "bold", fontSize: 40 }}>
             More content coming soon
           </span>
         </Zoom>
       </div>
+
       <div>
         <Signature />
       </div>
