@@ -6,6 +6,8 @@ import Pulse from "react-reveal/Pulse";
 import Zoom from "react-reveal/Zoom";
 import RubberBand from "react-reveal/RubberBand";
 import Signature from "../../components/common/signature/Signature.component";
+import LightSpeed from 'react-reveal/LightSpeed';
+
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -45,25 +47,32 @@ const AboutPage = () => (
           </p>
         </div>{" "}
       </Fade>
-      <Fade right>
-        <div style={{ marginTop: 10 }}>
-          {" "}
-          <Fade top cascade>
-            <p style={{}}>We create shows for all ...</p>
-            <p style={{ fontWeight: "bold" }}>Occasions</p>
-            <div>
 
-              <span>parties,</span><span> dinners,</span>    <span>dances,</span><span> religious services,</span>    <span> corporate functions,</span><span>   &c</span>
-            </div>
-            <span>+</span> <p style={{ fontWeight: "bold" }}>Locations</p>
-            <div>
+      <div style={{ marginTop: 60 }}>
+        {" "}
+        <Fade top cascade>
+          <p style={{}}>We create shows for all ...</p>
+        </Fade>
+        <LightSpeed left cascade>
+          <p style={{ fontWeight: "bold", fontSize: 30 }}>Occasions</p>
+          <div>
+            <Fade right>
+              <div><span>parties,</span><span> dinners,</span>    <span>dances,</span><span> religious services,</span>    <span> corporate functions,</span><span>   &c</span></div></Fade>
+          </div>
 
-              <span>clubs,</span><span>  bars,</span> <span>weddings,</span><span>galleries,</span> <span>churches,</span><span>  corners </span>
-            </div>
+          <span>+</span> <p style={{ fontWeight: "bold", fontSize: 30 }}>Locations</p>
+          <div>
+            <Fade left>
+              <div>
+                <span>clubs,</span><span>  bars,</span> <span>weddings,</span><span> galleries,</span> <span>churches,</span><span>  corners </span>
+              </div>
+            </Fade>
+          </div>
+        </LightSpeed >
 
-          </Fade>
-        </div>
-      </Fade>
+
+      </div>
+
       <RubberBand>
         <div>
           <i style={{ fontSize: 60, margin: 20 }} class="fas fa-guitar"></i>
