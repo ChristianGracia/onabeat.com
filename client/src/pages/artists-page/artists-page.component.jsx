@@ -15,8 +15,11 @@ const ArtistsPage = () => (
         }}
       />
     </div> */}
-    <p style={{ color: "black", fontWeight: "bold", fontSize: 30 }}>Artists</p>
-    <p style={{ fontWeight: "bold", marginTop: 20 }}>COMING SOON</p>
+    <div style={{ marginTop: 30, display: "flex", flexDirection: "column" }}>
+      <p style={{ color: "#F9D518", fontWeight: "bold", fontSize: 30 }}>Artists</p>
+
+      <span style={{ color: "#000", fontSize: 25, marginTop: 20, fontWeight: "bold" }}>Agostino - am@onabeat.com</span>
+    </div>
   </div>
 );
 export default ArtistsPage;

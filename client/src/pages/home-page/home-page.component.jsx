@@ -6,6 +6,7 @@ import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 // import ContentGrid from "../../components/grid/grid-component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
+import ContactEmail from "../../components/common/contact-email/contact-email.component"
 
 import JoinEmailList from "../../components/join-email-list/join-email-list.component"
 
@@ -40,9 +41,10 @@ const HomePage = () => (
       }}
     >
       <ContentBlockBox />
-      <p style={{ marginTop: 30, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New music every week!</p>
+      <p style={{ marginTop: 40, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New music every week!</p>
+      <div><ContactEmail /></div>
 
-      <div>
+      <div style={{ marginTop: 30 }}>
         <Signature />
       </div>
     </div>
