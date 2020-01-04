@@ -40,7 +40,7 @@ const HomePage = () => (
       }}
     >
       <ContentBlockBox />
-      <p style={{ marginTop: 30, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New content will be coming every week!</p>
+      <p style={{ marginTop: 30, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New music every week!</p>
 
       <div>
         <Signature />

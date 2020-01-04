@@ -50,12 +50,17 @@ const AboutPage = () => (
           {" "}
           <Fade top cascade>
             <p style={{}}>We create shows for all ...</p>
-            <p style={{ fontWeight: "bold" }}> Occasions</p>
-            <p>
-              (parties dinners dances religious services corporate functions &c)
-            </p>
+            <p style={{ fontWeight: "bold" }}>Occasions</p>
+            <div>
+
+              <span>parties,</span><span> dinners,</span>    <span>dances,</span><span> religious services,</span>    <span> corporate functions,</span><span>   &c</span>
+            </div>
             <span>+</span> <p style={{ fontWeight: "bold" }}>Locations</p>
-            <p>(clubs, bars, weddings, galleries, churches, corners.) </p>
+            <div>
+
+              <span>clubs,</span><span>  bars,</span> <span>weddings,</span><span>galleries,</span> <span>churches,</span><span>  corners </span>
+            </div>
+
           </Fade>
         </div>
       </Fade>
