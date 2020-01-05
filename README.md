@@ -1,7 +1,5 @@
 # On A Beat
 
-**Not Styled yet at all**
-
 Site written in React for onabeat.com
 
 www.onabeat.com
@@ -42,7 +40,7 @@ Users can add gif to database
 
 gif displayed on front-end
 
-### pics
+### Pics
 
 Stores pic info on MongoDb database
 
@@ -50,6 +48,10 @@ Users can add pics to database
 
 pics displayed on front-end
 
+
+### Edit Site Layout
+
+Users have total control of whats on site and in database
 
 
 ### Auth
