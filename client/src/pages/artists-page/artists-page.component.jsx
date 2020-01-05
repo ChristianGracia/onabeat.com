@@ -15,10 +15,10 @@ const ArtistsPage = () => (
         }}
       />
     </div> */}
-    <div style={{ marginTop: 30, display: "flex", flexDirection: "column" }}>
-      <p style={{ color: "#F9D518", fontWeight: "bold", fontSize: 30 }}>Artists</p>
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <p style={{ color: "black", fontWeight: "bold", fontSize: 30 }}>Artists</p>
 
-      <span style={{ color: "#000", fontSize: 25, marginTop: 20, fontWeight: "bold" }}>Agostino - am@onabeat.com</span>
+      <span style={{ color: "#000", fontSize: 25, marginTop: 20, fontWeight: "bold" }}><span style={{ color: "#F8D208" }}>Agostino</span> - am@onabeat.com</span>
     </div>
   </div>
 );
