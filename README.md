@@ -16,6 +16,14 @@ Product Owners can fully edit and arrange site with the backend I wrote them
 
 ## Features
 
+
+### Edit Site Layout
+
+Users have total control of all music, videos, gifs, photos, and user accounts in database
+
+Users can post and remove content blocks to the front page containing any combination of 1-4 music, songs, videos, and GIFs from the db
+
+
 ### Videos
 
 Stores video info on MongoDb database
@@ -47,11 +55,6 @@ Stores pic info on MongoDb database
 Users can add pics to database
 
 pics displayed on front-end
-
-
-### Edit Site Layout
-
-Users have total control of whats on site and in database
 
 
 ### Auth
