@@ -15,10 +15,18 @@ flex-wrap: wrap;
     font-size: 25px;
 
 }
+
 .week{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     color: #F8D100;
+    
     margin-bottom: 30px;
     margin-top:30px;
+}
+
+@media screen and (max-width: 330px){
+  .week{
+    font-size: 20px;
+  }
 }
