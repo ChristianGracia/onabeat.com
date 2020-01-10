@@ -7,6 +7,7 @@ import AboutPage from "./pages/about-page/about-page.component";
 // import RegisterPage from "./pages/register-page/register-page.component";
 import ArtistsPage from "./pages/artists-page/artists-page.component";
 import DashboardPage from "./pages/dashboard-page/dashboard-page.component";
+import PostPage from "./pages/post-page/post.component"
 
 import Header from "./components/header/header.component";
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/about" component={AboutPage} />
 
         <Route exact path="/artists" component={ArtistsPage} />
+        <Route exact path="/post/:id" component={PostPage} />
       </Switch>
       {/* for local */}
       {/* <Route exact path="/dashboard" component={DashboardPage} /> */}

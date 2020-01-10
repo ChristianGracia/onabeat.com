@@ -14,7 +14,6 @@ router.get("/:id"), function (req, res) {
     }).catch(function (err) {
         return res.status(404).json({ postnotfound: "No post found" });
     });
-    res.send;
 };
 
 module.exports = router;
