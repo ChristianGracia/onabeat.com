@@ -43,7 +43,7 @@ class JoinEmailList extends React.Component {
                         >    <TextInput
                                 placeholder="Email Address"
                                 name="emailAddress"
-                                type=""
+                                type="email"
                                 value={this.state.emailAddress}
                                 onChange={this.onChange}
                             />
