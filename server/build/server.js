@@ -26,6 +26,7 @@ var register = require("./api/register");
 var pics = require("./api/pics");
 var gifs = require("./api/gifs");
 var blocks = require("./api/blocks");
+var posts = require("./api/posts");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -35,7 +36,7 @@ var staticFiles = express.static(path.join(__dirname, "../../client/build"));
 app.use(staticFiles);
 
 router.get("/api", function (req, res) {
-  res.send("Welcome to On a Beat API - By Christian Gracia - JSON routes: /api/songs/all /api/videos/all");
+  res.send("Welcome to On a Beat API - By Christian Gracia - JSON routes: /api/blocks/all /api/songs/all /api/videos/all");
 });
 
 app.use(router);
@@ -46,6 +47,7 @@ app.use("/api/pics", pics);
 app.use("/api/blocks", blocks);
 app.use("/api/login", login);
 app.use("/api/register", register);
+app.use("/api/posts", posts)
 
 app.use("/*", staticFiles);
 
