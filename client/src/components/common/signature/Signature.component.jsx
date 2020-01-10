@@ -8,7 +8,7 @@ const Signature = () => {
         Site written by{" "}
         <a href="http://www.christiangracia.com">Christian Gracia</a>
         <i
-          class="fab fa-react fa-spin"
+          className="fab fa-react fa-spin"
           style={{ color: "#0082BE", fontWeight: "bold" }}
         ></i>
       </span>
