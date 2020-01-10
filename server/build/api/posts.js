@@ -9,11 +9,12 @@ var Block = require("../models/Block");
 router.get("/:id"), function (req, res) {
 
     Block.findById(req.params.id).then(function (block) {
-        return (res.json({ block })
+        return res.json(block);
 
     }).catch(function (err) {
-            return res.status(404).json({ picnotfound: "No post found" });
-        });
+        return res.status(404).json({ postnotfound: "No post found" });
+    });
     res.send;
-});
+};
+
 module.exports = router;
