@@ -19,8 +19,9 @@ class ContentBlockBox extends React.Component {
         this.setState({ blocks: blocks });
     }
     postClick(e) {
-        console.log(e.nativeEvent.srcElement.parentNode.attributes.id);
-        window.location.href = `/post/${e.nativeEvent.srcElement.parentNode.attributes.id.value}`;
+
+        let id = e.nativeEvent.target.attributes.id.value;
+        window.location.href = `/post/${id}`;
     }
 
 
@@ -32,7 +33,7 @@ class ContentBlockBox extends React.Component {
                     return (<Fade left>
                         <ContentBlockPlayer key={block._id} data={block} />
                         <div style={{ marginTop: 30 }}>
-                            <Button onClick={this.postClick} id={block._id} key={block._id} variant="dark"><span>See more of {block.title}</span></Button>
+                            <Button onClick={this.postClick} id={block._id} key={block._id} variant="dark">See more of {block.title}</Button>
                         </div>
                     </Fade>
                     );
