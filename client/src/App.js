@@ -7,7 +7,7 @@ import AboutPage from "./pages/about-page/about-page.component";
 // import RegisterPage from "./pages/register-page/register-page.component";
 import ArtistsPage from "./pages/artists-page/artists-page.component";
 import DashboardPage from "./pages/dashboard-page/dashboard-page.component";
-import PostPage from "./pages/post-page/post.component"
+import PostPage from "./pages/post-page/post-page.component"
 
 import Header from "./components/header/header.component";
 

@@ -3,14 +3,16 @@
 
 .item:hover {
 
-  transform: scale(1.4); 
-  padding: 120px 50px;
-  max-width: 88%;
+  transform: scale(1.15); 
+  // padding: 120px 50px;
+  // max-width: 88%;
+
 
 }
 
 }
 .container{
   // display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import "./content-block-player.styles.scss"
 import MediaDisplay from "../common/media-display/media-display.component"
+import { Button } from "react-bootstrap"
 
 const ContentPlayer = ({ data }) => {
     return (<div> <div class="week" ><span className="week">{data.title}</span></div>
-        <div className="container" >
+        <div style={{ marginTop: 20, marginBottom: 60 }}>
+        </div><div className="container" >
             {
                 data.first.url == "" ? null : <MediaDisplay data={data.first} />
             }

@@ -2,7 +2,9 @@ import React from "react";
 import MediaDisplay from "../common/media-display/media-display.component"
 
 const PostDisplay = ({ data }) => {
-    return (<div> <div class="week" ><span class="week">{data.title}</span></div>
+    return (<div>
+
+        <div class="week" ><span class="week">{data.title}</span></div>
         <div className="container" >
             {
                 data.first.url == "" ? null : <MediaDisplay data={data.first} />

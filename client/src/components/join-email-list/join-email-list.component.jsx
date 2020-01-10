@@ -35,7 +35,7 @@ class JoinEmailList extends React.Component {
 
 
                 {
-                    this.state.showEmailInput == false ? (<div><Button variant="secondary" onClick={this.handleClick}>Join Email List</Button></div>) :
+                    this.state.showEmailInput == false ? (<div><Button variant="dark" onClick={this.handleClick}>Join Email List</Button></div>) :
                         (<div>       <form
                             action="https://sendpoint.io/id/onabeat-email"
                             method="POST"
@@ -48,7 +48,7 @@ class JoinEmailList extends React.Component {
                                 onChange={this.onChange}
                             />
                             <div style={{ padding: 5 }}></div>
-                            <Button variant="secondary" type="submit">Join</Button></form></div>)
+                            <Button variant="dark" type="submit">Join</Button></form></div>)
                 }
 
             </div>
