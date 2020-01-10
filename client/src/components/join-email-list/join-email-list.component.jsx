@@ -1,6 +1,7 @@
 import React from 'react'
 import { ButtonToolbar, OverlayTrigger, Popover, Button } from "react-bootstrap"
 import TextInput from "../common/text-input/text-input.component";
+import RubberBand from "react-reveal/RubberBand"
 
 class JoinEmailList extends React.Component {
 
@@ -35,7 +36,9 @@ class JoinEmailList extends React.Component {
 
 
                 {
-                    this.state.showEmailInput == false ? (<div><Button variant="dark" onClick={this.handleClick}>Join Email List</Button></div>) :
+                    this.state.showEmailInput == false ? (<RubberBand ><div>
+
+                        <Button variant="dark" onClick={this.handleClick}>Join Email List</Button> </div>  </RubberBand>) :
                         (<div>       <form
                             action="https://sendpoint.io/id/onabeat-email"
                             method="POST"
