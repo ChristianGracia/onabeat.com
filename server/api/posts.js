@@ -8,12 +8,8 @@ var Block = require("../models/Block");
 
 router.get("/:id"), function (req, res) {
 
-    Block.findById(req.params.id).then(function (block) {
-        return res.json(block);
-
-    }).catch(function (err) {
-        return res.status(404).json({ postnotfound: "No post found" });
-    });
+    Block.findById(req.params.id).then(blocks => res.json(blocks))
+        .catch(err => res.status(404).json({ nopostsfound: "No post found" }));
 };
 
 module.exports = router;
