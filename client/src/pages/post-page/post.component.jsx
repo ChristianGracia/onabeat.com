@@ -1,4 +1,6 @@
 import React from "react";
+import ContentBlockPlayer from "../../components/content-block-player/content-block-player.component";
+import PostDisplay from "../../components/post-display/post-display.component"
 
 class PostPage extends React.Component {
     constructor(props) {
@@ -12,16 +14,22 @@ class PostPage extends React.Component {
         console.log(this.state.postId);
         const post = await fetch(`http://www.onabeat.com/api/posts/${this.state.postId}`);
         const postObj = await post.json();
+
         this.setState({ post: postObj });
+        console.log(this.state.post)
 
     }
 
     render() {
         return (
             <div>
-                hi</div>
+                {this.state.post.first ? <PostDisplay data={this.state.post} /> : null}
+
+            </div>
+
+
         )
     }
 }
-
 export default PostPage;
+
