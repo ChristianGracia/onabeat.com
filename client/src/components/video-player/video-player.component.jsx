@@ -8,7 +8,7 @@ const VideoPlayer = ({ videoUrl, name }) => (
       height="250"
       src={"https://www.youtube.com/embed/" + videoUrl}
       frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allow="autoplay; encrypted-media;"
       allowFullScreen
     ></iframe>
   </div>
