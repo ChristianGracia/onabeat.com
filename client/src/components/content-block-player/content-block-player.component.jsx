@@ -3,7 +3,7 @@ import "./content-block-player.styles.scss"
 import MediaDisplay from "../common/media-display/media-display.component"
 
 const ContentPlayer = ({ data }) => {
-    return (<div> <div class="week" ><span class="week">{data.title}</span></div>
+    return (<div> <div class="week" ><span className="week">{data.title}</span></div>
         <div className="container" >
             {
                 data.first.url == "" ? null : <MediaDisplay data={data.first} />

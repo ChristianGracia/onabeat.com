@@ -19,7 +19,8 @@ class ContentBlockBox extends React.Component {
         this.setState({ blocks: blocks });
     }
     postClick(e) {
-        console.log(e)
+        console.log(e.nativeEvent.srcElement.parentNode.attributes.id);
+        window.location.href = `/post/${e.nativeEvent.srcElement.parentNode.attributes.id.value}`;
     }
 
 
