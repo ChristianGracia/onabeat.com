@@ -6,15 +6,6 @@ const path = require("path");
 
 const app = express();
 
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
-
 app.use(cors({ origin: true, credentials: true }));
 
 const videos = require("./api/videos");
@@ -24,6 +15,7 @@ const register = require("./api/register");
 const pics = require("./api/pics");
 const gifs = require("./api/gifs");
 const blocks = require("./api/blocks");
+const posts = require("./api/posts");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -46,6 +38,7 @@ app.use("/api/pics", pics);
 app.use("/api/blocks", blocks);
 app.use("/api/login", login);
 app.use("/api/register", register);
+app.use("/api/posts", posts);
 
 app.use("/*", staticFiles);
 
