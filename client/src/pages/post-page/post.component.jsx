@@ -4,15 +4,15 @@ class PostPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            post: {}
+            post: {},
+            postId: props.match.params.id
         }
-        this.postId = props.match.params.id;
     }
     async componentDidMount() {
-        const post = await fetch("http://www.onabeat.com/api/posts/" + this.postId);
+        console.log(this.state.postId);
+        const post = await fetch(`http://www.onabeat.com/api/posts/${this.state.postId}`);
         const postObj = await post.json();
-        console.log(postObj)
-        this.setState({ post: postObj })
+        this.setState({ post: postObj });
 
     }
 
