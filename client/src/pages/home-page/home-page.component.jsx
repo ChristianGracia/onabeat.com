@@ -7,12 +7,14 @@ import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
 import ContactEmail from "../../components/common/contact-email/contact-email.component"
+import { Wave } from 'react-animated-text';
 
 import JoinEmailList from "../../components/join-email-list/join-email-list.component"
 
 
 
 import Bounce from "react-reveal/Bounce";
+import LazyLoad from "react-lazyload";
 
 const HomePage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
@@ -41,7 +43,14 @@ const HomePage = () => (
       }}
     >
       <ContentBlockBox />
-      <p style={{ marginTop: 40, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>New music every week!</p>
+
+
+      <LazyLoad height={200}>
+
+        <div style={{ marginTop: 40, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>
+          <Wave text="New music every week!" effect="stretch" effectChange={1.5} />
+        </div>
+      </LazyLoad>
       <div><ContactEmail /></div>
 
       <div style={{ marginTop: 30 }}>
