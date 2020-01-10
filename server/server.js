@@ -34,7 +34,7 @@ app.use(staticFiles);
 
 router.get("/api", (req, res) => {
   res.send(
-    "Welcome to On a Beat API - By Christian Gracia - JSON routes: /api/songs/all /api/videos/all"
+    "Welcome to On a Beat API - By Christian Gracia - JSON routes: /api/blocks/all /api/songs/all /api/videos/all"
   );
 });
 
