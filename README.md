@@ -2,7 +2,7 @@
 
 Site written in React for onabeat.com
 
-www.onabeat.com
+https://www.onabeat.com
 
 
 React front-end 
