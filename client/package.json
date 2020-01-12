@@ -1,7 +1,7 @@
 {
   "name": "on-a-beat",
   "version": "0.1.0",
-  "homepage": "http://www.onabeat.com",
+  "homepage": "https://www.onabeat.com",
   "proxy": "http://localhost:3001",
   "private": true,
   "dependencies": {

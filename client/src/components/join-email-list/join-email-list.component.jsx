@@ -49,6 +49,7 @@ class JoinEmailList extends React.Component {
                                 type="email"
                                 value={this.state.emailAddress}
                                 onChange={this.onChange}
+                                required
                             />
                             <div style={{ padding: 5 }}></div>
                             <Button variant="dark" type="submit">Join</Button></form></div>)
