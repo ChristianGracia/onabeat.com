@@ -47,7 +47,7 @@ const HomePage = () => (
 
       <LazyLoad height={200}>
 
-        <div style={{ marginTop: 40, fontStyle: "italic", color: "black", fontSize: 30, fontWeight: "bold", padding: 10 }}>
+        <div style={{ marginTop: 40, fontStyle: "italic", color: "black", fontSize: 24, fontWeight: "bold", padding: 10 }}>
           <Wave text="New music every week!" effect="stretch" effectChange={1.5} />
         </div>
       </LazyLoad>
