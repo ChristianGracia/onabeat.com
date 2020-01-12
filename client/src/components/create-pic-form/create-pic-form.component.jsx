@@ -36,7 +36,7 @@ class CreatePicForm extends React.Component {
         };
 
         const response = await fetch(
-            "http://www.onabeat.com/api/pics/create-pic",
+            "https://www.onabeat.com/api/pics/create-pic",
             options
         );
         const pic = await response.json();

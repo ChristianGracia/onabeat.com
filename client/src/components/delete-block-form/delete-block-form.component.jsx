@@ -21,7 +21,7 @@ class DeleteBlockForm extends React.Component {
         this.setState({ [e.target.name]: e.target.value });
     }
     async componentDidMount() {
-        const response = await fetch("http://www.onabeat.com/api/blocks/all");
+        const response = await fetch("https://www.onabeat.com/api/blocks/all");
         const blocks = await response.json();
 
         this.setState({ blocks: blocks });
@@ -42,7 +42,7 @@ class DeleteBlockForm extends React.Component {
         };
         let id = this.state.currentBlockId;
         const response = await fetch(
-            `http://www.onabeat.com/api/blocks/${id}`,
+            `https://www.onabeat.com/api/blocks/${id}`,
             options
         );
         const block = await response.json();

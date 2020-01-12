@@ -22,7 +22,7 @@ class DeleteVideoForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   async componentDidMount() {
-    const response = await fetch("http://www.onabeat.com/api/videos/all");
+    const response = await fetch("https://www.onabeat.com/api/videos/all");
     const videos = await response.json();
 
     this.setState({ videos: videos });
@@ -43,7 +43,7 @@ class DeleteVideoForm extends React.Component {
     };
     let id = this.state.currentVidId;
     const response = await fetch(
-      `http://www.onabeat.com/api/videos/${id}`,
+      `https://www.onabeat.com/api/videos/${id}`,
       options
     );
     const video = await response.json();

@@ -7,7 +7,7 @@ class SpotifyBox extends React.Component {
     this.state = { songs: [] };
   }
   async componentDidMount() {
-    const response = await fetch("http://www.onabeat.com/api/songs/all");
+    const response = await fetch("https://www.onabeat.com/api/songs/all");
     const songs = await response.json();
 
     this.setState({ songs: songs });

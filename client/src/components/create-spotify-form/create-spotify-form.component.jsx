@@ -54,7 +54,7 @@ class CreateSpotifyForm extends React.Component {
     };
 
     const response = await fetch(
-      "http://www.onabeat.com/api/songs/create-song",
+      "https://www.onabeat.com/api/songs/create-song",
       options
     );
 

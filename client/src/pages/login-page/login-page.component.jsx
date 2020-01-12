@@ -39,7 +39,7 @@ const LoginPage = () => (
     </Tada>
     <Button
       variant="danger"
-      onClick={() => (window.location.href = "http://onabeat.com")}
+      onClick={() => (window.location.href = "https://onabeat.com")}
     >
       Go back to home
     </Button>

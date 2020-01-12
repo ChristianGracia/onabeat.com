@@ -54,7 +54,7 @@ async function callLoginApi(user, password, callback) {
   };
 
   const response = await fetch(
-    "http://www.onabeat.com/api/login/login-user",
+    "https://www.onabeat.com/api/login/login-user",
     options
   );
   const content = await response.json();

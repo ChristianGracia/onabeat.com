@@ -1,5 +1,4 @@
 import React from "react";
-import ContentBlockPlayer from "../../components/content-block-player/content-block-player.component";
 import PostDisplay from "../../components/post-display/post-display.component"
 import { Button } from "react-bootstrap"
 class PostPage extends React.Component {
@@ -12,7 +11,7 @@ class PostPage extends React.Component {
     }
     async componentDidMount() {
         console.log(this.state.postId);
-        const post = await fetch(`http://www.onabeat.com/api/posts/${this.state.postId}`);
+        const post = await fetch(`https://www.onabeat.com/api/posts/${this.state.postId}`);
         const postObj = await post.json();
 
         this.setState({ post: postObj });
@@ -27,7 +26,7 @@ class PostPage extends React.Component {
 
                 <div style={{ padding: 30, marginTop: 80 }}><span style={{ fontSize: 30 }}>Comments</span></div>
                 <div style={{ marginTop: 60 }}>
-                    <Button onClick={() => window.location.href = "http://www.onabeat.com"} variant="dark">Back to Feed</Button>
+                    <Button onClick={() => window.location.href = "https://www.onabeat.com"} variant="dark">Back to Feed</Button>
                 </div>
             </div>
 

@@ -22,7 +22,7 @@ class DeleteGifForm extends React.Component {
         this.setState({ [e.target.name]: e.target.value });
     }
     async componentDidMount() {
-        const response = await fetch("http://www.onabeat.com/api/gifs/all");
+        const response = await fetch("https://www.onabeat.com/api/gifs/all");
         const gifs = await response.json();
 
         this.setState({ gifs: gifs });
@@ -43,7 +43,7 @@ class DeleteGifForm extends React.Component {
         };
         let id = this.state.currentGifId;
         const response = await fetch(
-            `http://www.onabeat.com/api/gifs/${id}`,
+            `https://www.onabeat.com/api/gifs/${id}`,
             options
         );
         const gif = await response.json();

@@ -37,13 +37,13 @@ class CreateBlockForm extends React.Component {
     }
 
     async componentDidMount() {
-        const songCall = await fetch("http://www.onabeat.com/api/songs/all");
+        const songCall = await fetch("https://www.onabeat.com/api/songs/all");
         const songs = await songCall.json();
-        const videoCall = await fetch("http://www.onabeat.com/api/videos/all");
+        const videoCall = await fetch("https://www.onabeat.com/api/videos/all");
         const videos = await videoCall.json();
-        const picCall = await fetch("http://www.onabeat.com/api/pics/all");
+        const picCall = await fetch("https://www.onabeat.com/api/pics/all");
         const pics = await picCall.json();
-        const gifCall = await fetch("http://www.onabeat.com/api/gifs/all");
+        const gifCall = await fetch("https://www.onabeat.com/api/gifs/all");
         const gifs = await gifCall.json();
 
         this.setState({
@@ -82,7 +82,7 @@ class CreateBlockForm extends React.Component {
             };
 
             const response = await fetch(
-                "http://www.onabeat.com/api/blocks/create-block",
+                "https://www.onabeat.com/api/blocks/create-block",
                 options
             );
             const block = await response.json();
