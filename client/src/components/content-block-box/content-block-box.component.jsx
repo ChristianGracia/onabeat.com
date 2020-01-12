@@ -13,7 +13,7 @@ class ContentBlockBox extends React.Component {
         this.postClick = this.postClick.bind(this);
     }
     async componentDidMount() {
-        const response = await fetch("http://www.onabeat.com/api/blocks/all");
+        const response = await fetch("https://www.onabeat.com/api/blocks/all");
         const blocks = await response.json();
         blocks.reverse();
         this.setState({ blocks: blocks });
