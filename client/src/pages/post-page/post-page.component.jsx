@@ -1,6 +1,8 @@
 import React from "react";
 import PostDisplay from "../../components/post-display/post-display.component"
 import { Button } from "react-bootstrap"
+import "./post.styles.scss"
+
 class PostPage extends React.Component {
     constructor(props) {
         super(props)
@@ -22,8 +24,10 @@ class PostPage extends React.Component {
     render() {
         return (
             <div>
-                <p style={{ fontWeight: "bold" }}>Thank you for sharing this post!</p>
-                <p>Link: https://www.onabeat.com/post/{this.state.postId}</p>
+                <p style={{ fontWeight: "bold", color: "red" }}>Thank you for sharing this post!</p>
+
+                <span clasName="share-link" style={{ fontWeight: "bold" }}>https://wwww.onabeat.com/post/{this.state.postId}</span>
+
                 {this.state.post.first ? <PostDisplay data={this.state.post} /> : null}
 
                 {/* <div style={{ padding: 30, marginTop: 80 }}><span style={{ fontSize: 30 }}>Comments</span></div> */}
