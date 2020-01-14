@@ -33,7 +33,7 @@ class ContentBlockBox extends React.Component {
                     return (<Fade left>
                         <ContentBlockPlayer key={block._id} data={block} />
                         <div style={{ marginTop: 30 }}>
-                            <Button onClick={this.postClick} id={block._id} key={block._id} variant="dark">See more of {block.title}</Button>
+                            <Button onClick={this.postClick} id={block._id} key={block._id} variant="dark"><span style={{ color: "#F8D101", fontWeight: "bold" }}>Share</span> {block.title}</Button>
                         </div>
                     </Fade>
                     );

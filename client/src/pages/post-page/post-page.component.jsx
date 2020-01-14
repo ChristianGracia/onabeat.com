@@ -24,7 +24,7 @@ class PostPage extends React.Component {
             <div>
                 {this.state.post.first ? <PostDisplay data={this.state.post} /> : null}
 
-                <div style={{ padding: 30, marginTop: 80 }}><span style={{ fontSize: 30 }}>Comments</span></div>
+                {/* <div style={{ padding: 30, marginTop: 80 }}><span style={{ fontSize: 30 }}>Comments</span></div> */}
                 <div style={{ marginTop: 60 }}>
                     <Button onClick={() => window.location.href = "https://www.onabeat.com"} variant="dark">Back to Feed</Button>
                 </div>
