@@ -22,6 +22,8 @@ class PostPage extends React.Component {
     render() {
         return (
             <div>
+                <p style={{ fontWeight: "bold" }}>Thank you for sharing this post!</p>
+                <p>Link: https://www.onabeat.com/posts/{this.state.postId}</p>
                 {this.state.post.first ? <PostDisplay data={this.state.post} /> : null}
 
                 {/* <div style={{ padding: 30, marginTop: 80 }}><span style={{ fontSize: 30 }}>Comments</span></div> */}
