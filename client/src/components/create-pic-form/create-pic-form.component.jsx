@@ -102,7 +102,7 @@ class CreatePicForm extends React.Component {
                             To get Pic Url, Right click any photo on internet, click Copy Image Address, Paste into url bar
             </p>
                     </div>
-                    <img height="250" width="250" src={this.state.picUrl} />
+                    <img alt="onabeat" height="250" width="250" src={this.state.picUrl} />
                     <p>The picture should render here if the image address is correct</p>
 
                     <div style={{ display: "flex", justifyContent: "center" }}>

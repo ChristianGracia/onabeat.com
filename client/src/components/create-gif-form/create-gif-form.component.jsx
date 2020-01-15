@@ -17,7 +17,7 @@ class CreateGifForm extends React.Component {
     }
 
     onChange(e) {
-        if (e.target.name == "gifUrl") {
+        if (e.target.name === "gifUrl") {
 
             let url = e.target.value
                 .slice(13)
@@ -119,7 +119,7 @@ class CreateGifForm extends React.Component {
             </p>
                     </div>
 
-                    <iframe height="250" width="250" src={this.state.gifUrl} frameBorder="0" class="" allowFullScreen></iframe>
+                    <iframe title={this.state.gifUrl} height="250" width="250" src={this.state.gifUrl} frameBorder="0" class="" allowFullScreen></iframe>
                     <p>GIF should load here if entered correctly</p>
 
                     <div style={{ display: "flex", justifyContent: "center" }}>

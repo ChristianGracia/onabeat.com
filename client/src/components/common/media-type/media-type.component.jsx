@@ -9,9 +9,9 @@ const MediaType = ({ type, url }) => {
         case "Vid":
             return <VideoPlayer videoUrl={url} />;
         case "Gif":
-            return <iframe height="250" width="250" src={url} frameBorder="0" class="" allowFullScreen></iframe>
+            return <iframe title={url} height="250" width="250" src={url} frameBorder="0" className="" allowFullScreen></iframe>
         case "Pic":
-            return <img height="250" width="250" src={url} />
+            return <img alt="onabeat pic" height="250" width="250" src={url} />
         default:
             return null
     }

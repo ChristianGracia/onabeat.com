@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonToolbar, OverlayTrigger, Popover, Button } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import TextInput from "../common/text-input/text-input.component";
 import RubberBand from "react-reveal/RubberBand"
 
@@ -16,7 +16,7 @@ class JoinEmailList extends React.Component {
     }
     handleClick(e) {
 
-        if (this.state.showEmailInput == true) {
+        if (this.state.showEmailInput === true) {
             this.setState({ showEmailInput: false })
 
         }
@@ -36,7 +36,7 @@ class JoinEmailList extends React.Component {
 
 
                 {
-                    this.state.showEmailInput == false ? (<RubberBand ><div>
+                    this.state.showEmailInput === false ? (<RubberBand ><div>
 
                         <Button variant="dark" onClick={this.handleClick}>Join Email List</Button> </div>  </RubberBand>) :
                         (<div>       <form

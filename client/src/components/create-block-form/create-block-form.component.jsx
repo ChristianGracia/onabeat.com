@@ -60,7 +60,7 @@ class CreateBlockForm extends React.Component {
     async onSubmitBlock(e) {
         e.preventDefault();
 
-        if (this.state.title == "") {
+        if (this.state.title === "") {
             alert("Enter a title for this week's post!")
         }
         else {

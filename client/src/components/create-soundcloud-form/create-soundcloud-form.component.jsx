@@ -18,7 +18,7 @@ class CreateSoundCloudForm extends React.Component {
   }
 
   onChange(e) {
-    if (e.target.name == "songUrl") {
+    if (e.target.name === "songUrl") {
 
       let url = e.target.value
         .split(" ")[6]
