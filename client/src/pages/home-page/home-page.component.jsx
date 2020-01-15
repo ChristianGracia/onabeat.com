@@ -1,8 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png"
 import "./home-page.styles.scss";
-import VideoBox from "../../components/video-box/video-box.component";
-import SpotifyBox from "../../components/spotify-box/spotify-box.component";
 // import ContentGrid from "../../components/grid/grid-component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";

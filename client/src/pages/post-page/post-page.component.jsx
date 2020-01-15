@@ -1,6 +1,7 @@
 import React from "react";
 import PostDisplay from "../../components/post-display/post-display.component"
 import { Button } from "react-bootstrap"
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import "./post.styles.scss"
 
 class PostPage extends React.Component {
@@ -33,8 +34,9 @@ class PostPage extends React.Component {
                 <p style={{ fontWeight: "bold", color: "red" }}>Thank you for sharing this post!</p>
 
                 {/* <span clasName="share-link" style={{ fontWeight: "bold" }}>https://wwww.onabeat.com/post/{this.state.postId}</span> */}
-
-                <Button className="copy-button" onClick={this.handleCopy}>Click to Copy Link</Button>
+                <CopyToClipboard text={`https://www.onabeat.com/post/${this.state.postId}`} onCopy={() => this.setState({ shareCheck: true })}>
+                    <Button className="copy-button">Click to Copy Link</Button>
+                </CopyToClipboard >
                 {this.state.shareCheck ? <span style={{ marginTop: 15 }}>Copied! Now just paste somewhere :)</span> : null}
 
                 {this.state.post.first ? <PostDisplay data={this.state.post} /> : null}
