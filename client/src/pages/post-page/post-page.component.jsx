@@ -8,7 +8,8 @@ class PostPage extends React.Component {
         super(props)
         this.state = {
             post: {},
-            postId: props.match.params.id
+            postId: props.match.params.id,
+            shareCheck: false
         }
     }
     async componentDidMount() {
@@ -20,13 +21,21 @@ class PostPage extends React.Component {
         console.log(this.state.post)
 
     }
+    handleCopy = () => {
+        navigator.clipboard.writeText(`https://www.onabeat.com/post/${this.state.postId}`)
+        this.setState({ shareCheck: true })
+    }
+
 
     render() {
         return (
-            <div>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
                 <p style={{ fontWeight: "bold", color: "red" }}>Thank you for sharing this post!</p>
 
-                <span clasName="share-link" style={{ fontWeight: "bold" }}>https://wwww.onabeat.com/post/{this.state.postId}</span>
+                {/* <span clasName="share-link" style={{ fontWeight: "bold" }}>https://wwww.onabeat.com/post/{this.state.postId}</span> */}
+
+                <Button className="copy-button" onClick={this.handleCopy}>Click to Copy Link</Button>
+                {this.state.shareCheck ? <span style={{ marginTop: 15 }}>Copied! Now just paste somewhere :)</span> : null}
 
                 {this.state.post.first ? <PostDisplay data={this.state.post} /> : null}
 
@@ -34,7 +43,7 @@ class PostPage extends React.Component {
                 <div style={{ marginTop: 60 }}>
                     <Button onClick={() => window.location.href = "https://www.onabeat.com"} variant="dark">Back to Feed</Button>
                 </div>
-            </div>
+            </div >
 
 
         )
