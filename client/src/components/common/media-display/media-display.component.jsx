@@ -7,7 +7,9 @@ const MediaDisplay = ({ data, id }) => {
   return (
     <div>
       <div className="item">
-        <p className="title">{data.name}</p>
+        <p className="title" style={{ marginTop: 20 }}>
+          {data.name}
+        </p>
 
         <LazyLoad height={200} placeholder={<Spinner />} offset={100}>
           <div>
