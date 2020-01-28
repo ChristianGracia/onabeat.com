@@ -5,11 +5,9 @@ import Spinner from "../../common/spinner/spinner.component";
 
 const MediaDisplay = ({ data, id }) => {
   return (
-    <div>
+    <div style={{ marginBottom: 20 }}>
       <div className="item">
-        <p className="title" style={{ marginTop: 20 }}>
-          {data.name}
-        </p>
+        <p className="title">{data.name}</p>
 
         <LazyLoad height={200} placeholder={<Spinner />} offset={100}>
           <div>
