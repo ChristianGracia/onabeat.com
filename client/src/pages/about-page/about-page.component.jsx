@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from "../../assets/logo.png";
 import "./about-page.styles.scss";
 import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
@@ -11,19 +11,6 @@ import ContactEmail from "../../components/common/contact-email/contact-email.co
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
-    {/* <div className="logo mr-auto ml-auto"> */}
-    {/* <div
-        className="logo-image"
-        style={{
-          backgroundImage: `url(
-            ${logo}
-          )`,
-          backgroundRepeat: "no-repeat"
-        }}
-      />
-    </div> */}
-    <p style={{ color: "black", fontWeight: "bold", fontSize: 30 }}>About Us</p>
-
     <div
       style={{
         display: "flex",
@@ -36,28 +23,41 @@ const AboutPage = () => (
       }}
     >
       <Pulse>
-        {" "}
-        <i style={{ fontSize: 70, color: "#F8D101" }} class="fas fa-drum"></i>
+        <div className="logo mr-auto ml-auto">
+          <div
+            className="logo-image"
+            style={{
+              backgroundImage: `url(
+            ${logo}
+          )`,
+              backgroundRepeat: "no-repeat"
+            }}
+          />
+        </div>
       </Pulse>
       <Fade left>
         <div style={{ marginTop: 30 }}>
           <p style={{ fontSize: 27 }}>
             <span style={{ fontWeight: "bold" }}>On A Beat</span> is a
-            performance company...{" "}
+            performance company.
           </p>
         </div>{" "}
       </Fade>
 
-      <div style={{ marginTop: 10 }}>
+      <div style={{ marginTop: 50 }}>
         {" "}
         <Fade top cascade>
-          <p style={{}}>We create shows for all ...</p>
+          <p style={{ fontWeight: "bold", fontSize: 22 }}>
+            We create shows for all...
+          </p>
         </Fade>
         <LightSpeed left cascade>
-          <p style={{ fontWeight: "bold", fontSize: 30 }}>Occasions</p>
+          <p style={{ fontWeight: "bold", fontSize: 30, color: "#F8D413" }}>
+            Occasions
+          </p>
           <div>
             <Fade right>
-              <div>
+              <div style={{ fontWeight: "bold" }}>
                 <span>parties,</span>
                 <span> dinners,</span>
                 <span> dances,</span>
@@ -68,10 +68,12 @@ const AboutPage = () => (
             </Fade>
           </div>
           <span>+</span>{" "}
-          <p style={{ fontWeight: "bold", fontSize: 30 }}>Locations</p>
+          <p style={{ fontWeight: "bold", fontSize: 30, color: "#F8D413" }}>
+            Locations
+          </p>
           <div>
             <Fade left>
-              <div>
+              <div style={{ fontWeight: "bold" }}>
                 <span>clubs,</span>
                 <span> bars,</span> <span>weddings,</span>
                 <span> galleries,</span> <span>churches,</span>
@@ -88,7 +90,7 @@ const AboutPage = () => (
         </div>{" "}
       </RubberBand>
       <Fade top cascade>
-        <div style={{ marginTop: 20 }}>
+        <div style={{ marginTop: 20, fontWeight: "bold", maxWidth: 900 }}>
           <p>
             Our ultimate goal is to create pan American symphonies, musicals,
             and operas of unprecedented scale and quality. As the goal
@@ -97,7 +99,7 @@ const AboutPage = () => (
           </p>
         </div>
 
-        <div style={{ marginTop: 20 }}>
+        <div style={{ marginTop: 20, fontWeight: "bold", maxWidth: 900 }}>
           <p>
             Both more and less than a band: we feature a revolving group of
             artists, and can be as big or small or the situation requires. Check

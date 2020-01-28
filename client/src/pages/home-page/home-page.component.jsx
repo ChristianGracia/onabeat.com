@@ -1,15 +1,12 @@
 import React from "react";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import "./home-page.styles.scss";
 // import ContentGrid from "../../components/grid/grid-component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
-import ContactEmail from "../../components/common/contact-email/contact-email.component"
-import { Wave } from 'react-animated-text';
+import { Wave } from "react-animated-text";
 
-import JoinEmailList from "../../components/join-email-list/join-email-list.component"
-
-
+import JoinEmailList from "../../components/join-email-list/join-email-list.component";
 
 import Bounce from "react-reveal/Bounce";
 import LazyLoad from "react-lazyload";
@@ -42,14 +39,24 @@ const HomePage = () => (
     >
       <ContentBlockBox />
 
-
       <LazyLoad height={200}>
-
-        <div style={{ marginTop: 40, fontStyle: "italic", color: "black", fontSize: 24, fontWeight: "bold", padding: 10 }}>
-          <Wave text="New music every week!" effect="stretch" effectChange={1.5} />
+        <div
+          style={{
+            marginTop: 40,
+            fontStyle: "italic",
+            color: "black",
+            fontSize: 24,
+            fontWeight: "bold",
+            padding: 10
+          }}
+        >
+          <Wave
+            text="New music every week!"
+            effect="stretch"
+            effectChange={1.5}
+          />
         </div>
       </LazyLoad>
-      <div><ContactEmail /></div>
 
       <div style={{ marginTop: 30 }}>
         <Signature />
