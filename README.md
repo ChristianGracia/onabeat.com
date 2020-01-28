@@ -16,6 +16,12 @@ Product Owners can fully edit and arrange site with the backend I wrote them
 
 ## Features
 
+### Posts
+
+Site owners can add and remove content in content blocks containing 1-4 media items.
+
+Each content block has their own page and a one click copy to clipboard button to share the link on social media
+
 
 ### Edit Site Layout
 
