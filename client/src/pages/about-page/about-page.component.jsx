@@ -44,7 +44,7 @@ const AboutPage = () => (
         </div>{" "}
       </Fade>
 
-      <div style={{ marginTop: 50 }}>
+      <div style={{ marginTop: 30 }}>
         {" "}
         <Fade top cascade>
           <p style={{ fontWeight: "bold", fontSize: 22 }}>
@@ -67,7 +67,9 @@ const AboutPage = () => (
               </div>
             </Fade>
           </div>
-          <span>+</span>{" "}
+          <div style={{ marginTop: 20, marginBottom: 10 }}>
+            <span style={{ fontWeight: "bold", fontSize: 25 }}>+</span>
+          </div>
           <p style={{ fontWeight: "bold", fontSize: 30, color: "#F8D413" }}>
             Locations
           </p>

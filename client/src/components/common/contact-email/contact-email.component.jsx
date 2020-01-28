@@ -10,7 +10,7 @@ const ContactEmail = () => {
         style={{
           color: "#00",
           fontSize: 25,
-          marginTop: 20,
+          marginTop: 10,
           fontWeight: "bold"
         }}
       >
@@ -19,16 +19,13 @@ const ContactEmail = () => {
       <div
         style={{
           textAlign: "center",
-          marginTop: 10,
+
           display: "flex",
           flexDirection: "column"
         }}
         className="social-links"
       >
-        <span style={{ fontWeight: "bold" }}>Agostino</span>
-        <span style={{ padding: 10 }}></span>
-
-        <span>
+        <span style={{ fontWeight: "bold" }}>
           <i
             className="fas fa-envelope"
             style={{ color: "black", fontSize: 20 }}

@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import "./home-page.styles.scss";
-// import ContentGrid from "../../components/grid/grid-component";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
 import { Wave } from "react-animated-text";
@@ -25,24 +24,11 @@ const HomePage = () => (
           }}
         />
       </div>
-    </Bounce>
-    <div style={{ display: "flex", justifyContent: "center", marginTop: 30 }}>
-      <JoinEmailList />
-    </div>
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        marginTop: 30
-      }}
-    >
-      <ContentBlockBox />
 
       <LazyLoad height={200}>
         <div
           style={{
-            marginTop: 40,
+            marginTop: 25,
             fontStyle: "italic",
             color: "black",
             fontSize: 24,
@@ -57,8 +43,21 @@ const HomePage = () => (
           />
         </div>
       </LazyLoad>
+    </Bounce>
+    <div style={{ display: "flex", justifyContent: "center", marginTop: 30 }}>
+      <JoinEmailList />
+    </div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        marginTop: 7
+      }}
+    >
+      <ContentBlockBox />
 
-      <div style={{ marginTop: 30 }}>
+      <div style={{ marginTop: 100 }}>
         <Signature />
       </div>
     </div>
