@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from "../../assets/logo.PNG";
+import logo from "../../assets/agostinoPic.JPG";
 import "./artists-page.styles.scss";
 
 const ArtistsPage = () => (
@@ -7,6 +7,19 @@ const ArtistsPage = () => (
     <div style={{ marginTop: 25 }}>
       <span style={{ fontWeight: "bold", fontSize: 30 }}>Artists</span>
     </div>
+
+    <div className="logo" style={{ height: 200, marginTop: 30 }}>
+      <div
+        className="logo-image"
+        style={{
+          backgroundImage: `url(
+            ${logo}
+          )`,
+          backgroundRepeat: "no-repeat"
+        }}
+      />
+    </div>
+
     <div style={{ display: "flex", flexDirection: "column" }}>
       <span
         style={{
