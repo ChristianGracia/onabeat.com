@@ -11,6 +11,19 @@ import ContactEmail from "../../components/common/contact-email/contact-email.co
 
 const AboutPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
+    <Pulse>
+      <div className="logo">
+        <div
+          className="logo-image"
+          style={{
+            backgroundImage: `url(
+            ${logo}
+          )`,
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+      </div>
+    </Pulse>
     <div
       style={{
         display: "flex",
@@ -22,19 +35,6 @@ const AboutPage = () => (
         fontSize: 20
       }}
     >
-      <Pulse>
-        <div className="logo mr-auto ml-auto">
-          <div
-            className="logo-image"
-            style={{
-              backgroundImage: `url(
-            ${logo}
-          )`,
-              backgroundRepeat: "no-repeat"
-            }}
-          />
-        </div>
-      </Pulse>
       <Fade left>
         <div style={{ marginTop: 30 }}>
           <p style={{ fontSize: 27 }}>
