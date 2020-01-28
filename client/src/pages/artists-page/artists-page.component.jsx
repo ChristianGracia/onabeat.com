@@ -4,6 +4,9 @@ import "./artists-page.styles.scss";
 
 const ArtistsPage = () => (
   <div style={{ justifyContent: "center", alignItems: "center" }}>
+    <div style={{ marginTop: 25 }}>
+      <span style={{ fontWeight: "bold", fontSize: 30 }}>Artists</span>
+    </div>
     <div style={{ display: "flex", flexDirection: "column" }}>
       <span
         style={{
