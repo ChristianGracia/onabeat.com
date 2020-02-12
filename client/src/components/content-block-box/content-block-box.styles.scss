@@ -1,32 +1,30 @@
 .container {
   display: flex;
   flex-direction: row;
-max-width: 96vw;
-justify-content: space-between;
-flex-wrap: wrap;
+  max-width: 96vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .item {
   flex: 1;
-
 }
 
-.title{
-    font-weight: bold;
-    font-size: 25px;
-
+.title {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.week{
-    font-weight: bold;
-    font-size: 30px;
-    color: #F8D100;
-    
-    margin-bottom: 30px;
-    margin-top:30px;
+.week {
+  font-weight: bold;
+  font-size: 30px;
+  color: #f8d100;
+
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-@media screen and (max-width: 330px){
-  .week{
+@media screen and (max-width: 330px) {
+  .week {
     font-size: 20px;
   }
 }
