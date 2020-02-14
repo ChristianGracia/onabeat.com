@@ -1,18 +1,12 @@
 @media screen and (min-width: 900px) {
-    .item { transition: transform .2s; }
+  .item {
+    transition: transform 0.2s;
+  }
 
-.item:hover {
-
-  transform: scale(1.15); 
-  // padding: 120px 50px;
-  // max-width: 88%;
-
-
+  .item:hover {
+    transform: scale(1.15);
+  }
 }
-
-}
-.container{
-  // display: flex;
+.container {
   justify-content: space-around;
-
 }
