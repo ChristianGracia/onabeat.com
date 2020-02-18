@@ -31,13 +31,13 @@ const HomePage = () => (
             marginTop: 25,
             fontStyle: "italic",
             color: "black",
-            fontSize: 24,
+            fontSize: 20,
             fontWeight: "bold",
             padding: 10
           }}
         >
           <Wave
-            text="New music every week!"
+            text="bison and bear coming March 1st!"
             effect="stretch"
             effectChange={1.5}
           />
