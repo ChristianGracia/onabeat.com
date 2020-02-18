@@ -26,16 +26,7 @@ const HomePage = () => (
       </div>
 
       <LazyLoad height={200}>
-        <div
-          style={{
-            marginTop: 25,
-            fontStyle: "italic",
-            color: "black",
-            fontSize: 20,
-            fontWeight: "bold",
-            padding: 10
-          }}
-        >
+        <div className="music-title">
           <Wave
             text="bison and bear coming March 1st!"
             effect="stretch"
