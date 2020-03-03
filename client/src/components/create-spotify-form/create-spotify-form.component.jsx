@@ -18,9 +18,7 @@ class CreateSpotifyForm extends React.Component {
   }
 
   onChange(e) {
-
     if (e.target.name === "songUrl") {
-
       let url = e.target.value
         .slice(13)
         .split(" ")[0]
@@ -28,17 +26,15 @@ class CreateSpotifyForm extends React.Component {
 
       this.setState({
         songUrl: url
-      })
-    }
-    else {
+      });
+    } else {
       this.setState({ [e.target.name]: e.target.value });
-
     }
   }
   async onSubmit(e) {
     e.preventDefault();
 
-    let url = this.state.songUrl
+    let url = this.state.songUrl;
 
     const newSong = {
       name: this.state.name,
