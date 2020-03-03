@@ -23,7 +23,7 @@ class ChangeLayoutForm extends React.Component {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <form onSubmit={this.onSubmit}>
           <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-            Edit Site Layout
+            Edit Site Header (will work soon)
           </span>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
