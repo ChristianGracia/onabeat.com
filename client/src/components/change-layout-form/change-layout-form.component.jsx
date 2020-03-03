@@ -7,7 +7,9 @@ class ChangeLayoutForm extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      header: ""
+    };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -34,10 +36,10 @@ class ChangeLayoutForm extends React.Component {
           </span>
 
           <TextInput
-            placeholder="Name of pic"
-            name="name"
+            placeholder="Name of site header"
+            name="Header"
             type="text"
-            value={this.state.name}
+            value={this.state.header}
             onChange={this.onChange}
             style={{ maxWidth: 320 }}
           />
