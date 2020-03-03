@@ -28,7 +28,7 @@ const HomePage = () => (
       <LazyLoad height={200}>
         <div className="music-title">
           <Wave
-            text="bison and bear coming March 1st!"
+            text="bison and bear coming March 31st!"
             effect="stretch"
             effectChange={1.5}
           />
