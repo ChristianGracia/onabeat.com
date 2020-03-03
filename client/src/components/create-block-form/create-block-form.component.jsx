@@ -201,7 +201,7 @@ class CreateBlockForm extends React.Component {
         />
 
         <TextInput
-          placeholder="url that will link to post"
+          placeholder="Unique URL that will link to post"
           name="shareUrl"
           type="text"
           value={this.state.title}
