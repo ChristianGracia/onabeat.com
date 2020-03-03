@@ -1,5 +1,5 @@
 import React from "react";
-// import TextInput from "../common/text-input/text-input.component";
+import TextInput from "../common/text-input/text-input.component";
 
 import { Button } from "react-bootstrap";
 
@@ -27,6 +27,14 @@ class ChangeLayoutForm extends React.Component {
           </span>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
+            <TextInput
+              placeholder="Name of pic"
+              name="name"
+              type="text"
+              value={this.state.name}
+              onChange={this.onChange}
+              style={{ maxWidth: 320 }}
+            />
             <Button type="submit" variant="primary">
               Submit
             </Button>
