@@ -10,6 +10,7 @@ class ChangeLayoutForm extends React.Component {
     this.state = {
       header: ""
     };
+
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -32,12 +33,12 @@ class ChangeLayoutForm extends React.Component {
       >
         <form onSubmit={this.onSubmit}>
           <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
-            Edit Site Header (will work soon)
+            Edit Site Header
           </span>
 
           <TextInput
             placeholder="Name of site header"
-            name="Header"
+            name="header"
             type="text"
             value={this.state.header}
             onChange={this.onChange}
