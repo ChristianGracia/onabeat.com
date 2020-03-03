@@ -5,14 +5,14 @@ import DeleteVideoForm from "../delete-video-form/delete-video-form.component";
 import RegisterForm from "../register-form/register-form.component";
 import CreateSpotifyForm from "../create-spotify-form/create-spotify-form.component";
 import DeleteSongForm from "../delete-song-form/delete-song-form.component";
-import ChangeLayoutForm from "../change-layout-form/change-layout-form.component";
+import ChangeHeaderForm from "../change-header-form/change-header-form.component";
 import CreateSoundcloudForm from "../create-soundcloud-form/create-soundcloud-form.component";
-import CreateBlockForm from "../create-block-form/create-block-form.component"
-import DeleteBlockForm from "../delete-block-form/delete-block-form.component"
-import CreateGifForm from "../create-gif-form/create-gif-form.component"
-import CreatePicForm from "../create-pic-form/create-pic-form.component"
-import DeletePicForm from "../delete-pic-form/delete-pic-form.component"
-import DeleteGifForm from "../delete-gif-form/delete-gif-form.component"
+import CreateBlockForm from "../create-block-form/create-block-form.component";
+import DeleteBlockForm from "../delete-block-form/delete-block-form.component";
+import CreateGifForm from "../create-gif-form/create-gif-form.component";
+import CreatePicForm from "../create-pic-form/create-pic-form.component";
+import DeletePicForm from "../delete-pic-form/delete-pic-form.component";
+import DeleteGifForm from "../delete-gif-form/delete-gif-form.component";
 
 class EditSite extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class EditSite extends React.Component {
       showDeleteVideo: false,
       showAddSpotify: false,
       showDeleteSong: false,
-      showChangeLayout: false,
+      showEditHeader: false,
       showAddSoundCloud: false,
       showAddContentBlock: false,
       showDeleteContentBlock: false,
@@ -90,8 +90,8 @@ class EditSite extends React.Component {
       case "register":
         this.setState({ showRegister: true });
         break;
-      case "edit-site":
-        this.setState({ showChangeLayout: true });
+      case "edit-header":
+        this.setState({ showEditHeader: true });
         break;
       default:
         break;
@@ -169,7 +169,6 @@ class EditSite extends React.Component {
               Remove a song
             </Button>
           </div>
-
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
               Pic
@@ -190,7 +189,6 @@ class EditSite extends React.Component {
               Remove a pic{" "}
             </Button>
           </div>
-
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
               Loop/Gif
@@ -231,7 +229,6 @@ class EditSite extends React.Component {
               Remove media block{" "}
             </Button>
           </div>
-
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
               Site
@@ -239,10 +236,10 @@ class EditSite extends React.Component {
 
             <Button
               onClick={this.handleClick}
-              name="edit-site"
+              name="edit-header"
               style={{ margin: 5, fontWeight: "bold" }}
             >
-              Change site layout{" "}
+              Change site header{" "}
             </Button>
             <Button
               onClick={this.handleClick}
@@ -262,7 +259,7 @@ class EditSite extends React.Component {
           {this.state.showAddContentBlock ? <CreateBlockForm /> : null}
           {this.state.showDeleteContentBlock ? <DeleteBlockForm /> : null}
           {this.state.showDeleteSong ? <DeleteSongForm /> : null}
-          {this.state.showChangeLayout ? <ChangeLayoutForm /> : null}
+          {this.state.showEditHeader ? <ChangeHeaderForm /> : null}
           {this.state.showAddPic ? <CreatePicForm /> : null}
           {this.state.showAddGif ? <CreateGifForm /> : null}
           {this.state.showDeletePic ? <DeletePicForm /> : null}
