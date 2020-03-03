@@ -20,25 +20,30 @@ class ChangeLayoutForm extends React.Component {
   }
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
         <form onSubmit={this.onSubmit}>
           <span style={{ color: "red", fontWeight: "bold", fontSize: 23 }}>
             Edit Site Header (will work soon)
           </span>
 
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <TextInput
-              placeholder="Name of pic"
-              name="name"
-              type="text"
-              value={this.state.name}
-              onChange={this.onChange}
-              style={{ maxWidth: 320 }}
-            />
-            <Button type="submit" variant="primary">
-              Submit
-            </Button>
-          </div>
+          <TextInput
+            placeholder="Name of pic"
+            name="name"
+            type="text"
+            value={this.state.name}
+            onChange={this.onChange}
+            style={{ maxWidth: 320 }}
+          />
+          <Button type="submit" variant="primary">
+            Submit
+          </Button>
         </form>
       </div>
     );
