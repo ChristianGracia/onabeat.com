@@ -16,6 +16,7 @@ const pics = require("./api/pics");
 const gifs = require("./api/gifs");
 const blocks = require("./api/blocks");
 const posts = require("./api/posts");
+const header = require("./api/header");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -39,6 +40,7 @@ app.use("/api/blocks", blocks);
 app.use("/api/login", login);
 app.use("/api/register", register);
 app.use("/api/posts", posts);
+app.use("/api/header", header);
 
 app.use("/*", staticFiles);
 
