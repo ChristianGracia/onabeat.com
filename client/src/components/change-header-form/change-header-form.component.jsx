@@ -20,6 +20,31 @@ class ChangeLayoutForm extends React.Component {
   }
   async onSubmit(e) {
     e.preventDefault();
+
+    const newHeader = {
+      header: this.state.header
+    };
+    console.log(newHeader);
+
+    const options = {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(newHeader)
+    };
+
+    const response = await fetch(
+      "https://www.onabeat.com/api/header/create-header",
+      options
+    );
+    const header = await response.json();
+    if (header.headerString === this.state.header) {
+      alert("header posted");
+      this.setState({
+        header: ""
+      });
+    } else {
+      alert("Error posting header");
+    }
   }
   render() {
     return (
