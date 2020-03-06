@@ -22,7 +22,7 @@ class ChangeLayoutForm extends React.Component {
     e.preventDefault();
 
     const newHeader = {
-      header: this.state.header
+      headerString: this.state.header
     };
     console.log(newHeader);
 
