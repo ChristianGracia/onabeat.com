@@ -22,17 +22,17 @@ class CreatePicForm extends React.Component {
   async onSubmit(e) {
     e.preventDefault();
 
-    const newGif = {
+    const newPic = {
       name: this.state.name,
       picUrl: this.state.picUrl,
       description: this.state.description
     };
-    console.log(newGif);
+    console.log(newPic);
 
     const options = {
       method: "POST",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify(newGif)
+      body: JSON.stringify(newPic)
     };
 
     const response = await fetch(

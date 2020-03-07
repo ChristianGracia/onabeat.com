@@ -5,7 +5,7 @@ import MediaDisplay from "../common/media-display/media-display.component";
 const ContentPlayer = ({ data }) => {
   return (
     <div>
-      <div class="week" style={{ marginBottom: -30 }}>
+      <div className="week" style={{ marginBottom: -30 }}>
         <span className="week">{data.title}</span>
       </div>
       <div style={{ marginTop: 10, marginBottom: 60 }}></div>
