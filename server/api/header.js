@@ -4,13 +4,13 @@ const mongoose = require("mongoose");
 
 const Header = require("../models/Header");
 
-router.get("/"),
+router.get("/",
   (req, res) => {
     res.send({ hi: "hi" });
   };
 router.post("/create-header", (req, res) => {
   const newHeader = new Header({
-    header: req.body.HeaderString
+    header: req.body.headerString
   });
 
   newHeader.save().then(header => res.json(header));
