@@ -7,7 +7,7 @@ import AboutPage from "./pages/about-page/about-page.component";
 // import RegisterPage from "./pages/register-page/register-page.component";
 import ArtistsPage from "./pages/artists-page/artists-page.component";
 import DashboardPage from "./pages/dashboard-page/dashboard-page.component";
-import PostPage from "./pages/post-page/post-page.component"
+import PostPage from "./pages/post-page/post-page.component";
 
 import Header from "./components/header/header.component";
 
@@ -28,12 +28,13 @@ function App() {
         <Route exact path="/post/:id" component={PostPage} />
       </Switch>
       {/* for local */}
-      {/* <Route exact path="/dashboard" component={DashboardPage} /> */}
+      <Route exact path="/dashboard" component={DashboardPage} />
 
       {/* for heroku */}
+      {/*}
       <Switch>
         <PrivateRoute exact path="/dashboard" component={DashboardPage} />
-      </Switch>
+  </Switch> */}
 
       <div style={{ paddingBottom: 300 }}></div>
     </div>
