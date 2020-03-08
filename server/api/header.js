@@ -14,7 +14,7 @@ router.post("/create-header", (req, res) => {
   });
   newHeader.save().then(header => res.json(header));
 });
-router.post("/change-header", (req, res) => {
+router.put("/change-header", (req, res) => {
   var update = JSON.parse(req.body.header);
   Header.findOneAndUpdate("5e653cbaa853fb002defaf59", update, function(
     err,
