@@ -27,17 +27,17 @@ class ChangeLayoutForm extends React.Component {
     console.log(newHeader);
 
     const options = {
-      method: "POST",
+      method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(newHeader)
     };
 
     const response = await fetch(
-      "https://www.onabeat.com/api/header/create-header",
+      "https://www.onabeat.com/api/header/change-header",
       options
     );
     const header = await response.json();
-    if (header.headerString === this.state.header) {
+    if (header.Done === "hi") {
       alert("header posted");
       this.setState({
         header: ""

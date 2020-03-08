@@ -27,7 +27,7 @@ router.put("/change-header", (req, res) => {
     }
     console.log("RESULT: " + result);
     // res.send("Done: " + Header.headerString);
-    res.send("Done: ");
+    res.send({ Done: "hi" });
   });
   // const newHeader = new Header({
   //   headerString: req.body.headerString
