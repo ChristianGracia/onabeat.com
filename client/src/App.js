@@ -28,13 +28,14 @@ function App() {
         <Route exact path="/post/:id" component={PostPage} />
       </Switch>
       {/* for local */}
+      {/*
       <Route exact path="/dashboard" component={DashboardPage} />
-
+      */}
       {/* for heroku */}
-      {/*}
+
       <Switch>
         <PrivateRoute exact path="/dashboard" component={DashboardPage} />
-  </Switch> */}
+      </Switch>
 
       <div style={{ paddingBottom: 300 }}></div>
     </div>
