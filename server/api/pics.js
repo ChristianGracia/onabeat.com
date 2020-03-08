@@ -7,7 +7,7 @@ const Pic = require("../models/Pic");
 router.get("/all", (req, res) => {
   Pic.find()
     // .sort({ date: -1 })
-    .then(posts => res.json(posts))
+    .then(pics => res.json(pics))
     .catch(err => res.status(404).json({ nopicsfound: "No pics found" }));
 });
 

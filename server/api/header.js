@@ -35,7 +35,6 @@ router.put("/change-header", (req, res) => {
 });
 router.get("/all", (req, res) => {
   Header.find()
-    // .sort({ date: -1 })
     .then(header => res.json(header))
     .catch(err => res.status(404).json({ noheaderfound: "No header found" }));
 });
