@@ -15,7 +15,8 @@ router.post("/create-header", (req, res) => {
   newHeader.save().then(header => res.json(header));
 });
 router.post("/change-header", (req, res) => {
-  Header.findOneAndUpdate("5e653cbaa853fb002defaf59", req.body.header, function(
+  var update = JSON.parse(req.body.header);
+  Header.findOneAndUpdate("5e653cbaa853fb002defaf59", update, function(
     err,
     result
   ) {
@@ -23,7 +24,7 @@ router.post("/change-header", (req, res) => {
       console.log(err);
     }
     console.log("RESULT: " + result);
-    res.send("Done");
+    res.send("Done: " + Header.headerString);
   });
   // const newHeader = new Header({
   //   headerString: req.body.headerString
