@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 
 router.post("/create-header", (req, res) => {
   const newHeader = new Header({
-    header: req.body.headerString
+    headerString: req.body.headerString
   });
 
   newHeader.save().then(header => res.json(header));
