@@ -3,9 +3,9 @@ import logo from "../../assets/logo.png";
 import "./home-page.styles.scss";
 import Signature from "../../components/common/signature/Signature.component";
 import ContentBlockBox from "../../components/content-block-box/content-block-box.component";
-import { Wave } from "react-animated-text";
 
 import JoinEmailList from "../../components/join-email-list/join-email-list.component";
+import SiteHeader from "../../components/site-header/site-header.component";
 
 import Bounce from "react-reveal/Bounce";
 import LazyLoad from "react-lazyload";
@@ -27,11 +27,7 @@ const HomePage = () => (
 
       <LazyLoad height={200}>
         <div className="music-title">
-          <Wave
-            text="bison and bear coming March 31st!"
-            effect="stretch"
-            effectChange={1.5}
-          />
+          <SiteHeader />
         </div>
       </LazyLoad>
     </Bounce>
