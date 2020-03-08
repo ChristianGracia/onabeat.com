@@ -199,14 +199,14 @@ class CreateBlockForm extends React.Component {
           value={this.state.title}
           onChange={this.onChange}
         />
-
+        {/* 
         <TextInput
           placeholder="Unique URL that will link to post"
           name="shareUrl"
           type="text"
           value={this.state.title}
           onChange={this.onChange}
-        />
+        /> */}
 
         <DropdownButton
           id="dropdown-item-button"
