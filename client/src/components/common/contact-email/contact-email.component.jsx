@@ -11,7 +11,7 @@ const ContactEmail = () => {
           color: "#00",
           fontSize: 25,
           marginTop: 10,
-          fontWeight: "bold"
+          fontWeight: "bold",
         }}
       >
         <span style={{ color: "#F8D208" }}></span>{" "}
@@ -21,7 +21,7 @@ const ContactEmail = () => {
           textAlign: "center",
 
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
         className="social-links"
       >
@@ -30,7 +30,7 @@ const ContactEmail = () => {
             className="fas fa-envelope"
             style={{ color: "black", fontSize: 20 }}
           ></i>{" "}
-          am@onabeat.com
+          onabeat@protonmail.com
         </span>
       </div>
     </div>
